@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		6BC093B81938B8C700E68EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B71938B8C700E68EEA /* Foundation.framework */; };
 		6BC093BD1938B8C700E68EEA /* ARHandlingChains.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */; };
-		6BC093BF1938B8C700E68EEA /* ARHandlingChains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC093BE1938B8C700E68EEA /* ARHandlingChains.m */; };
 		6BC093C61938B8C700E68EEA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093C51938B8C700E68EEA /* XCTest.framework */; };
 		6BC093C71938B8C700E68EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B71938B8C700E68EEA /* Foundation.framework */; };
 		6BC093C91938B8C700E68EEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093C81938B8C700E68EEA /* UIKit.framework */; };
 		6BC093CC1938B8C700E68EEA /* libARHandlingChains.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B41938B8C700E68EEA /* libARHandlingChains.a */; };
 		6BC093D21938B8C700E68EEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC093D01938B8C700E68EEA /* InfoPlist.strings */; };
-		6BC093D41938B8C700E68EEA /* ARHandlingChainsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC093D31938B8C700E68EEA /* ARHandlingChainsTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +44,11 @@
 		6BC093B71938B8C700E68EEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BC093BB1938B8C700E68EEA /* ARHandlingChains-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARHandlingChains-Prefix.pch"; sourceTree = "<group>"; };
 		6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARHandlingChains.h; sourceTree = "<group>"; };
-		6BC093BE1938B8C700E68EEA /* ARHandlingChains.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARHandlingChains.m; sourceTree = "<group>"; };
 		6BC093C41938B8C700E68EEA /* ARHandlingChainsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARHandlingChainsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC093C51938B8C700E68EEA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6BC093C81938B8C700E68EEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6BC093CF1938B8C700E68EEA /* ARHandlingChainsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARHandlingChainsTests-Info.plist"; sourceTree = "<group>"; };
 		6BC093D11938B8C700E68EEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6BC093D31938B8C700E68EEA /* ARHandlingChainsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARHandlingChainsTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */,
-				6BC093BE1938B8C700E68EEA /* ARHandlingChains.m */,
 				6BC093BA1938B8C700E68EEA /* Supporting Files */,
 			);
 			path = ARHandlingChains;
@@ -128,7 +123,6 @@
 		6BC093CD1938B8C700E68EEA /* ARHandlingChainsTests */ = {
 			isa = PBXGroup;
 			children = (
-				6BC093D31938B8C700E68EEA /* ARHandlingChainsTests.m */,
 				6BC093CE1938B8C700E68EEA /* Supporting Files */,
 			);
 			path = ARHandlingChainsTests;
@@ -223,7 +217,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC093BF1938B8C700E68EEA /* ARHandlingChains.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC093D41938B8C700E68EEA /* ARHandlingChainsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +325,7 @@
 				GCC_PREFIX_HEADER = "ARHandlingChains/ARHandlingChains-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -345,6 +338,7 @@
 				GCC_PREFIX_HEADER = "ARHandlingChains/ARHandlingChains-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -404,6 +398,7 @@
 				6BC093D91938B8C700E68EEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BC093DA1938B8C700E68EEA /* Build configuration list for PBXNativeTarget "ARHandlingChainsTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +407,7 @@
 				6BC093DC1938B8C700E68EEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
