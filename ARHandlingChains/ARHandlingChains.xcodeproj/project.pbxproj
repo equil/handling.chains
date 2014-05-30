@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BC093B81938B8C700E68EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B71938B8C700E68EEA /* Foundation.framework */; };
+		6BC093BD1938B8C700E68EEA /* ARHandlingChains.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */; };
+		6BC093BF1938B8C700E68EEA /* ARHandlingChains.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC093BE1938B8C700E68EEA /* ARHandlingChains.m */; };
+		6BC093C61938B8C700E68EEA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093C51938B8C700E68EEA /* XCTest.framework */; };
+		6BC093C71938B8C700E68EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B71938B8C700E68EEA /* Foundation.framework */; };
+		6BC093C91938B8C700E68EEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093C81938B8C700E68EEA /* UIKit.framework */; };
+		6BC093CC1938B8C700E68EEA /* libARHandlingChains.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B41938B8C700E68EEA /* libARHandlingChains.a */; };
+		6BC093D21938B8C700E68EEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC093D01938B8C700E68EEA /* InfoPlist.strings */; };
+		6BC093D41938B8C700E68EEA /* ARHandlingChainsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC093D31938B8C700E68EEA /* ARHandlingChainsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BC093CA1938B8C700E68EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC093AC1938B8C700E68EEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BC093B31938B8C700E68EEA;
+			remoteInfo = ARHandlingChains;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6BC093B21938B8C700E68EEA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				6BC093BD1938B8C700E68EEA /* ARHandlingChains.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6BC093B41938B8C700E68EEA /* libARHandlingChains.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libARHandlingChains.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC093B71938B8C700E68EEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BC093BB1938B8C700E68EEA /* ARHandlingChains-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARHandlingChains-Prefix.pch"; sourceTree = "<group>"; };
+		6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARHandlingChains.h; sourceTree = "<group>"; };
+		6BC093BE1938B8C700E68EEA /* ARHandlingChains.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARHandlingChains.m; sourceTree = "<group>"; };
+		6BC093C41938B8C700E68EEA /* ARHandlingChainsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARHandlingChainsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC093C51938B8C700E68EEA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6BC093C81938B8C700E68EEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6BC093CF1938B8C700E68EEA /* ARHandlingChainsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARHandlingChainsTests-Info.plist"; sourceTree = "<group>"; };
+		6BC093D11938B8C700E68EEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BC093D31938B8C700E68EEA /* ARHandlingChainsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARHandlingChainsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BC093B11938B8C700E68EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC093B81938B8C700E68EEA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC093C11938B8C700E68EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC093C61938B8C700E68EEA /* XCTest.framework in Frameworks */,
+				6BC093CC1938B8C700E68EEA /* libARHandlingChains.a in Frameworks */,
+				6BC093C91938B8C700E68EEA /* UIKit.framework in Frameworks */,
+				6BC093C71938B8C700E68EEA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BC093AB1938B8C700E68EEA = {
+			isa = PBXGroup;
+			children = (
+				6BC093B91938B8C700E68EEA /* ARHandlingChains */,
+				6BC093CD1938B8C700E68EEA /* ARHandlingChainsTests */,
+				6BC093B61938B8C700E68EEA /* Frameworks */,
+				6BC093B51938B8C700E68EEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BC093B51938B8C700E68EEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BC093B41938B8C700E68EEA /* libARHandlingChains.a */,
+				6BC093C41938B8C700E68EEA /* ARHandlingChainsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BC093B61938B8C700E68EEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BC093B71938B8C700E68EEA /* Foundation.framework */,
+				6BC093C51938B8C700E68EEA /* XCTest.framework */,
+				6BC093C81938B8C700E68EEA /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BC093B91938B8C700E68EEA /* ARHandlingChains */ = {
+			isa = PBXGroup;
+			children = (
+				6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */,
+				6BC093BE1938B8C700E68EEA /* ARHandlingChains.m */,
+				6BC093BA1938B8C700E68EEA /* Supporting Files */,
+			);
+			path = ARHandlingChains;
+			sourceTree = "<group>";
+		};
+		6BC093BA1938B8C700E68EEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BC093BB1938B8C700E68EEA /* ARHandlingChains-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BC093CD1938B8C700E68EEA /* ARHandlingChainsTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BC093D31938B8C700E68EEA /* ARHandlingChainsTests.m */,
+				6BC093CE1938B8C700E68EEA /* Supporting Files */,
+			);
+			path = ARHandlingChainsTests;
+			sourceTree = "<group>";
+		};
+		6BC093CE1938B8C700E68EEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BC093CF1938B8C700E68EEA /* ARHandlingChainsTests-Info.plist */,
+				6BC093D01938B8C700E68EEA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BC093B31938B8C700E68EEA /* ARHandlingChains */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC093D71938B8C700E68EEA /* Build configuration list for PBXNativeTarget "ARHandlingChains" */;
+			buildPhases = (
+				6BC093B01938B8C700E68EEA /* Sources */,
+				6BC093B11938B8C700E68EEA /* Frameworks */,
+				6BC093B21938B8C700E68EEA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARHandlingChains;
+			productName = ARHandlingChains;
+			productReference = 6BC093B41938B8C700E68EEA /* libARHandlingChains.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6BC093C31938B8C700E68EEA /* ARHandlingChainsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BC093DA1938B8C700E68EEA /* Build configuration list for PBXNativeTarget "ARHandlingChainsTests" */;
+			buildPhases = (
+				6BC093C01938B8C700E68EEA /* Sources */,
+				6BC093C11938B8C700E68EEA /* Frameworks */,
+				6BC093C21938B8C700E68EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BC093CB1938B8C700E68EEA /* PBXTargetDependency */,
+			);
+			name = ARHandlingChainsTests;
+			productName = ARHandlingChainsTests;
+			productReference = 6BC093C41938B8C700E68EEA /* ARHandlingChainsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BC093AC1938B8C700E68EEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 6BC093AF1938B8C700E68EEA /* Build configuration list for PBXProject "ARHandlingChains" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BC093AB1938B8C700E68EEA;
+			productRefGroup = 6BC093B51938B8C700E68EEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BC093B31938B8C700E68EEA /* ARHandlingChains */,
+				6BC093C31938B8C700E68EEA /* ARHandlingChainsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BC093C21938B8C700E68EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC093D21938B8C700E68EEA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BC093B01938B8C700E68EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC093BF1938B8C700E68EEA /* ARHandlingChains.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BC093C01938B8C700E68EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC093D41938B8C700E68EEA /* ARHandlingChainsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BC093CB1938B8C700E68EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BC093B31938B8C700E68EEA /* ARHandlingChains */;
+			targetProxy = 6BC093CA1938B8C700E68EEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BC093D01938B8C700E68EEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BC093D11938B8C700E68EEA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BC093D51938B8C700E68EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6BC093D61938B8C700E68EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BC093D81938B8C700E68EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ARHandlingChains.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARHandlingChains/ARHandlingChains-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6BC093D91938B8C700E68EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ARHandlingChains.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARHandlingChains/ARHandlingChains-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6BC093DB1938B8C700E68EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARHandlingChains/ARHandlingChains-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ARHandlingChainsTests/ARHandlingChainsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6BC093DC1938B8C700E68EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ARHandlingChains/ARHandlingChains-Prefix.pch";
+				INFOPLIST_FILE = "ARHandlingChainsTests/ARHandlingChainsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BC093AF1938B8C700E68EEA /* Build configuration list for PBXProject "ARHandlingChains" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC093D51938B8C700E68EEA /* Debug */,
+				6BC093D61938B8C700E68EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BC093D71938B8C700E68EEA /* Build configuration list for PBXNativeTarget "ARHandlingChains" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC093D81938B8C700E68EEA /* Debug */,
+				6BC093D91938B8C700E68EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6BC093DA1938B8C700E68EEA /* Build configuration list for PBXNativeTarget "ARHandlingChainsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BC093DB1938B8C700E68EEA /* Debug */,
+				6BC093DC1938B8C700E68EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BC093AC1938B8C700E68EEA /* Project object */;
+}
