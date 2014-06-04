@@ -7,6 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6556509FCAACF0272AC75892 /* ARHCCAdoptedProtocolsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654A34938AAFD145F167E /* ARHCCAdoptedProtocolsTest.m */; };
+		655651CC89E9171CBA2543BC /* ARHCCCommonAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565AA530CA88AD1019F724 /* ARHCCCommonAccessorFactory.m */; };
+		655652CA0CEF98993DCB5FD2 /* ARHCCPropertiesDescriptorsAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650BD89ACE897AF3612A4 /* ARHCCPropertiesDescriptorsAnalyzer.m */; };
+		655653321DA8F70A52B8B8DC /* ARHCCObjectStrongAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556544221E2E39C243D3B7E /* ARHCCObjectStrongAccessorFactory.m */; };
+		65565375D560436336F51CD9 /* ARHCAbstractTypeWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565451156D8E59734F1AC7 /* ARHCAbstractTypeWrapper.m */; };
+		655653A7E28DDEDBC09D4CBF /* ARHCAbstractHandlingChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BACB049456CEE5759BE /* ARHCAbstractHandlingChain.m */; };
+		655653C4B2B4BBE7BFC26009 /* ARHCAbstractChainElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565FBDAEFC532FF90AC791 /* ARHCAbstractChainElement.m */; };
+		655653F709A9299AEF73FBA8 /* CCECompleteNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565546DEDC52B1AF935A63 /* CCECompleteNotification.m */; };
+		6556547D6A44D59720192994 /* ARHCCAdaptedObjectWeakSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565DCB6C312CDAF817EF6D /* ARHCCAdaptedObjectWeakSetter.m */; };
+		655654AF8D1071B095AA5FB0 /* ARHCCPropertyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 655653116C420FED64486E03 /* ARHCCPropertyInfo.m */; };
+		6556555C44E3A914A616F94B /* ARHCCAdaptedCommonGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565318BD6BF490221A1FC2 /* ARHCCAdaptedCommonGetter.m */; };
+		6556564E46E97C0127896307 /* ARHCCMutableDictionaryPropertiesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556535AD3387DD1217A30AD /* ARHCCMutableDictionaryPropertiesAdapter.m */; };
+		655658DDEAA3EAE2A351C0DB /* CCEErrorNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 655651BBBC3FEEEA72EDC94E /* CCEErrorNotification.m */; };
+		655658E1F6A9FAB9A8A7B607 /* ARHCCObjectWeakAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565D24683309E6B837E5CC /* ARHCCObjectWeakAccessorFactory.m */; };
+		6556597C907D0935A31F7BDC /* ARHCCAdaptedPropertyAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655D020CDD9AC647D1FB0 /* ARHCCAdaptedPropertyAccessor.m */; };
+		655659AFF7B77C9673FCB19D /* CWeakObjectHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565F808D1D030C824A1BEA /* CWeakObjectHandle.m */; };
+		655659C7D3CF2A6F7F441425 /* ARHCCObjcPropertyHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 655656F5717091B5A2C939E2 /* ARHCCObjcPropertyHolder.m */; };
+		65565A099D89B4C6C5BFE822 /* CCEClearContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654607CDA46F662CCBCC3 /* CCEClearContext.m */; };
+		65565A233BADC9523BADFC64 /* ARHCCAdaptedPropertyAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655D020CDD9AC647D1FB0 /* ARHCCAdaptedPropertyAccessor.m */; };
+		65565AA2B81154F7BE25174A /* ARHCCAdaptedObjectStrongGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655656A60E8B7790A82E2A71 /* ARHCCAdaptedObjectStrongGetter.m */; };
+		65565B0D8FA14D7F960627F3 /* ARHCCAdaptedObjectStrongSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BE28177A2352AAD1440 /* ARHCCAdaptedObjectStrongSetter.m */; };
+		65565B182EF05E49C2A44C1E /* ARHCCPropertiesDescriptorsAnalyzerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556518A0A3B5017CCE18333 /* ARHCCPropertiesDescriptorsAnalyzerTest.m */; };
+		65565BDB0895AF966CF245ED /* CWeakObjectHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565F808D1D030C824A1BEA /* CWeakObjectHandle.m */; };
+		65565BE7D73131122C26A76E /* ARHCCPropertyInfosForProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 655653D98E4273F2BF91E6CE /* ARHCCPropertyInfosForProtocol.m */; };
+		65565CE27C3DAC8BD8BD4964 /* ARHCCChildProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556519E8864E178329A854D /* ARHCCChildProtocols.m */; };
+		65565CF13C0D5EA1A27FE1FD /* ARHCCPropertiesDescriptorsAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650BD89ACE897AF3612A4 /* ARHCCPropertiesDescriptorsAnalyzer.m */; };
+		65565D328E0131E5D27BD490 /* ARHCCAdaptedCommonPresented.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556536B730755CD918B5BA0 /* ARHCCAdaptedCommonPresented.m */; };
+		65565DBF17544F258854CC61 /* CCEClearContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654607CDA46F662CCBCC3 /* CCEClearContext.m */; };
+		65565E744020505A9D68176F /* ARHCAccessorAbstractFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 655656313342834AD6B12806 /* ARHCAccessorAbstractFactory.m */; };
+		65565EBB6DB88C65DE0C1BEA /* ARHCCAdaptedCommonSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650541A0DD345F2192A3C /* ARHCCAdaptedCommonSetter.m */; };
+		65565ED9C53D23C49DF4186A /* ARHCAbstractHandlingChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BACB049456CEE5759BE /* ARHCAbstractHandlingChain.m */; };
+		65565EEBD53DD874D740F981 /* ARHCAbstractAdaptedPropertyAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655FB2A052B0A783864EF /* ARHCAbstractAdaptedPropertyAccessor.m */; };
+		65565F16BB130857975DDEF2 /* CCEStoreDataFromContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565AEE6BD7099911D6D679 /* CCEStoreDataFromContext.m */; };
+		65565F32FBC7EB996D863D09 /* CErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565F9FFFAE9FD0E63810CF /* CErrorHandle.m */; };
+		65565F9115D3C8CFAAB4E337 /* ARHCCHandlingChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565C34D04DF55C6506EF22 /* ARHCCHandlingChain.m */; };
+		65565FB865040F096C62CD3A /* ARHCCAdaptedObjectWeakGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565C9379DBD38CB3582A7A /* ARHCCAdaptedObjectWeakGetter.m */; };
+		65565FBC5CC77A1460F44AFD /* ARHCAbstractChainElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565FBDAEFC532FF90AC791 /* ARHCAbstractChainElement.m */; };
+		65565FC4387FC91D55F90450 /* ARHCCMutableDictionaryPropertiesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556535AD3387DD1217A30AD /* ARHCCMutableDictionaryPropertiesAdapter.m */; };
+		65565FF1AB534F1F7E8A30A7 /* ARHCCHandlingChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565C34D04DF55C6506EF22 /* ARHCCHandlingChain.m */; };
 		6BC093B81938B8C700E68EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B71938B8C700E68EEA /* Foundation.framework */; };
 		6BC093BD1938B8C700E68EEA /* ARHandlingChains.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */; };
 		6BC093C61938B8C700E68EEA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093C51938B8C700E68EEA /* XCTest.framework */; };
@@ -14,6 +53,7 @@
 		6BC093C91938B8C700E68EEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093C81938B8C700E68EEA /* UIKit.framework */; };
 		6BC093CC1938B8C700E68EEA /* libARHandlingChains.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B41938B8C700E68EEA /* libARHandlingChains.a */; };
 		6BC093D21938B8C700E68EEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BC093D01938B8C700E68EEA /* InfoPlist.strings */; };
+		6BC093E0193CB8A000E68EEA /* ARHCCPropertyInfoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC093DF193CB8A000E68EEA /* ARHCCPropertyInfoTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +80,77 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		655650541A0DD345F2192A3C /* ARHCCAdaptedCommonSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdaptedCommonSetter.m; sourceTree = "<group>"; };
+		655650730C76611CB7D734DC /* ARHCAbstractAdaptedPropertyAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCAbstractAdaptedPropertyAccessor.h; sourceTree = "<group>"; };
+		655650BD89ACE897AF3612A4 /* ARHCCPropertiesDescriptorsAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCPropertiesDescriptorsAnalyzer.m; sourceTree = "<group>"; };
+		655651002B6308B9DD4B982A /* ARHCAbstractHandlingChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCAbstractHandlingChain.h; sourceTree = "<group>"; };
+		65565102CC2514E8B514E6A5 /* ARHCCPropertyInfosForProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCPropertyInfosForProtocol.h; sourceTree = "<group>"; };
+		6556518A0A3B5017CCE18333 /* ARHCCPropertiesDescriptorsAnalyzerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCPropertiesDescriptorsAnalyzerTest.m; sourceTree = "<group>"; };
+		6556519E8864E178329A854D /* ARHCCChildProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCChildProtocols.m; sourceTree = "<group>"; };
+		655651BBBC3FEEEA72EDC94E /* CCEErrorNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEErrorNotification.m; sourceTree = "<group>"; };
+		6556521B3E6C674296615EA1 /* ARHCIDAPDContextInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCIDAPDContextInspector.h; sourceTree = "<group>"; };
+		6556526D4584398E2B679D6A /* ARHCCAdaptedCommonSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCAdaptedCommonSetter.h; sourceTree = "<group>"; };
+		655653116C420FED64486E03 /* ARHCCPropertyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCPropertyInfo.m; sourceTree = "<group>"; };
+		65565318BD6BF490221A1FC2 /* ARHCCAdaptedCommonGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdaptedCommonGetter.m; sourceTree = "<group>"; };
+		6556535AD3387DD1217A30AD /* ARHCCMutableDictionaryPropertiesAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCMutableDictionaryPropertiesAdapter.m; sourceTree = "<group>"; };
+		6556536B730755CD918B5BA0 /* ARHCCAdaptedCommonPresented.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdaptedCommonPresented.m; sourceTree = "<group>"; };
+		655653D98E4273F2BF91E6CE /* ARHCCPropertyInfosForProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCPropertyInfosForProtocol.m; sourceTree = "<group>"; };
+		655653FDDBC6D77E4AB7690B /* ARHCITestParentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCITestParentProtocol.h; sourceTree = "<group>"; };
+		6556544221E2E39C243D3B7E /* ARHCCObjectStrongAccessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCObjectStrongAccessorFactory.m; sourceTree = "<group>"; };
+		65565451156D8E59734F1AC7 /* ARHCAbstractTypeWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCAbstractTypeWrapper.m; sourceTree = "<group>"; };
+		655654607CDA46F662CCBCC3 /* CCEClearContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEClearContext.m; sourceTree = "<group>"; };
+		655654A34938AAFD145F167E /* ARHCCAdoptedProtocolsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdoptedProtocolsTest.m; sourceTree = "<group>"; };
+		65565546DEDC52B1AF935A63 /* CCECompleteNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCECompleteNotification.m; sourceTree = "<group>"; };
+		655655D020CDD9AC647D1FB0 /* ARHCCAdaptedPropertyAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdaptedPropertyAccessor.m; sourceTree = "<group>"; };
+		655655EBC12C19C3845CF071 /* ARHCAbstractChainElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCAbstractChainElement.h; sourceTree = "<group>"; };
+		655655EC22C838670BBE123C /* ARHCCCommonAccessorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCCommonAccessorFactory.h; sourceTree = "<group>"; };
+		655655FB2A052B0A783864EF /* ARHCAbstractAdaptedPropertyAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCAbstractAdaptedPropertyAccessor.m; sourceTree = "<group>"; };
+		65565625E6B08A553EFBD453 /* ARHCIDAPDError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCIDAPDError.h; sourceTree = "<group>"; };
+		655656313342834AD6B12806 /* ARHCAccessorAbstractFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCAccessorAbstractFactory.m; sourceTree = "<group>"; };
+		65565657CE66928FA9482E8D /* ARHCCAdaptedObjectStrongGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCAdaptedObjectStrongGetter.h; sourceTree = "<group>"; };
+		655656A60E8B7790A82E2A71 /* ARHCCAdaptedObjectStrongGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdaptedObjectStrongGetter.m; sourceTree = "<group>"; };
+		655656F5717091B5A2C939E2 /* ARHCCObjcPropertyHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCObjcPropertyHolder.m; sourceTree = "<group>"; };
+		655656FB48070A44F2B802B8 /* CCEClearContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEClearContext.h; sourceTree = "<group>"; };
+		6556571C7279DCDFF611B58D /* ARHCCHandlingChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCHandlingChain.h; sourceTree = "<group>"; };
+		65565767547F16EF29DE2AC6 /* CCEErrorNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEErrorNotification.h; sourceTree = "<group>"; };
+		6556577CAD4F4934A67E9CE9 /* ARHCCObjectStrongAccessorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCObjectStrongAccessorFactory.h; sourceTree = "<group>"; };
+		655657C3143C02E644C86566 /* IChainContextInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IChainContextInspector.h; sourceTree = "<group>"; };
+		6556582873872E05F5AF30C5 /* ARHCAccessorAbstractFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCAccessorAbstractFactory.h; sourceTree = "<group>"; };
+		65565872CF2190E88AF56347 /* CErrorHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CErrorHandle.h; sourceTree = "<group>"; };
+		6556589ECA06E97E4B7E56D5 /* ARHCITestPropertyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCITestPropertyDescriptor.h; sourceTree = "<group>"; };
+		655658B7415723EB7B842968 /* ARHCITestChildThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCITestChildThree.h; sourceTree = "<group>"; };
+		655658DF7F49779A0FCA10DB /* CCEStoreDataFromContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCEStoreDataFromContext.h; sourceTree = "<group>"; };
+		655659035A9411999826C31D /* ARHCIAdaptedPropertyAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCIAdaptedPropertyAccessor.h; sourceTree = "<group>"; };
+		6556590F40D69D2B423A019A /* ARHCCPropertyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCPropertyInfo.h; sourceTree = "<group>"; };
+		655659E9F12D5ACEA5A9739B /* ARHCCAdaptedObjectWeakSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCAdaptedObjectWeakSetter.h; sourceTree = "<group>"; };
+		65565A04A118C9C49712A47D /* ARHCCChildProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCChildProtocols.h; sourceTree = "<group>"; };
+		65565A125DB2315C15080B4E /* ARHCCAdaptedCommonPresented.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCAdaptedCommonPresented.h; sourceTree = "<group>"; };
+		65565A7D73A464C4F247671B /* ARHCCObjectWeakAccessorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCObjectWeakAccessorFactory.h; sourceTree = "<group>"; };
+		65565AA530CA88AD1019F724 /* ARHCCCommonAccessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCCommonAccessorFactory.m; sourceTree = "<group>"; };
+		65565AEE6BD7099911D6D679 /* CCEStoreDataFromContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCEStoreDataFromContext.m; sourceTree = "<group>"; };
+		65565AF76C9D4F983A006964 /* ARHCCObjcPropertyHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCObjcPropertyHolder.h; sourceTree = "<group>"; };
+		65565B623AC2AB2A020056EC /* ARHCCAdaptedCommonGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCAdaptedCommonGetter.h; sourceTree = "<group>"; };
+		65565B73C8C15E5AF090EC49 /* ARHCCMutableDictionaryPropertiesAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCMutableDictionaryPropertiesAdapter.h; sourceTree = "<group>"; };
+		65565B81941391A91672ECFE /* ARHCCPropertiesDescriptorsAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCPropertiesDescriptorsAnalyzer.h; sourceTree = "<group>"; };
+		65565B8DAE2AA1FD8F1AD568 /* ARHCCAdaptedPropertyAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCAdaptedPropertyAccessor.h; sourceTree = "<group>"; };
+		65565BA687DD5D02CB9E85FC /* ARHCITestSuperPropertyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCITestSuperPropertyDescriptor.h; sourceTree = "<group>"; };
+		65565BACB049456CEE5759BE /* ARHCAbstractHandlingChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCAbstractHandlingChain.m; sourceTree = "<group>"; };
+		65565BB71D0CCFA4D1EFEBAC /* ARHCITestChildTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCITestChildTwo.h; sourceTree = "<group>"; };
+		65565BE28177A2352AAD1440 /* ARHCCAdaptedObjectStrongSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdaptedObjectStrongSetter.m; sourceTree = "<group>"; };
+		65565BF1D63D5CB2638DC199 /* ARHCCAdaptedObjectWeakGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCAdaptedObjectWeakGetter.h; sourceTree = "<group>"; };
+		65565C03058B8F03EFEA15FE /* CWeakObjectHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWeakObjectHandle.h; sourceTree = "<group>"; };
+		65565C34D04DF55C6506EF22 /* ARHCCHandlingChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCHandlingChain.m; sourceTree = "<group>"; };
+		65565C9379DBD38CB3582A7A /* ARHCCAdaptedObjectWeakGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdaptedObjectWeakGetter.m; sourceTree = "<group>"; };
+		65565CE360D7AE0D8A8AA590 /* ARHCCAdaptedObjectStrongSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCAdaptedObjectStrongSetter.h; sourceTree = "<group>"; };
+		65565CE8A8B6E2062AF25B4B /* ARHCIPropertiesDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCIPropertiesDescriptor.h; sourceTree = "<group>"; };
+		65565D24683309E6B837E5CC /* ARHCCObjectWeakAccessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCObjectWeakAccessorFactory.m; sourceTree = "<group>"; };
+		65565D4E00D0843024F6627A /* ARHCITestChildOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCITestChildOne.h; sourceTree = "<group>"; };
+		65565DCB6C312CDAF817EF6D /* ARHCCAdaptedObjectWeakSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCAdaptedObjectWeakSetter.m; sourceTree = "<group>"; };
+		65565E70FA0081E273A9D550 /* CCECompleteNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCECompleteNotification.h; sourceTree = "<group>"; };
+		65565F808D1D030C824A1BEA /* CWeakObjectHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWeakObjectHandle.m; sourceTree = "<group>"; };
+		65565F9C7DF38FD080E28B83 /* ARHCAbstractTypeWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCAbstractTypeWrapper.h; sourceTree = "<group>"; };
+		65565F9FFFAE9FD0E63810CF /* CErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CErrorHandle.m; sourceTree = "<group>"; };
+		65565FBDAEFC532FF90AC791 /* ARHCAbstractChainElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCAbstractChainElement.m; sourceTree = "<group>"; };
 		6BC093B41938B8C700E68EEA /* libARHandlingChains.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libARHandlingChains.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC093B71938B8C700E68EEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6BC093BB1938B8C700E68EEA /* ARHandlingChains-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARHandlingChains-Prefix.pch"; sourceTree = "<group>"; };
@@ -49,6 +160,7 @@
 		6BC093C81938B8C700E68EEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6BC093CF1938B8C700E68EEA /* ARHandlingChainsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARHandlingChainsTests-Info.plist"; sourceTree = "<group>"; };
 		6BC093D11938B8C700E68EEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BC093DF193CB8A000E68EEA /* ARHCCPropertyInfoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCPropertyInfoTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +186,236 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655652131BA52F39DAA60344 /* PropertiesDescriptors */ = {
+			isa = PBXGroup;
+			children = (
+				65565625E6B08A553EFBD453 /* ARHCIDAPDError.h */,
+				65565CE8A8B6E2062AF25B4B /* ARHCIPropertiesDescriptor.h */,
+				6556521B3E6C674296615EA1 /* ARHCIDAPDContextInspector.h */,
+			);
+			path = PropertiesDescriptors;
+			sourceTree = "<group>";
+		};
+		655652F3964375A772949A6C /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				655654607CDA46F662CCBCC3 /* CCEClearContext.m */,
+				655656FB48070A44F2B802B8 /* CCEClearContext.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		6556532CF8CE06E0D1C2EDC6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				65565AA530CA88AD1019F724 /* ARHCCCommonAccessorFactory.m */,
+				655655EC22C838670BBE123C /* ARHCCCommonAccessorFactory.h */,
+				6556544221E2E39C243D3B7E /* ARHCCObjectStrongAccessorFactory.m */,
+				6556577CAD4F4934A67E9CE9 /* ARHCCObjectStrongAccessorFactory.h */,
+				65565D24683309E6B837E5CC /* ARHCCObjectWeakAccessorFactory.m */,
+				65565A7D73A464C4F247671B /* ARHCCObjectWeakAccessorFactory.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6556535E5ED7C78FC9210D17 /* PropertiesAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				6556518A0A3B5017CCE18333 /* ARHCCPropertiesDescriptorsAnalyzerTest.m */,
+				6556589ECA06E97E4B7E56D5 /* ARHCITestPropertyDescriptor.h */,
+				65565BDAB8BC7D53E477010A /* Accessors */,
+				6BC093DF193CB8A000E68EEA /* ARHCCPropertyInfoTest.m */,
+				655657E9F39842E6D18BD639 /* RuntimeTools */,
+				65565BA687DD5D02CB9E85FC /* ARHCITestSuperPropertyDescriptor.h */,
+			);
+			path = PropertiesAdapter;
+			sourceTree = "<group>";
+		};
+		655653C4819417A34680EC0D /* Chain */ = {
+			isa = PBXGroup;
+			children = (
+				655656141E335205D08CD537 /* Tools */,
+			);
+			path = Chain;
+			sourceTree = "<group>";
+		};
+		655654148796722B4D218B86 /* PropertiesAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				6556535AD3387DD1217A30AD /* ARHCCMutableDictionaryPropertiesAdapter.m */,
+				65565B73C8C15E5AF090EC49 /* ARHCCMutableDictionaryPropertiesAdapter.h */,
+				655650BD89ACE897AF3612A4 /* ARHCCPropertiesDescriptorsAnalyzer.m */,
+				65565B81941391A91672ECFE /* ARHCCPropertiesDescriptorsAnalyzer.h */,
+				655655D020CDD9AC647D1FB0 /* ARHCCAdaptedPropertyAccessor.m */,
+				65565B8DAE2AA1FD8F1AD568 /* ARHCCAdaptedPropertyAccessor.h */,
+				65565D903D8BA9ABE129A095 /* TypeBridge */,
+				65565F2731B084BB4F21346F /* Accessors */,
+				6556590F40D69D2B423A019A /* ARHCCPropertyInfo.h */,
+				655653116C420FED64486E03 /* ARHCCPropertyInfo.m */,
+				65565836756D640595F6B7E6 /* RuntimeTools */,
+			);
+			path = PropertiesAdapter;
+			sourceTree = "<group>";
+		};
+		65565431D031055F26039454 /* AccessorsImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				65565E2C0A2F0FC2171E6A43 /* Common */,
+				655654BF1370637807F10480 /* Getters */,
+				655656E70B6B83B05B7B9F54 /* Setters */,
+			);
+			path = AccessorsImplementation;
+			sourceTree = "<group>";
+		};
+		655654BF1370637807F10480 /* Getters */ = {
+			isa = PBXGroup;
+			children = (
+				655656A60E8B7790A82E2A71 /* ARHCCAdaptedObjectStrongGetter.m */,
+				65565657CE66928FA9482E8D /* ARHCCAdaptedObjectStrongGetter.h */,
+				65565C9379DBD38CB3582A7A /* ARHCCAdaptedObjectWeakGetter.m */,
+				65565BF1D63D5CB2638DC199 /* ARHCCAdaptedObjectWeakGetter.h */,
+			);
+			path = Getters;
+			sourceTree = "<group>";
+		};
+		655655151140EF9A56565731 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				655657C3143C02E644C86566 /* IChainContextInspector.h */,
+				65565C03058B8F03EFEA15FE /* CWeakObjectHandle.h */,
+				65565F808D1D030C824A1BEA /* CWeakObjectHandle.m */,
+				65565872CF2190E88AF56347 /* CErrorHandle.h */,
+				65565F9FFFAE9FD0E63810CF /* CErrorHandle.m */,
+				655654148796722B4D218B86 /* PropertiesAdapter */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6556553A9B1CCD88AB79BBD4 /* FactoriesImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				6556532CF8CE06E0D1C2EDC6 /* Common */,
+			);
+			path = FactoriesImplementation;
+			sourceTree = "<group>";
+		};
+		655656141E335205D08CD537 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6556535E5ED7C78FC9210D17 /* PropertiesAdapter */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		655656E70B6B83B05B7B9F54 /* Setters */ = {
+			isa = PBXGroup;
+			children = (
+				65565BE28177A2352AAD1440 /* ARHCCAdaptedObjectStrongSetter.m */,
+				65565CE360D7AE0D8A8AA590 /* ARHCCAdaptedObjectStrongSetter.h */,
+				655659E9F12D5ACEA5A9739B /* ARHCCAdaptedObjectWeakSetter.h */,
+				65565DCB6C312CDAF817EF6D /* ARHCCAdaptedObjectWeakSetter.m */,
+			);
+			path = Setters;
+			sourceTree = "<group>";
+		};
+		655657E9F39842E6D18BD639 /* RuntimeTools */ = {
+			isa = PBXGroup;
+			children = (
+				655654A34938AAFD145F167E /* ARHCCAdoptedProtocolsTest.m */,
+				655653FDDBC6D77E4AB7690B /* ARHCITestParentProtocol.h */,
+				65565D4E00D0843024F6627A /* ARHCITestChildOne.h */,
+				65565BB71D0CCFA4D1EFEBAC /* ARHCITestChildTwo.h */,
+				655658B7415723EB7B842968 /* ARHCITestChildThree.h */,
+			);
+			path = RuntimeTools;
+			sourceTree = "<group>";
+		};
+		65565836756D640595F6B7E6 /* RuntimeTools */ = {
+			isa = PBXGroup;
+			children = (
+				6556519E8864E178329A854D /* ARHCCChildProtocols.m */,
+				65565A04A118C9C49712A47D /* ARHCCChildProtocols.h */,
+				655656F5717091B5A2C939E2 /* ARHCCObjcPropertyHolder.m */,
+				65565AF76C9D4F983A006964 /* ARHCCObjcPropertyHolder.h */,
+				655653D98E4273F2BF91E6CE /* ARHCCPropertyInfosForProtocol.m */,
+				65565102CC2514E8B514E6A5 /* ARHCCPropertyInfosForProtocol.h */,
+			);
+			path = RuntimeTools;
+			sourceTree = "<group>";
+		};
+		655658826E7C3180E3662AAC /* Chain */ = {
+			isa = PBXGroup;
+			children = (
+				655652131BA52F39DAA60344 /* PropertiesDescriptors */,
+				65565FC148685968E23DF339 /* CommonElements */,
+				655655151140EF9A56565731 /* Tools */,
+				655655EBC12C19C3845CF071 /* ARHCAbstractChainElement.h */,
+				655651002B6308B9DD4B982A /* ARHCAbstractHandlingChain.h */,
+				65565FBDAEFC532FF90AC791 /* ARHCAbstractChainElement.m */,
+				6556571C7279DCDFF611B58D /* ARHCCHandlingChain.h */,
+				65565BACB049456CEE5759BE /* ARHCAbstractHandlingChain.m */,
+				65565C34D04DF55C6506EF22 /* ARHCCHandlingChain.m */,
+			);
+			path = Chain;
+			sourceTree = "<group>";
+		};
+		65565BDAB8BC7D53E477010A /* Accessors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Accessors;
+			sourceTree = "<group>";
+		};
+		65565D903D8BA9ABE129A095 /* TypeBridge */ = {
+			isa = PBXGroup;
+			children = (
+				65565451156D8E59734F1AC7 /* ARHCAbstractTypeWrapper.m */,
+				65565F9C7DF38FD080E28B83 /* ARHCAbstractTypeWrapper.h */,
+			);
+			path = TypeBridge;
+			sourceTree = "<group>";
+		};
+		65565E2C0A2F0FC2171E6A43 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				655650730C76611CB7D734DC /* ARHCAbstractAdaptedPropertyAccessor.h */,
+				6556536B730755CD918B5BA0 /* ARHCCAdaptedCommonPresented.m */,
+				65565A125DB2315C15080B4E /* ARHCCAdaptedCommonPresented.h */,
+				655655FB2A052B0A783864EF /* ARHCAbstractAdaptedPropertyAccessor.m */,
+				655650541A0DD345F2192A3C /* ARHCCAdaptedCommonSetter.m */,
+				6556526D4584398E2B679D6A /* ARHCCAdaptedCommonSetter.h */,
+				65565318BD6BF490221A1FC2 /* ARHCCAdaptedCommonGetter.m */,
+				65565B623AC2AB2A020056EC /* ARHCCAdaptedCommonGetter.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		65565F2731B084BB4F21346F /* Accessors */ = {
+			isa = PBXGroup;
+			children = (
+				655659035A9411999826C31D /* ARHCIAdaptedPropertyAccessor.h */,
+				655656313342834AD6B12806 /* ARHCAccessorAbstractFactory.m */,
+				6556582873872E05F5AF30C5 /* ARHCAccessorAbstractFactory.h */,
+				65565431D031055F26039454 /* AccessorsImplementation */,
+				6556553A9B1CCD88AB79BBD4 /* FactoriesImplementation */,
+			);
+			path = Accessors;
+			sourceTree = "<group>";
+		};
+		65565FC148685968E23DF339 /* CommonElements */ = {
+			isa = PBXGroup;
+			children = (
+				655658DF7F49779A0FCA10DB /* CCEStoreDataFromContext.h */,
+				655651BBBC3FEEEA72EDC94E /* CCEErrorNotification.m */,
+				65565767547F16EF29DE2AC6 /* CCEErrorNotification.h */,
+				65565AEE6BD7099911D6D679 /* CCEStoreDataFromContext.m */,
+				65565546DEDC52B1AF935A63 /* CCECompleteNotification.m */,
+				65565E70FA0081E273A9D550 /* CCECompleteNotification.h */,
+				655652F3964375A772949A6C /* Internal */,
+			);
+			path = CommonElements;
+			sourceTree = "<group>";
+		};
 		6BC093AB1938B8C700E68EEA = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +450,7 @@
 			children = (
 				6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */,
 				6BC093BA1938B8C700E68EEA /* Supporting Files */,
+				655658826E7C3180E3662AAC /* Chain */,
 			);
 			path = ARHandlingChains;
 			sourceTree = "<group>";
@@ -124,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				6BC093CE1938B8C700E68EEA /* Supporting Files */,
+				655653C4819417A34680EC0D /* Chain */,
 			);
 			path = ARHandlingChainsTests;
 			sourceTree = "<group>";
@@ -217,6 +561,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655658DDEAA3EAE2A351C0DB /* CCEErrorNotification.m in Sources */,
+				65565F16BB130857975DDEF2 /* CCEStoreDataFromContext.m in Sources */,
+				655653F709A9299AEF73FBA8 /* CCECompleteNotification.m in Sources */,
+				65565BDB0895AF966CF245ED /* CWeakObjectHandle.m in Sources */,
+				655653C4B2B4BBE7BFC26009 /* ARHCAbstractChainElement.m in Sources */,
+				65565ED9C53D23C49DF4186A /* ARHCAbstractHandlingChain.m in Sources */,
+				65565F9115D3C8CFAAB4E337 /* ARHCCHandlingChain.m in Sources */,
+				65565DBF17544F258854CC61 /* CCEClearContext.m in Sources */,
+				65565F32FBC7EB996D863D09 /* CErrorHandle.m in Sources */,
+				65565FC4387FC91D55F90450 /* ARHCCMutableDictionaryPropertiesAdapter.m in Sources */,
+				655652CA0CEF98993DCB5FD2 /* ARHCCPropertiesDescriptorsAnalyzer.m in Sources */,
+				65565A233BADC9523BADFC64 /* ARHCCAdaptedPropertyAccessor.m in Sources */,
+				65565E744020505A9D68176F /* ARHCAccessorAbstractFactory.m in Sources */,
+				65565D328E0131E5D27BD490 /* ARHCCAdaptedCommonPresented.m in Sources */,
+				65565EEBD53DD874D740F981 /* ARHCAbstractAdaptedPropertyAccessor.m in Sources */,
+				65565AA2B81154F7BE25174A /* ARHCCAdaptedObjectStrongGetter.m in Sources */,
+				65565EBB6DB88C65DE0C1BEA /* ARHCCAdaptedCommonSetter.m in Sources */,
+				6556555C44E3A914A616F94B /* ARHCCAdaptedCommonGetter.m in Sources */,
+				65565B0D8FA14D7F960627F3 /* ARHCCAdaptedObjectStrongSetter.m in Sources */,
+				65565FB865040F096C62CD3A /* ARHCCAdaptedObjectWeakGetter.m in Sources */,
+				6556547D6A44D59720192994 /* ARHCCAdaptedObjectWeakSetter.m in Sources */,
+				655654AF8D1071B095AA5FB0 /* ARHCCPropertyInfo.m in Sources */,
+				655651CC89E9171CBA2543BC /* ARHCCCommonAccessorFactory.m in Sources */,
+				655653321DA8F70A52B8B8DC /* ARHCCObjectStrongAccessorFactory.m in Sources */,
+				655658E1F6A9FAB9A8A7B607 /* ARHCCObjectWeakAccessorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +593,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655659AFF7B77C9673FCB19D /* CWeakObjectHandle.m in Sources */,
+				65565FBC5CC77A1460F44AFD /* ARHCAbstractChainElement.m in Sources */,
+				655653A7E28DDEDBC09D4CBF /* ARHCAbstractHandlingChain.m in Sources */,
+				65565FF1AB534F1F7E8A30A7 /* ARHCCHandlingChain.m in Sources */,
+				65565A099D89B4C6C5BFE822 /* CCEClearContext.m in Sources */,
+				6556564E46E97C0127896307 /* ARHCCMutableDictionaryPropertiesAdapter.m in Sources */,
+				65565CF13C0D5EA1A27FE1FD /* ARHCCPropertiesDescriptorsAnalyzer.m in Sources */,
+				6556597C907D0935A31F7BDC /* ARHCCAdaptedPropertyAccessor.m in Sources */,
+				65565B182EF05E49C2A44C1E /* ARHCCPropertiesDescriptorsAnalyzerTest.m in Sources */,
+				6BC093E0193CB8A000E68EEA /* ARHCCPropertyInfoTest.m in Sources */,
+				65565375D560436336F51CD9 /* ARHCAbstractTypeWrapper.m in Sources */,
+				65565CE27C3DAC8BD8BD4964 /* ARHCCChildProtocols.m in Sources */,
+				6556509FCAACF0272AC75892 /* ARHCCAdoptedProtocolsTest.m in Sources */,
+				655659C7D3CF2A6F7F441425 /* ARHCCObjcPropertyHolder.m in Sources */,
+				65565BE7D73131122C26A76E /* ARHCCPropertyInfosForProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
