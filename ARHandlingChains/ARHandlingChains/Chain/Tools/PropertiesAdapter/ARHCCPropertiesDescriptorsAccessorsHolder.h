@@ -4,8 +4,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ARHCCPropertiesDescriptorsAnalyzer : NSObject
+@interface ARHCCPropertiesDescriptorsAccessorsHolder : NSObject
 
 @property (nonatomic, readonly) NSDictionary *accessors;
+
++ (ARHCCPropertiesDescriptorsAccessorsHolder *) holder;
 
 @end

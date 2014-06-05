@@ -4,7 +4,8 @@
 //
 
 #import "ARHCCMutableDictionaryPropertiesAdapter.h"
-#import "CWeakObjectHandle.h"
+#import "ARHCCPropertiesDescriptorsAccessorsHolder.h"
+#import "ARHCIAdaptedPropertyAccessor.h"
 
 typedef enum
 {
@@ -20,6 +21,7 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
 {
 @private
     NSMutableDictionary *_state;
+    ARHCCPropertiesDescriptorsAccessorsHolder *_holder;
 }
 
 - (instancetype)initWithDictionary:(NSMutableDictionary *)state
@@ -28,6 +30,7 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
     if (self)
     {
         _state = state;
+        _holder = [ARHCCPropertiesDescriptorsAccessorsHolder holder];
     }
 
     return self;
@@ -42,7 +45,8 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
     BOOL result = [super respondsToSelector:aSelector];
     if (!result)
     {
-        result = [self detectTypeForSelector:aSelector] != UnknownMethodForProperty;
+        //result = [self detectTypeForSelector:aSelector] != UnknownMethodForProperty;
+        result = [_holder.accessors objectForKey:NSStringFromSelector (aSelector)] != nil;
     }
     return result;
 }
@@ -101,21 +105,27 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     NSMethodSignature *result = [super methodSignatureForSelector:aSelector];
-    ForwardMethodType methodType = [self detectTypeForSelector:aSelector];
+//    ForwardMethodType methodType = [self detectTypeForSelector:aSelector];
+//
+//    if (methodType == SetterMethodForProperty)
+//    {
+//        result = [NSMethodSignature signatureWithObjCTypes:"v@:@"];
+//    }
+//
+//    if (methodType == GetterMethodForProperty)
+//    {
+//        result = [NSMethodSignature signatureWithObjCTypes:"@@:"];
+//    }
+//
+//    if (methodType == PresentedMethodForProperty)
+//    {
+//        result = [NSMethodSignature signatureWithObjCTypes:"c@:"];
+//    }
 
-    if (methodType == SetterMethodForProperty)
+    id <ARHCIAdaptedPropertyAccessor> accessor = [_holder.accessors objectForKey:NSStringFromSelector (aSelector)];
+    if (accessor != nil)
     {
-        result = [NSMethodSignature signatureWithObjCTypes:"v@:@"];
-    }
-
-    if (methodType == GetterMethodForProperty)
-    {
-        result = [NSMethodSignature signatureWithObjCTypes:"@@:"];
-    }
-
-    if (methodType == PresentedMethodForProperty)
-    {
-        result = [NSMethodSignature signatureWithObjCTypes:"c@:"];
+        result = accessor.signature;
     }
 
     return result;
@@ -123,39 +133,50 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation
 {
-    ForwardMethodType methodType = [self detectTypeForSelector:anInvocation.selector];
-    NSString *key = [self getKey:anInvocation.selector
-                      methodType:methodType];
+//    ForwardMethodType methodType = [self detectTypeForSelector:anInvocation.selector];
+//    NSString *key = [self getKey:anInvocation.selector
+//                      methodType:methodType];
+//
+//    if (methodType == GetterMethodForProperty)
+//    {
+//        NSObject *value = [_state objectForKey:key];
+//        [anInvocation setReturnValue:&value];
+//
+//        return;
+//    }
+//
+//    if (methodType == SetterMethodForProperty)
+//    {
+//        void *temp;
+//        [anInvocation getArgument:&temp
+//                          atIndex:2];
+//        NSObject *newValue = (__bridge NSObject *) temp;
+//        if (newValue == nil)
+//        {
+//            [_state removeObjectForKey:key];
+//        }
+//        else
+//        {
+//            [_state setObject:newValue
+//                       forKey:key];
+//        }
+//    }
+//
+//    if (methodType == PresentedMethodForProperty)
+//    {
+//        BOOL result = [_state objectForKey:key] != nil;
+//        [anInvocation setReturnValue:&result];
+//    }
 
-    if (methodType == GetterMethodForProperty)
+    id <ARHCIAdaptedPropertyAccessor> accessor = [_holder.accessors objectForKey:NSStringFromSelector (anInvocation.selector)];
+    if (accessor != nil)
     {
-        NSObject *value = [_state objectForKey:key];
-        [anInvocation setReturnValue:&value];
-
-        return;
+        [accessor performWithInvocation:anInvocation
+                               delegate:_state];
     }
-
-    if (methodType == SetterMethodForProperty)
+    else
     {
-        void *temp;
-        [anInvocation getArgument:&temp
-                          atIndex:2];
-        NSObject *newValue = (__bridge NSObject *) temp;
-        if (newValue == nil)
-        {
-            [_state removeObjectForKey:key];
-        }
-        else
-        {
-            [_state setObject:newValue
-                       forKey:key];
-        }
-    }
-
-    if (methodType == PresentedMethodForProperty)
-    {
-        BOOL result = [_state objectForKey:key] != nil;
-        [anInvocation setReturnValue:&result];
+        [super forwardInvocation:anInvocation];
     }
 }
 

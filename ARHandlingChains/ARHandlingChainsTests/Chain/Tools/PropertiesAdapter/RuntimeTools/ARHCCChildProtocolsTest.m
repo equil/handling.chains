@@ -1,5 +1,5 @@
 //
-//  ARHCCAdoptedProtocolsTest.m
+//  ARHCCChildProtocolsTest.m
 //  ARHandlingChains
 //
 //  Created by Alexey Rogatkin on 04.06.14.
@@ -14,11 +14,11 @@
 #import "ARHCITestChildThree.h"
 #import "ARHCITestChildTwo.h"
 
-@interface ARHCCAdoptedProtocolsTest : XCTestCase
+@interface ARHCCChildProtocolsTest : XCTestCase
 
 @end
 
-@implementation ARHCCAdoptedProtocolsTest
+@implementation ARHCCChildProtocolsTest
 
 - (void)setUp
 {

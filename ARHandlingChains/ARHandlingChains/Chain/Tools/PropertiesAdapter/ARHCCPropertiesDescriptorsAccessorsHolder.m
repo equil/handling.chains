@@ -2,31 +2,41 @@
 // Created by Alexey Rogatkin on 30.05.14.
 //
 
-#import "ARHCCPropertiesDescriptorsAnalyzer.h"
+#import "ARHCCPropertiesDescriptorsAccessorsHolder.h"
 #import "ARHCIPropertiesDescriptor.h"
-#import "ARHCCAdaptedPropertyAccessor.h"
 #import "ARHCCPropertyInfo.h"
 #import "ARHCAccessorAbstractFactory.h"
 #import "ARHCCChildProtocols.h"
 #import "ARHCCPropertyInfosForProtocol.h"
-#import <objc/runtime.h>
 
-@implementation ARHCCPropertiesDescriptorsAnalyzer
+@implementation ARHCCPropertiesDescriptorsAccessorsHolder
 {
     NSMutableDictionary *_accessors;
 }
 
 @synthesize accessors = _accessors;
 
-- (id)init
+- (id)initPrivate
 {
     self = [super init];
     if (self)
     {
-        _accessors = [ARHCCPropertiesDescriptorsAnalyzer createAccessorsOfPropertiesForRootProtocol:@protocol(ARHCIPropertiesDescriptor)];
-        NSLog (@"Accessors: %@", _accessors);
+        _accessors = [ARHCCPropertiesDescriptorsAccessorsHolder createAccessorsOfPropertiesForRootProtocol:@protocol(ARHCIPropertiesDescriptor)];
     }
     return self;
+}
+
++ (ARHCCPropertiesDescriptorsAccessorsHolder *)holder
+{
+    static ARHCCPropertiesDescriptorsAccessorsHolder *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^
+    {
+        sharedInstance = [[ARHCCPropertiesDescriptorsAccessorsHolder alloc] initPrivate];
+    });
+
+    return sharedInstance;
 }
 
 + (NSMutableDictionary *)createAccessorsOfPropertiesForRootProtocol:(Protocol *)descriptorProtocol
@@ -61,25 +71,25 @@
             }
             else
             {
-                id <ARHCIAdaptedPropertyAccessor> object = factory.createGetterAccessor;
-                if (object != nil)
+                id <ARHCIAdaptedPropertyAccessor> accessor = factory.createGetterAccessor;
+                if (accessor != nil)
                 {
-                    [result setObject:object
-                               forKey:object.accessorName];
+                    [result setObject:accessor
+                               forKey:accessor.accessorName];
                 }
 
-                object = factory.createSetterAccessor;
-                if (object != nil)
+                accessor = factory.createSetterAccessor;
+                if (accessor != nil)
                 {
-                    [result setObject:object
-                               forKey:object.accessorName];
+                    [result setObject:accessor
+                               forKey:accessor.accessorName];
                 }
 
-                object = factory.createPresentedAccessor;
-                if (object != nil)
+                accessor = factory.createPresentedAccessor;
+                if (accessor != nil)
                 {
-                    [result setObject:object
-                               forKey:object.accessorName];
+                    [result setObject:accessor
+                               forKey:accessor.accessorName];
                 }
             }
         }
@@ -135,7 +145,7 @@
         [result unionSet:[self collectPropertyNamesWithPresentedAccessorsRecursivelyForProtocol:protocol]];
     }
 
-    [result unionSet:[ARHCCPropertiesDescriptorsAnalyzer extractPropertiesWithPresentedLikeAccessor:descriptorProtocol]];
+    [result unionSet:[ARHCCPropertiesDescriptorsAccessorsHolder extractPropertiesWithPresentedLikeAccessor:descriptorProtocol]];
 
     return result;
 }
@@ -147,7 +157,7 @@
     ARHCCPropertyInfosForProtocol *properties = [[ARHCCPropertyInfosForProtocol alloc] initWithProtocol:protocol];
     for (ARHCCPropertyInfo *propertyInfo in properties)
     {
-        if (![ARHCCPropertiesDescriptorsAnalyzer isPresentedLikeAccessor:propertyInfo])
+        if (![ARHCCPropertiesDescriptorsAccessorsHolder isPresentedLikeAccessor:propertyInfo])
         {
             [result addObject:propertyInfo.name];
         }
@@ -163,7 +173,7 @@
     ARHCCPropertyInfosForProtocol *properties = [[ARHCCPropertyInfosForProtocol alloc] initWithProtocol:protocol];
     for (ARHCCPropertyInfo *propertyInfo in properties)
     {
-        if ([ARHCCPropertiesDescriptorsAnalyzer isPresentedLikeAccessor:propertyInfo])
+        if ([ARHCCPropertiesDescriptorsAccessorsHolder isPresentedLikeAccessor:propertyInfo])
         {
             [result addObject:[propertyInfo.name substringToIndex:propertyInfo.name.length - 9]];
         }

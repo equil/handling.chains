@@ -53,12 +53,12 @@
         return nil;
     }
 
-    return [self internalCreateGetterAccessor];
+    return [self internalCreateSetterAccessor];
 }
 
 - (id <ARHCIAdaptedPropertyAccessor>)createGetterAccessor
 {
-    return [self internalCreateSetterAccessor];
+    return [self internalCreateGetterAccessor];
 }
 
 #pragma mark - Internal overriding elements

@@ -22,7 +22,8 @@
 
 - (NSString *)accessorName
 {
-    if (_accessorName == nil) {
+    if (_accessorName == nil)
+    {
         _accessorName = self.defaultAccessorName;
     }
     return _accessorName;
@@ -36,6 +37,21 @@
 - (void)performWithInvocation:(NSInvocation *)invocation
                      delegate:(NSMutableDictionary *)dictionary
 {
+}
+
+- (BOOL)isEqual:(id)other
+{
+    if (other == self)
+    {
+        return YES;
+    }
+
+    if (other != nil && [[other class] isEqual:[self class]])
+    {
+        return NO;
+    }
+
+    return NO;
 }
 
 @end
