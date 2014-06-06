@@ -19,13 +19,10 @@
 		655653695F6F16304F203DEB /* CSelectorAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565ED507DBE571812B22C1 /* CSelectorAccessorFactory.m */; };
 		655653858F9831983280AD38 /* CAdaptedScalarNumberGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565402C15709B01957796F /* CAdaptedScalarNumberGetter.m */; };
 		655653A7B4BFE19967BEFEE6 /* CWeakObjectHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565E7BC376C2F3C37EA245 /* CWeakObjectHandle.m */; };
-		655653A7E28DDEDBC09D4CBF /* ARHAbstractHandlingChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BACB049456CEE5759BE /* ARHAbstractHandlingChain.m */; };
 		655653C4B2B4BBE7BFC26009 /* ARHAbstractChainElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565FBDAEFC532FF90AC791 /* ARHAbstractChainElement.m */; };
 		655653F709A9299AEF73FBA8 /* ARHCECompleteNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565546DEDC52B1AF935A63 /* ARHCECompleteNotification.m */; };
 		655653FCB8B283B2829257B8 /* CAdaptedCommonPresented.m in Sources */ = {isa = PBXBuildFile; fileRef = 655658BA9D77F629381EDCF3 /* CAdaptedCommonPresented.m */; };
-		65565461C82BAF57DB8EAE6A /* CPropertyInfosForProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 655651EF18BC539679EBA8DD /* CPropertyInfosForProtocol.m */; };
 		65565475A86AD666475B1189 /* CObjectWeakAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565305B2D86E5197EE569C /* CObjectWeakAccessorFactory.m */; };
-		655654F44FFD2B594FB3A6ED /* CWeakObjectHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565E7BC376C2F3C37EA245 /* CWeakObjectHandle.m */; };
 		6556553819CCD0BA8470CBBA /* CAdaptedCommonGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655353A76331A766A6606 /* CAdaptedCommonGetter.m */; };
 		65565553C729798EFDF586BA /* CAdaptedSelectorGetterAndSetterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 655659FEA39D2E9728B60EBA /* CAdaptedSelectorGetterAndSetterTest.m */; };
 		65565593DFD3C259D012540A /* CStructureAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650B1251ADC0E12987935 /* CStructureAccessorFactory.m */; };
@@ -33,35 +30,31 @@
 		655657077670187849C24904 /* CAdaptedObjectStrongSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565FBC04714047012784F6 /* CAdaptedObjectStrongSetter.m */; };
 		6556571473D51EFA5426B059 /* CAdaptedClassGetterAndSetterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BC451B8AC16D67B7EB5 /* CAdaptedClassGetterAndSetterTest.m */; };
 		65565775B2BC8059CC93E151 /* CCommonAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A3CF6EA5D76D9776369 /* CCommonAccessorFactory.m */; };
-		655657D812B10E0C7588D3A9 /* CPropertiesDescriptorsAccessorsHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A46EF581B09C9704DA7 /* CPropertiesDescriptorsAccessorsHolder.m */; };
 		65565848AD02B999818CBA8F /* CPropertiesDescriptorsAccessorsHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A46EF581B09C9704DA7 /* CPropertiesDescriptorsAccessorsHolder.m */; };
 		6556589515BB9C820DF74EB4 /* CAdaptedSelectorSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565F1D9A90DAFC75E6B147 /* CAdaptedSelectorSetter.m */; };
 		655658ACD24CFB3480EBF73A /* CAdaptedScalarNumberGetterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565F9994CF78A096C975C5 /* CAdaptedScalarNumberGetterTest.m */; };
 		655658D51D8FEFD6D023DBCE /* CAdaptedClassSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565328FBCB2A7C18379AAF /* CAdaptedClassSetter.m */; };
 		655658DDEAA3EAE2A351C0DB /* ARHCEErrorNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 655651BBBC3FEEEA72EDC94E /* ARHCEErrorNotification.m */; };
-		65565A099D89B4C6C5BFE822 /* CEClearContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654607CDA46F662CCBCC3 /* CEClearContext.m */; };
 		65565A6C0E1EA553A5473983 /* CAdaptedSelectorGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556537E7AE86430881DF16C /* CAdaptedSelectorGetter.m */; };
 		65565B182EF05E49C2A44C1E /* CPropertiesDescriptorsAccessorsHolderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556518A0A3B5017CCE18333 /* CPropertiesDescriptorsAccessorsHolderTest.m */; };
 		65565B75383E489203C337F2 /* CObjectStrongAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 655656F5F47AEE2E0CDE385F /* CObjectStrongAccessorFactory.m */; };
-		65565B90D760EE3660570654 /* CAdaptedClassGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654EAB14BCCA5994CBC73 /* CAdaptedClassGetter.m */; };
 		65565CEE76CE85D8458DBB88 /* CAdaptedObjectWeakSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BA7714A730456CB0863 /* CAdaptedObjectWeakSetter.m */; };
-		65565D1433359CEC567C7983 /* CChildProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654F855EFA2E00D2FB5CD /* CChildProtocols.m */; };
 		65565D36AF712534BAD135A0 /* AbstractAdaptedPropertyAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556529F994C7AFD73278209 /* AbstractAdaptedPropertyAccessor.m */; };
 		65565D6E93CE51C4C359C6D4 /* CAdaptedScalarNumberSetterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565D048BF9D1B02BB5AC8E /* CAdaptedScalarNumberSetterTest.m */; };
 		65565DB874B76E0A39A76387 /* CAdaptedCommonSettersAndGettersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 655657C8D0FCFEB8FAE7AD53 /* CAdaptedCommonSettersAndGettersTest.m */; };
 		65565DBF17544F258854CC61 /* CEClearContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654607CDA46F662CCBCC3 /* CEClearContext.m */; };
-		65565DC0E6898758AE3FDE92 /* ARHCMutableDictionaryPropertiesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565E387BDB863585B30C24 /* ARHCMutableDictionaryPropertiesAdapter.m */; };
 		65565DD90C3A1F7494E02597 /* CAdaptedStructureGetterAndSetterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556529ED78AF6165A9B6C1A /* CAdaptedStructureGetterAndSetterTest.m */; };
 		65565E2E42535CA9CDAF6DA4 /* AbstractAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565EF4BA338D8FC6CC7269 /* AbstractAccessorFactory.m */; };
-		65565E5F75087AF174245292 /* CQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 655652D8B5C002E04D115889 /* CQueue.m */; };
 		65565ED9C53D23C49DF4186A /* ARHAbstractHandlingChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BACB049456CEE5759BE /* ARHAbstractHandlingChain.m */; };
 		65565EF975E2D809706B18BD /* ARHCErrorHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556508148697676B7F2C1E7 /* ARHCErrorHandle.m */; };
 		65565F16BB130857975DDEF2 /* ARHCEStoreDataFromContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565AEE6BD7099911D6D679 /* ARHCEStoreDataFromContext.m */; };
 		65565F7BEEFAB0DDF6C6468C /* CClassAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 655656D617813D64E4B2EA65 /* CClassAccessorFactory.m */; };
 		65565F9115D3C8CFAAB4E337 /* ARHCHandlingChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565C34D04DF55C6506EF22 /* ARHCHandlingChain.m */; };
-		65565FBC5CC77A1460F44AFD /* ARHAbstractChainElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565FBDAEFC532FF90AC791 /* ARHAbstractChainElement.m */; };
 		65565FE5EC257C7A74651D38 /* CMutableDictionaryPropertiesAdapterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565D2A7C6419B028A241A3 /* CMutableDictionaryPropertiesAdapterTest.m */; };
-		65565FF1AB534F1F7E8A30A7 /* ARHCHandlingChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565C34D04DF55C6506EF22 /* ARHCHandlingChain.m */; };
+		6B273D211941E67B00740B02 /* CQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 655652D8B5C002E04D115889 /* CQueue.m */; };
+		6B273D221941E68F00740B02 /* CAdaptedClassGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654EAB14BCCA5994CBC73 /* CAdaptedClassGetter.m */; };
+		6B273D231941E68F00740B02 /* CChildProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654F855EFA2E00D2FB5CD /* CChildProtocols.m */; };
+		6B273D241941E68F00740B02 /* CPropertyInfosForProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 655651EF18BC539679EBA8DD /* CPropertyInfosForProtocol.m */; };
 		6BC093B81938B8C700E68EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B71938B8C700E68EEA /* Foundation.framework */; };
 		6BC093BD1938B8C700E68EEA /* ARHandlingChains.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */; };
 		6BC093C61938B8C700E68EEA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093C51938B8C700E68EEA /* XCTest.framework */; };
@@ -641,6 +634,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B273D221941E68F00740B02 /* CAdaptedClassGetter.m in Sources */,
+				6B273D231941E68F00740B02 /* CChildProtocols.m in Sources */,
+				6B273D241941E68F00740B02 /* CPropertyInfosForProtocol.m in Sources */,
+				6B273D211941E67B00740B02 /* CQueue.m in Sources */,
 				655658DDEAA3EAE2A351C0DB /* ARHCEErrorNotification.m in Sources */,
 				65565F16BB130857975DDEF2 /* ARHCEStoreDataFromContext.m in Sources */,
 				655653F709A9299AEF73FBA8 /* ARHCECompleteNotification.m in Sources */,
@@ -683,10 +680,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65565FBC5CC77A1460F44AFD /* ARHAbstractChainElement.m in Sources */,
-				655653A7E28DDEDBC09D4CBF /* ARHAbstractHandlingChain.m in Sources */,
-				65565FF1AB534F1F7E8A30A7 /* ARHCHandlingChain.m in Sources */,
-				65565A099D89B4C6C5BFE822 /* CEClearContext.m in Sources */,
 				65565B182EF05E49C2A44C1E /* CPropertiesDescriptorsAccessorsHolderTest.m in Sources */,
 				6BC093E0193CB8A000E68EEA /* CPropertyInfoTest.m in Sources */,
 				6556509FCAACF0272AC75892 /* CChildProtocolsTest.m in Sources */,
@@ -697,13 +690,6 @@
 				65565DB874B76E0A39A76387 /* CAdaptedCommonSettersAndGettersTest.m in Sources */,
 				6556571473D51EFA5426B059 /* CAdaptedClassGetterAndSetterTest.m in Sources */,
 				65565FE5EC257C7A74651D38 /* CMutableDictionaryPropertiesAdapterTest.m in Sources */,
-				65565E5F75087AF174245292 /* CQueue.m in Sources */,
-				65565DC0E6898758AE3FDE92 /* ARHCMutableDictionaryPropertiesAdapter.m in Sources */,
-				65565B90D760EE3660570654 /* CAdaptedClassGetter.m in Sources */,
-				65565D1433359CEC567C7983 /* CChildProtocols.m in Sources */,
-				65565461C82BAF57DB8EAE6A /* CPropertyInfosForProtocol.m in Sources */,
-				655657D812B10E0C7588D3A9 /* CPropertiesDescriptorsAccessorsHolder.m in Sources */,
-				655654F44FFD2B594FB3A6ED /* CWeakObjectHandle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
