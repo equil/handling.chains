@@ -55,6 +55,20 @@
 		6B273D221941E68F00740B02 /* CAdaptedClassGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654EAB14BCCA5994CBC73 /* CAdaptedClassGetter.m */; };
 		6B273D231941E68F00740B02 /* CChildProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654F855EFA2E00D2FB5CD /* CChildProtocols.m */; };
 		6B273D241941E68F00740B02 /* CPropertyInfosForProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 655651EF18BC539679EBA8DD /* CPropertyInfosForProtocol.m */; };
+		6B273D331941ECDD00740B02 /* ARHandlingChains.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D341941ECDD00740B02 /* ARHCEStoreDataFromContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 655658DF7F49779A0FCA10DB /* ARHCEStoreDataFromContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D351941ECDD00740B02 /* ARHCEErrorNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565767547F16EF29DE2AC6 /* ARHCEErrorNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D361941ECDD00740B02 /* ARHCECompleteNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565E70FA0081E273A9D550 /* ARHCECompleteNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D371941ECDD00740B02 /* ARHAbstractChainElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 655655EBC12C19C3845CF071 /* ARHAbstractChainElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D381941ECDD00740B02 /* ARHAbstractHandlingChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 655651002B6308B9DD4B982A /* ARHAbstractHandlingChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D391941ECDD00740B02 /* ARHCHandlingChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556571C7279DCDFF611B58D /* ARHCHandlingChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D3A1941ECDD00740B02 /* ARHCIDAPDError.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565D5D9C19632B3F23D72B /* ARHCIDAPDError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D3B1941ECDD00740B02 /* ARHIPropertiesDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556599D3F88C58946E70226 /* ARHIPropertiesDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D3C1941ECDD00740B02 /* ARHIDAPDContextInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 655650C47F7FE31BA8A18622 /* ARHIDAPDContextInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D3D1941ECDD00740B02 /* ARHCMutableDictionaryPropertiesAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565A5E653D5F4ED3B27031 /* ARHCMutableDictionaryPropertiesAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D3E1941ECDD00740B02 /* ARHCPropertyInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556501D72E19B75AEA12245 /* ARHCPropertyInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D3F1941ECDD00740B02 /* ARHCErrorHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556563BCB8B59AE2A6B2EB2 /* ARHCErrorHandle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B273D401941ECDD00740B02 /* ARHIChainContextInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 655655960A42AA690E5C0D92 /* ARHIChainContextInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BC093B81938B8C700E68EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093B71938B8C700E68EEA /* Foundation.framework */; };
 		6BC093BD1938B8C700E68EEA /* ARHandlingChains.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6BC093BC1938B8C700E68EEA /* ARHandlingChains.h */; };
 		6BC093C61938B8C700E68EEA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC093C51938B8C700E68EEA /* XCTest.framework */; };
@@ -556,6 +570,30 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		6B273D321941ECA400740B02 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B273D331941ECDD00740B02 /* ARHandlingChains.h in Headers */,
+				6B273D341941ECDD00740B02 /* ARHCEStoreDataFromContext.h in Headers */,
+				6B273D351941ECDD00740B02 /* ARHCEErrorNotification.h in Headers */,
+				6B273D361941ECDD00740B02 /* ARHCECompleteNotification.h in Headers */,
+				6B273D371941ECDD00740B02 /* ARHAbstractChainElement.h in Headers */,
+				6B273D381941ECDD00740B02 /* ARHAbstractHandlingChain.h in Headers */,
+				6B273D391941ECDD00740B02 /* ARHCHandlingChain.h in Headers */,
+				6B273D3A1941ECDD00740B02 /* ARHCIDAPDError.h in Headers */,
+				6B273D3B1941ECDD00740B02 /* ARHIPropertiesDescriptor.h in Headers */,
+				6B273D3C1941ECDD00740B02 /* ARHIDAPDContextInspector.h in Headers */,
+				6B273D3D1941ECDD00740B02 /* ARHCMutableDictionaryPropertiesAdapter.h in Headers */,
+				6B273D3E1941ECDD00740B02 /* ARHCPropertyInfo.h in Headers */,
+				6B273D3F1941ECDD00740B02 /* ARHCErrorHandle.h in Headers */,
+				6B273D401941ECDD00740B02 /* ARHIChainContextInspector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		6BC093B31938B8C700E68EEA /* ARHandlingChains */ = {
 			isa = PBXNativeTarget;
@@ -564,6 +602,7 @@
 				6BC093B01938B8C700E68EEA /* Sources */,
 				6BC093B11938B8C700E68EEA /* Frameworks */,
 				6BC093B21938B8C700E68EEA /* CopyFiles */,
+				6B273D321941ECA400740B02 /* Headers */,
 			);
 			buildRules = (
 			);
