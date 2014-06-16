@@ -11,9 +11,6 @@ extern NSString *const kARHCHandlingChainErrorNotification;
 
 @interface ARHCHandlingChain : ARHAbstractHandlingChain
 
-- (id)initWithElementsNames:(NSArray *)elementsNames;
-- (id)initWithElementsClasses:(NSArray *)elementsClasses;
-
 - (void)registerCompleteObserver:(id)observer
                         selector: (SEL) selector;
 - (void)registerErrorObserver:(id)observer

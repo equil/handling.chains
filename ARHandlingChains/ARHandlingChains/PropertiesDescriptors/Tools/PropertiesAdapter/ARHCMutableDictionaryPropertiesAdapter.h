@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ARHCMutableDictionaryPropertiesAdapter : NSObject
+@interface ARHCMutableDictionaryPropertiesAdapter : NSObject<NSCopying>
 
 @property (nonatomic, readonly) NSDictionary *state;
 

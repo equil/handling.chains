@@ -28,7 +28,6 @@
             @"f" : NSStringFromSelector (@selector(numberWithFloat:)),
             @"d" : NSStringFromSelector (@selector(numberWithDouble:))
     };
-
     if ([_typeToSelectorMapping objectForKey:type] == nil)
     {
         NSLog (@"Error: getter for scalar number created with unsupported type \"%@\"", type);

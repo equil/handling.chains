@@ -13,6 +13,8 @@ typedef struct
 
 @protocol CITestPropertyDescriptor <CITestSuperPropertyDescriptor>
 
+@optional
+
 @property (strong, getter=getSO, setter=setSO:) NSObject *strongObject;
 @property (nonatomic, retain) NSObject *retainObject;
 @property (atomic, copy) NSObject *copyObject;

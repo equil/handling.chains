@@ -7,7 +7,7 @@
 
 @interface ARHCErrorHandle : NSObject
 
-@property (nonatomic, strong) NSMutableDictionary *customInfo;
+@property (nonatomic, strong) NSDictionary *additionalInfo;
 @property (nonatomic, assign) Class elementClass;
 @property (nonatomic, assign) Class chainClass;
 

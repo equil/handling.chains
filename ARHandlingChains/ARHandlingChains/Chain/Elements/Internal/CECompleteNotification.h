@@ -6,8 +6,9 @@
 #import <Foundation/Foundation.h>
 #import "ARHCIDAPDError.h"
 #import "ARHAbstractChainElement.h"
+#import "ARHCChainElement.h"
 
-@interface ARHCECompleteNotification : ARHAbstractChainElement <ARHCIDAPDError>
+@interface CECompleteNotification : ARHCChainElement
 
 
 @end

@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 
 #import "ARHCMutableDictionaryPropertiesAdapter.h"
-#import "CWeakObjectHandle.h";
+#import "CWeakObjectHandle.h"
 #import "ARHIPropertiesDescriptor.h"
 #import "ARHIChainContextInspector.h"
 

@@ -7,5 +7,5 @@
 #import "ARHAbstractChainElement.h"
 #import "ARHCIDAPDError.h"
 
-@interface ARHCEErrorNotification : ARHAbstractChainElement <ARHCIDAPDError>
+@interface CEErrorNotification : ARHAbstractChainElement <ARHCIDAPDError>
 @end

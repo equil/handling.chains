@@ -4,23 +4,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ARHIFutureContext.h"
+
+@protocol ARHIChainQueuesPool;
 
 @interface ARHAbstractHandlingChain : NSObject
-{
-@protected
-    dispatch_queue_t _handlingQueue;
-    dispatch_queue_t _tempQueue;
-    dispatch_queue_t _masterQueue;
-}
 
-- (id)initWithElements:(NSArray *)elements;
+- (id)initWithElementsClasses:(NSArray *)elements;
+- (id)initWithElementsClasses:(NSArray *)elements
+                         pool: (id <ARHIChainQueuesPool>)pool;
 
-- (void)handle;
-
-- (void)handleWithInitialContext:(NSDictionary *)initialContext;
-
-- (void)cancelHandling;
-
-- (NSMutableDictionary *)waitForCompleteAndCopyContext;
+- (id<ARHIFutureContext>)handle;
+- (id<ARHIFutureContext>)handleWithInitialContext:(NSDictionary *)initialContext;
 
 @end

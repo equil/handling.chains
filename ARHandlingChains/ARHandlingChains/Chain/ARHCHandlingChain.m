@@ -5,6 +5,10 @@
 
 #import "ARHCHandlingChain.h"
 #import "ARHAbstractChainElement.h"
+#import "ARHCEInspectContextContext.h"
+#import "CEErrorNotification.h"
+#import "CECompleteNotification.h"
+#import "ARHIChainQueuesPool.h"
 
 NSString *const kARHCHandlingChainCompleteNotification = @"ARHCCompleteNotification";
 NSString *const kARHCHandlingChainErrorNotification = @"ARHCErrorNotification";
@@ -15,16 +19,14 @@ NSString *const kARHCHandlingChainErrorNotification = @"ARHCErrorNotification";
 
 #pragma mark - Initialization
 
-- (id)initWithElementsNames:(NSArray *)elementsNames
-{
-    NSArray *elements = [self prepareElementsByNames:elementsNames];
-    return [super initWithElements:elements];
-}
-
 - (id)initWithElementsClasses:(NSArray *)elementsClasses
+                         pool:(id <ARHIChainQueuesPool>)pool
 {
-    NSArray *elements = [self prepareElementsByClasses:elementsClasses];
-    return [super initWithElements:elements];
+    NSMutableArray *elements = [elementsClasses mutableCopy];
+    [elements addObject:[CEErrorNotification class]];
+    [elements addObject:[CECompleteNotification class]];
+    return [super initWithElementsClasses:elementsClasses
+                                     pool:pool];
 }
 
 #pragma mark - Public interface observing
@@ -59,56 +61,6 @@ NSString *const kARHCHandlingChainErrorNotification = @"ARHCErrorNotification";
     [[NSNotificationCenter defaultCenter] removeObserver:observer
                                                     name:kARHCHandlingChainErrorNotification
                                                   object:[self class]];
-}
-
-#pragma mark - Util methods
-
-- (NSArray *)prepareElementsByNames:(NSArray *)array
-{
-    NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:array.count];
-    for (NSString *className in array)
-    {
-        Class elementClass = NSClassFromString (className);
-        if (elementClass == nil)
-        {
-            elementClass = NSClassFromString ([NSString stringWithFormat:@"CJCCE%@",
-                                                                         className]);
-        }
-        ARHAbstractChainElement *element = [self instantiateElement:elementClass];
-        if (element != nil)
-        {
-            NSLog(@"Element %@/CJCCE%@ added to chain", className, className);
-            [result addObject:element];
-        } else {
-            NSLog(@"Can't instantiate element %@/CJCCE%@", className, className);
-        }
-    }
-    return result;
-}
-
-- (NSArray *)prepareElementsByClasses:(NSArray *)array
-{
-    NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:array.count];
-    for (Class class in array)
-    {
-        ARHAbstractChainElement *element = [self instantiateElement:class];
-        if (element != nil)
-        {
-            [result addObject:element];
-        }
-    }
-    return result;
-}
-
-- (ARHAbstractChainElement *)instantiateElement:(Class)elementClass
-{
-    ARHAbstractChainElement *result = nil;
-    if (elementClass != nil && [elementClass isSubclassOfClass:[ARHAbstractChainElement class]])
-    {
-        result = [[elementClass alloc] init];
-        result.chainClass = [self class];
-    }
-    return result;
 }
 
 @end

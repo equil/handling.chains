@@ -5,115 +5,69 @@
 
 #import "ARHAbstractHandlingChain.h"
 #import "ARHAbstractChainElement.h"
-
-void contextFinalizer (void *context)
-{
-    CFRelease (context);
-}
+#import "CEInitializeFutureContext.h"
+#import "ARHCSingleExecutionQueuePool.h"
+#import "ARHCHandlingChainQueueBuilder.h"
 
 @implementation ARHAbstractHandlingChain
 {
 @private
-    NSArray *_elements;
-    dispatch_semaphore_t _initializationSemaphore;
+    id <ARHIChainQueuesPool> _pool;
+    NSArray *_elementsClasses;
+    ARHCHandlingChainQueueBuilder *_queueBuilder;
 }
 
 #pragma mark - Initialization
 
-- (id)initWithElements:(NSArray *)elements;
+- (id)initWithElementsClasses:(NSArray *)elements;
+{
+    return [self initWithElementsClasses:elements
+                                    pool:[[ARHCSingleExecutionQueuePool alloc] init]];
+}
+
+- (id)initWithElementsClasses:(NSArray *)elements
+                         pool:(id <ARHIChainQueuesPool>)pool
 {
     self = [super init];
     if (self)
     {
-        _elements = elements;
-        _masterQueue = dispatch_queue_create ("ru.idecide.jacarta.initChain.handling.master", DISPATCH_QUEUE_SERIAL);
-        _initializationSemaphore = dispatch_semaphore_create (1);
+        _elementsClasses = elements;
+        _pool = pool;
+        _queueBuilder = [[ARHCHandlingChainQueueBuilder alloc] initWithChainClass:[self class]];
     }
     return self;
 }
 
 
+
 #pragma mark - Interface behavior methods
 
-- (void)handle
+- (id <ARHIFutureContext>)handle
 {
-    [self handleWithInitialContext:@{ }];
+    return [self handleWithInitialContext:@{ }];
 }
 
-- (void)handleWithInitialContext:(NSDictionary *)initialContext
+- (id <ARHIFutureContext>)handleWithInitialContext:(NSDictionary *)initialContext
 {
-    dispatch_semaphore_wait (_initializationSemaphore, DISPATCH_TIME_FOREVER);
-    dispatch_async (_masterQueue, ^
-    {
-        [self cancelHandling];
+    CFutureContext *result = [[CFutureContext alloc] init];
 
-        NSMutableDictionary *context = [[NSMutableDictionary alloc] initWithDictionary:initialContext];
-        _handlingQueue = [self createSuspendedQueueWithContext:context];
-        [self composeQueue:_handlingQueue];
-        dispatch_resume (_handlingQueue);
-        dispatch_semaphore_signal (_initializationSemaphore);
-    });
-}
+    NSMutableDictionary *initial = [initialContext mutableCopy];
+    id <IPDFutureContext> adapter = (id <IPDFutureContext>) [[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:initial];
+    adapter.futureContext = result;
 
-- (void)cancelHandling
-{
-    if (_handlingQueue == nil)
+    [_queueBuilder setInitialContext:initial];
+    [_queueBuilder setDelegate:_pool];
+    for (Class elementClass in _elementsClasses)
     {
-        return;
+        [_queueBuilder add:elementClass];
     }
-    NSMutableDictionary *context = (__bridge NSMutableDictionary *) dispatch_get_context (_handlingQueue);
-    [context setObject:@""
-                forKey:kChainContextKeyCancelExecution];
-    _tempQueue = _handlingQueue;
-    _handlingQueue = nil;
-}
+    [_queueBuilder add:[CEInitializeFutureContext class]];
 
-- (NSMutableDictionary *)waitForCompleteAndCopyContext
-{
-    dispatch_semaphore_wait (_initializationSemaphore, DISPATCH_TIME_FOREVER);
+    ARHCHandlingChainQueue *queue = [_queueBuilder build];
 
-    if (_handlingQueue == nil)
-    {
-        NSLog(@"Cancel waiting: handling chain is nil");
-        return nil;
-    }
+    result.respondedQueue = queue;
 
-    NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
-    dispatch_sync (_handlingQueue, ^
-    {
-        [result addEntriesFromDictionary:(__bridge NSMutableDictionary *) dispatch_get_context (dispatch_get_current_queue ())];
-    });
-
-    dispatch_semaphore_signal (_initializationSemaphore);
-    return result;
-}
-
-
-
-#pragma mark - Supporting and utils private methods
-
-
-- (void)composeQueue:(dispatch_queue_t)queue
-{
-    for (id element in _elements)
-    {
-        if ([element isKindOfClass:[ARHAbstractChainElement class]])
-        {
-            ARHAbstractChainElement *chainElement = (ARHAbstractChainElement *) element;
-            dispatch_async (queue, ^
-            {
-                [chainElement handle];
-            });
-        }
-    }
-}
-
-- (dispatch_queue_t)createSuspendedQueueWithContext:(NSMutableDictionary *)context
-{
-    dispatch_queue_t result = dispatch_queue_create ("ru.idecide.jacarta.initChain.handling", DISPATCH_QUEUE_SERIAL);
-    dispatch_suspend (result);
-    dispatch_set_context (result, (__bridge_retained CFMutableDictionaryRef) context);
-    dispatch_set_finalizer_f (result, &contextFinalizer);
+    [_pool placeToPool:queue];
 
     return result;
 }

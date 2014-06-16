@@ -12,7 +12,7 @@
 
 @synthesize elementClass = _elementClass;
 @synthesize chainClass = _chainClass;
-@synthesize customInfo = _customInfo;
+@synthesize additionalInfo = _additionalInfo;
 
 
 @end

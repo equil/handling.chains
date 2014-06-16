@@ -8,6 +8,6 @@
 #import "ARHCIDAPDError.h"
 #import "ARHIDAPDContextInspector.h"
 
-@interface ARHCEStoreDataFromContext : ARHAbstractChainElement <ARHCIDAPDError, ARHIDAPDContextInspector>
+@interface ARHCEInspectContextContext : ARHAbstractChainElement <ARHCIDAPDError, ARHIDAPDContextInspector>
 
 @end

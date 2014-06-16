@@ -5,20 +5,20 @@
 
 #import <Foundation/Foundation.h>
 #import "ARHCMutableDictionaryPropertiesAdapter.h"
-
-extern NSString *const kChainContextKeyCancelExecution;
+#import "ARHCHandlingChainQueue.h"
 
 @interface ARHAbstractChainElement : NSObject
 
-@property (nonatomic, readonly) NSMutableDictionary *internalContext;
-@property (nonatomic, readonly) ARHCMutableDictionaryPropertiesAdapter *context;
-@property (nonatomic, assign) BOOL mustCancel;
+@property (nonatomic, assign) ARHCHandlingChainQueue *queue;
+
+@property (nonatomic, readonly) id context;
+
 @property (nonatomic, assign) Class chainClass;
 
 - (void)handle;
 
 - (BOOL)canProcess;
 
-- (void) process;
+- (void)process;
 
 @end

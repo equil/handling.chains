@@ -3,10 +3,9 @@
 // Copyright (c) 2014 iDecide. All rights reserved.
 //
 
-#import "ARHCEStoreDataFromContext.h"
-#import "ARHIChainContextInspector.h"
+#import "ARHCEInspectContextContext.h"
 
-@implementation ARHCEStoreDataFromContext
+@implementation ARHCEInspectContextContext
 {
 }
 
