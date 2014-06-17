@@ -5,14 +5,14 @@
 
 #import "ARHAbstractHandlingChain.h"
 #import "ARHAbstractChainElement.h"
-#import "ARHCSingleExecutionQueuePool.h"
+#import "ARHCSingleExecutionQueueExecutionStrategy.h"
 #import "ARHCHandlingChainQueueBuilder.h"
 #import "CFutureContext.h"
 
 @implementation ARHAbstractHandlingChain
 {
 @private
-    id <ARHIChainQueuesPool> _pool;
+    id <ARHIChainQueuesExecutionStrategy> _pool;
     NSArray *_elementsClasses;
     ARHCHandlingChainQueueBuilder *_queueBuilder;
 }
@@ -22,11 +22,11 @@
 - (id)initWithElementsClasses:(NSArray *)elements;
 {
     return [self initWithElementsClasses:elements
-                                    pool:[[ARHCSingleExecutionQueuePool alloc] init]];
+                                    pool:[[ARHCSingleExecutionQueueExecutionStrategy alloc] init]];
 }
 
 - (id)initWithElementsClasses:(NSArray *)elements
-                         pool:(id <ARHIChainQueuesPool>)pool
+                         pool:(id <ARHIChainQueuesExecutionStrategy>)pool
 {
     self = [super init];
     if (self)

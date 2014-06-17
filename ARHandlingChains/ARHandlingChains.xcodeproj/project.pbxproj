@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6556501C1A02B4721E33CB4B /* ARHCSingleExecutionQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BA428B9A462F0FC8473 /* ARHCSingleExecutionQueuePool.m */; };
+		6556501C1A02B4721E33CB4B /* ARHCSingleExecutionQueueExecutionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BA428B9A462F0FC8473 /* ARHCSingleExecutionQueueExecutionStrategy.m */; };
 		6556504E83B102FA2B7D9B34 /* CAdaptedStructureSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650AAB9F9F169A00622BE /* CAdaptedStructureSetter.m */; };
 		655650876622BB0E640A6E6E /* CAdaptedCommonSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565CF4B19049F523D2A7A6 /* CAdaptedCommonSetter.m */; };
 		6556509FCAACF0272AC75892 /* CChildProtocolsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 655654A34938AAFD145F167E /* CChildProtocolsTest.m */; };
@@ -24,7 +24,7 @@
 		655653858F9831983280AD38 /* CAdaptedScalarNumberGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565402C15709B01957796F /* CAdaptedScalarNumberGetter.m */; };
 		655653A7B4BFE19967BEFEE6 /* CWeakObjectHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565E7BC376C2F3C37EA245 /* CWeakObjectHandle.m */; };
 		655653FCB8B283B2829257B8 /* CAdaptedCommonPresented.m in Sources */ = {isa = PBXBuildFile; fileRef = 655658BA9D77F629381EDCF3 /* CAdaptedCommonPresented.m */; };
-		65565455D817E48113F14F7D /* ARHCSerialExecutionQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565D2D618CF62A5BD2D4D6 /* ARHCSerialExecutionQueuePool.m */; };
+		65565455D817E48113F14F7D /* ARHCSerialExecutionQueueExecutionStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565D2D618CF62A5BD2D4D6 /* ARHCSerialExecutionQueueExecutionStrategy.m */; };
 		65565475A86AD666475B1189 /* CObjectWeakAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565305B2D86E5197EE569C /* CObjectWeakAccessorFactory.m */; };
 		6556553819CCD0BA8470CBBA /* CAdaptedCommonGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655655353A76331A766A6606 /* CAdaptedCommonGetter.m */; };
 		65565553C729798EFDF586BA /* CAdaptedSelectorGetterAndSetterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 655659FEA39D2E9728B60EBA /* CAdaptedSelectorGetterAndSetterTest.m */; };
@@ -59,9 +59,9 @@
 		6B1B1373194FA9EA00D199F3 /* ARHAbstractChainElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565ADA6BE84D57F7E7ECAD /* ARHAbstractChainElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B1B1374194FA9EA00D199F3 /* ARHCChainElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556562979B92B935695AE27 /* ARHCChainElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B1B1375194FA9EA00D199F3 /* ARHIFutureContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556517F24BC0CE5892FCBAF /* ARHIFutureContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B1B1376194FA9EA00D199F3 /* ARHIChainQueuesPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 655652BBB4A2DDB5B51BA4CB /* ARHIChainQueuesPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B1B1377194FA9EA00D199F3 /* ARHCSingleExecutionQueuePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 655658E5551E5E1D70A34260 /* ARHCSingleExecutionQueuePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B1B1378194FA9EA00D199F3 /* ARHCSerialExecutionQueuePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556525EEC588F748DA41FB8 /* ARHCSerialExecutionQueuePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B1B1376194FA9EA00D199F3 /* ARHIChainQueuesExecutionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 655652BBB4A2DDB5B51BA4CB /* ARHIChainQueuesExecutionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B1B1377194FA9EA00D199F3 /* ARHCSingleExecutionQueueExecutionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 655658E5551E5E1D70A34260 /* ARHCSingleExecutionQueueExecutionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B1B1378194FA9EA00D199F3 /* ARHCSerialExecutionQueueExecutionStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6556525EEC588F748DA41FB8 /* ARHCSerialExecutionQueueExecutionStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B1B1379194FA9EA00D199F3 /* ARHCHandlingChainQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 655657E0C809616750ADE439 /* ARHCHandlingChainQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B1B137A194FA9EA00D199F3 /* ARHCHandlingChainQueueBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565D83CCB7702050548684 /* ARHCHandlingChainQueueBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B1B137B194FA9EA00D199F3 /* ARHIHandlingChainQueueDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 65565F33EA63A1B69C12DE9C /* ARHIHandlingChainQueueDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -114,10 +114,10 @@
 		655651B5C64E1323B7C88488 /* CPropertiesDescriptorsAccessorsHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPropertiesDescriptorsAccessorsHolder.h; sourceTree = "<group>"; };
 		655651EF18BC539679EBA8DD /* CPropertyInfosForProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPropertyInfosForProtocol.m; sourceTree = "<group>"; };
 		655651FCA6859F19ECA58248 /* CAdaptedClassSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedClassSetter.h; sourceTree = "<group>"; };
-		6556525EEC588F748DA41FB8 /* ARHCSerialExecutionQueuePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCSerialExecutionQueuePool.h; sourceTree = "<group>"; };
+		6556525EEC588F748DA41FB8 /* ARHCSerialExecutionQueueExecutionStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCSerialExecutionQueueExecutionStrategy.h; sourceTree = "<group>"; };
 		6556529ED78AF6165A9B6C1A /* CAdaptedStructureGetterAndSetterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedStructureGetterAndSetterTest.m; sourceTree = "<group>"; };
 		6556529F994C7AFD73278209 /* AbstractAdaptedPropertyAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractAdaptedPropertyAccessor.m; sourceTree = "<group>"; };
-		655652BBB4A2DDB5B51BA4CB /* ARHIChainQueuesPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHIChainQueuesPool.h; sourceTree = "<group>"; };
+		655652BBB4A2DDB5B51BA4CB /* ARHIChainQueuesExecutionStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHIChainQueuesExecutionStrategy.h; sourceTree = "<group>"; };
 		655652C712D1464FF4718FAA /* CAdaptedObjectWeakGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedObjectWeakGetter.h; sourceTree = "<group>"; };
 		655652E46E092A3B04BD349C /* CAdaptedSelectorGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedSelectorGetter.h; sourceTree = "<group>"; };
 		655652EA91B3FCF77816D19D /* ARHCHandlingChainQueueBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCHandlingChainQueueBuilder.m; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		655658B7415723EB7B842968 /* ITestChildThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITestChildThree.h; sourceTree = "<group>"; };
 		655658BA9D77F629381EDCF3 /* CAdaptedCommonPresented.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedCommonPresented.m; sourceTree = "<group>"; };
 		655658DF7F49779A0FCA10DB /* ARHCEInspectContextContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCEInspectContextContext.h; sourceTree = "<group>"; };
-		655658E5551E5E1D70A34260 /* ARHCSingleExecutionQueuePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCSingleExecutionQueuePool.h; sourceTree = "<group>"; };
+		655658E5551E5E1D70A34260 /* ARHCSingleExecutionQueueExecutionStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCSingleExecutionQueueExecutionStrategy.h; sourceTree = "<group>"; };
 		655659059749B2AD950B507E /* CAdaptedObjectStrongGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedObjectStrongGetter.h; sourceTree = "<group>"; };
 		6556599D3F88C58946E70226 /* ARHIPropertiesDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHIPropertiesDescriptor.h; sourceTree = "<group>"; };
 		655659D9521857347AA79209 /* CAdaptedScalarNumberGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedScalarNumberGetter.h; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		65565AE051A3DAF3AF99F5DB /* CAdaptedObjectStrongSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedObjectStrongSetter.h; sourceTree = "<group>"; };
 		65565AEBAB46CB63E072A4CA /* IAdaptedPropertyAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAdaptedPropertyAccessor.h; sourceTree = "<group>"; };
 		65565AEE6BD7099911D6D679 /* ARHCEInspectContextContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCEInspectContextContext.m; sourceTree = "<group>"; };
-		65565BA428B9A462F0FC8473 /* ARHCSingleExecutionQueuePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCSingleExecutionQueuePool.m; sourceTree = "<group>"; };
+		65565BA428B9A462F0FC8473 /* ARHCSingleExecutionQueueExecutionStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCSingleExecutionQueueExecutionStrategy.m; sourceTree = "<group>"; };
 		65565BA687DD5D02CB9E85FC /* CITestSuperPropertyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CITestSuperPropertyDescriptor.h; sourceTree = "<group>"; };
 		65565BA7714A730456CB0863 /* CAdaptedObjectWeakSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedObjectWeakSetter.m; sourceTree = "<group>"; };
 		65565BACB049456CEE5759BE /* ARHAbstractHandlingChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHAbstractHandlingChain.m; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		65565CFB8690C1900E08AE39 /* CAdaptedStructureGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedStructureGetter.h; sourceTree = "<group>"; };
 		65565D048BF9D1B02BB5AC8E /* CAdaptedScalarNumberSetterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedScalarNumberSetterTest.m; sourceTree = "<group>"; };
 		65565D2A7C6419B028A241A3 /* CMutableDictionaryPropertiesAdapterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMutableDictionaryPropertiesAdapterTest.m; sourceTree = "<group>"; };
-		65565D2D618CF62A5BD2D4D6 /* ARHCSerialExecutionQueuePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCSerialExecutionQueuePool.m; sourceTree = "<group>"; };
+		65565D2D618CF62A5BD2D4D6 /* ARHCSerialExecutionQueueExecutionStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCSerialExecutionQueueExecutionStrategy.m; sourceTree = "<group>"; };
 		65565D3FC4F28FE042865D4F /* CAdaptedObjectStrongGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedObjectStrongGetter.m; sourceTree = "<group>"; };
 		65565D4E00D0843024F6627A /* ITestChildOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITestChildOne.h; sourceTree = "<group>"; };
 		65565D5D9C19632B3F23D72B /* ARHCIDAPDError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCIDAPDError.h; sourceTree = "<group>"; };
@@ -361,16 +361,16 @@
 			path = RuntimeTools;
 			sourceTree = "<group>";
 		};
-		655656B8F47D9DC334D1A298 /* Pools */ = {
+		655656B8F47D9DC334D1A298 /* ExecutionStrategy */ = {
 			isa = PBXGroup;
 			children = (
-				655652BBB4A2DDB5B51BA4CB /* ARHIChainQueuesPool.h */,
-				65565BA428B9A462F0FC8473 /* ARHCSingleExecutionQueuePool.m */,
-				655658E5551E5E1D70A34260 /* ARHCSingleExecutionQueuePool.h */,
-				65565D2D618CF62A5BD2D4D6 /* ARHCSerialExecutionQueuePool.m */,
-				6556525EEC588F748DA41FB8 /* ARHCSerialExecutionQueuePool.h */,
+				655652BBB4A2DDB5B51BA4CB /* ARHIChainQueuesExecutionStrategy.h */,
+				65565BA428B9A462F0FC8473 /* ARHCSingleExecutionQueueExecutionStrategy.m */,
+				655658E5551E5E1D70A34260 /* ARHCSingleExecutionQueueExecutionStrategy.h */,
+				65565D2D618CF62A5BD2D4D6 /* ARHCSerialExecutionQueueExecutionStrategy.m */,
+				6556525EEC588F748DA41FB8 /* ARHCSerialExecutionQueueExecutionStrategy.h */,
 			);
-			path = Pools;
+			path = ExecutionStrategy;
 			sourceTree = "<group>";
 		};
 		655657E9F39842E6D18BD639 /* RuntimeTools */ = {
@@ -395,7 +395,7 @@
 				65565C34D04DF55C6506EF22 /* ARHCHandlingChain.m */,
 				6556517F24BC0CE5892FCBAF /* ARHIFutureContext.h */,
 				655651E2A4F5E5C8D9085D9F /* Internal */,
-				655656B8F47D9DC334D1A298 /* Pools */,
+				655656B8F47D9DC334D1A298 /* ExecutionStrategy */,
 				65565C2B5836D2DC724DE692 /* Queues */,
 			);
 			path = Chain;
@@ -631,9 +631,9 @@
 				6B1B1373194FA9EA00D199F3 /* ARHAbstractChainElement.h in Headers */,
 				6B1B1374194FA9EA00D199F3 /* ARHCChainElement.h in Headers */,
 				6B1B1375194FA9EA00D199F3 /* ARHIFutureContext.h in Headers */,
-				6B1B1376194FA9EA00D199F3 /* ARHIChainQueuesPool.h in Headers */,
-				6B1B1377194FA9EA00D199F3 /* ARHCSingleExecutionQueuePool.h in Headers */,
-				6B1B1378194FA9EA00D199F3 /* ARHCSerialExecutionQueuePool.h in Headers */,
+				6B1B1376194FA9EA00D199F3 /* ARHIChainQueuesExecutionStrategy.h in Headers */,
+				6B1B1377194FA9EA00D199F3 /* ARHCSingleExecutionQueueExecutionStrategy.h in Headers */,
+				6B1B1378194FA9EA00D199F3 /* ARHCSerialExecutionQueueExecutionStrategy.h in Headers */,
 				6B1B1379194FA9EA00D199F3 /* ARHCHandlingChainQueue.h in Headers */,
 				6B1B137A194FA9EA00D199F3 /* ARHCHandlingChainQueueBuilder.h in Headers */,
 				6B1B137B194FA9EA00D199F3 /* ARHIHandlingChainQueueDelegate.h in Headers */,
@@ -758,8 +758,8 @@
 				655650AF27E5C8993B65BAAC /* CEErrorNotification.m in Sources */,
 				65565EE06B19611308348006 /* ARHAbstractChainElement.m in Sources */,
 				6556514C5379D591626C1261 /* ARHCChainElement.m in Sources */,
-				6556501C1A02B4721E33CB4B /* ARHCSingleExecutionQueuePool.m in Sources */,
-				65565455D817E48113F14F7D /* ARHCSerialExecutionQueuePool.m in Sources */,
+				6556501C1A02B4721E33CB4B /* ARHCSingleExecutionQueueExecutionStrategy.m in Sources */,
+				65565455D817E48113F14F7D /* ARHCSerialExecutionQueueExecutionStrategy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

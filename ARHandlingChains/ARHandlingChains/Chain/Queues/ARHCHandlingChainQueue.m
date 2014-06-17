@@ -3,7 +3,7 @@
 //
 
 #import "ARHCHandlingChainQueue.h"
-#import "ARHIChainQueuesPool.h"
+#import "ARHIChainQueuesExecutionStrategy.h"
 #import "ARHIHandlingChainQueueDelegate.h"
 
 void contextFinalizer (void *context)

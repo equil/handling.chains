@@ -2,9 +2,9 @@
 // Created by Alexey Rogatkin on 16.06.14.
 //
 
-#import "ARHCSingleExecutionQueuePool.h"
+#import "ARHCSingleExecutionQueueExecutionStrategy.h"
 
-@implementation ARHCSingleExecutionQueuePool
+@implementation ARHCSingleExecutionQueueExecutionStrategy
 {
 @private
     NSMutableSet *_toDelete;

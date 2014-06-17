@@ -2,9 +2,9 @@
 // Created by Alexey Rogatkin on 17.06.14.
 //
 
-#import "ARHCSerialExecutionQueuePool.h"
+#import "ARHCSerialExecutionQueueExecutionStrategy.h"
 
-@implementation ARHCSerialExecutionQueuePool
+@implementation ARHCSerialExecutionQueueExecutionStrategy
 {
     NSMutableArray *_toExecute;
     ARHCHandlingChainQueue *_current;

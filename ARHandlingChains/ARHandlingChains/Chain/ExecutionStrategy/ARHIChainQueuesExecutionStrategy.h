@@ -6,7 +6,7 @@
 #import "ARHIHandlingChainQueueDelegate.h"
 #import "ARHCHandlingChainQueue.h"
 
-@protocol ARHIChainQueuesPool <ARHIHandlingChainQueueDelegate>
+@protocol ARHIChainQueuesExecutionStrategy <ARHIHandlingChainQueueDelegate>
 
 - (void)placeToPool:(ARHCHandlingChainQueue *)queue;
 
