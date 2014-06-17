@@ -12,7 +12,8 @@
 @property (nonatomic, readonly) BOOL handled;
 @property (nonatomic, readonly) NSMutableDictionary *context;
 
-@property (nonatomic, assign) id<ARHIHandlingChainQueueDelegate> delegate;
+- (void) addDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
+- (void) removeDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
 
 - (id)initWithQueue:(dispatch_queue_t)queue;
 

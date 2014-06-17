@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65565001F7665674FFFB0A18 /* CEInitializeFutureContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650662E835F19F708F68B /* CEInitializeFutureContext.m */; };
 		6556501C1A02B4721E33CB4B /* ARHCSingleExecutionQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BA428B9A462F0FC8473 /* ARHCSingleExecutionQueuePool.m */; };
 		6556504E83B102FA2B7D9B34 /* CAdaptedStructureSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650AAB9F9F169A00622BE /* CAdaptedStructureSetter.m */; };
 		655650876622BB0E640A6E6E /* CAdaptedCommonSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565CF4B19049F523D2A7A6 /* CAdaptedCommonSetter.m */; };
@@ -103,7 +102,6 @@
 		6556501802FC5F163A2BB61D /* CObjectStrongAccessorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CObjectStrongAccessorFactory.h; sourceTree = "<group>"; };
 		6556501D72E19B75AEA12245 /* ARHCPropertyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCPropertyInfo.h; sourceTree = "<group>"; };
 		65565065FE8558DCA9D90B99 /* CChildProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CChildProtocols.h; sourceTree = "<group>"; };
-		655650662E835F19F708F68B /* CEInitializeFutureContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEInitializeFutureContext.m; sourceTree = "<group>"; };
 		6556508148697676B7F2C1E7 /* ARHCErrorHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCErrorHandle.m; sourceTree = "<group>"; };
 		655650AAB9F9F169A00622BE /* CAdaptedStructureSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedStructureSetter.m; sourceTree = "<group>"; };
 		655650B1251ADC0E12987935 /* CStructureAccessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CStructureAccessorFactory.m; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		655652EA91B3FCF77816D19D /* ARHCHandlingChainQueueBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCHandlingChainQueueBuilder.m; sourceTree = "<group>"; };
 		65565305B2D86E5197EE569C /* CObjectWeakAccessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CObjectWeakAccessorFactory.m; sourceTree = "<group>"; };
 		65565328FBCB2A7C18379AAF /* CAdaptedClassSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedClassSetter.m; sourceTree = "<group>"; };
-		6556532DBCE5B40CAA716A3C /* CEInitializeFutureContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEInitializeFutureContext.h; sourceTree = "<group>"; };
 		6556537E7AE86430881DF16C /* CAdaptedSelectorGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedSelectorGetter.m; sourceTree = "<group>"; };
 		655653AE94A62D83D045D1C4 /* CAdaptedCommonGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedCommonGetter.h; sourceTree = "<group>"; };
 		655653FDDBC6D77E4AB7690B /* ITestParentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITestParentProtocol.h; sourceTree = "<group>"; };
@@ -182,7 +179,6 @@
 		65565BD081CB1872E1864DA2 /* CScalarNumberAccessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CScalarNumberAccessorFactory.m; sourceTree = "<group>"; };
 		65565BDE4034E81453FB742D /* CAdaptedCommonPresented.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedCommonPresented.h; sourceTree = "<group>"; };
 		65565BE8C80577ACC9BA2ABC /* CECompleteNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CECompleteNotification.h; sourceTree = "<group>"; };
-		65565C0B51FE622B72A7CE30 /* IPDFutureContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDFutureContext.h; sourceTree = "<group>"; };
 		65565C34D04DF55C6506EF22 /* ARHCHandlingChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCHandlingChain.m; sourceTree = "<group>"; };
 		65565C4D425AC83FC584E0C2 /* CAdaptedCommonSettersAndGettersTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedCommonSettersAndGettersTest.h; sourceTree = "<group>"; };
 		65565C60CC18CD3CB9A05E36 /* AbstractAdaptedPropertyAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractAdaptedPropertyAccessor.h; sourceTree = "<group>"; };
@@ -302,9 +298,6 @@
 		655652F3964375A772949A6C /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				655650662E835F19F708F68B /* CEInitializeFutureContext.m */,
-				6556532DBCE5B40CAA716A3C /* CEInitializeFutureContext.h */,
-				65565C0B51FE622B72A7CE30 /* IPDFutureContext.h */,
 				65565AB96BAAEAAF4040DB63 /* CECompleteNotification.m */,
 				65565EDF7EAAF81B4197B509 /* CEErrorNotification.h */,
 				65565BE8C80577ACC9BA2ABC /* CECompleteNotification.h */,
@@ -785,7 +778,6 @@
 				6556571473D51EFA5426B059 /* CAdaptedClassGetterAndSetterTest.m in Sources */,
 				65565FE5EC257C7A74651D38 /* CMutableDictionaryPropertiesAdapterTest.m in Sources */,
 				65565192C0FB4E232AD8BBFB /* CFutureContext.m in Sources */,
-				65565001F7665674FFFB0A18 /* CEInitializeFutureContext.m in Sources */,
 				655655BD088201D66E0CECA8 /* ARHCHandlingChainQueueBuilder.m in Sources */,
 				655659A9D9538C0738F35D99 /* ARHCHandlingChainQueue.m in Sources */,
 			);

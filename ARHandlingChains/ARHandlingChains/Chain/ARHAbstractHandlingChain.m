@@ -5,9 +5,9 @@
 
 #import "ARHAbstractHandlingChain.h"
 #import "ARHAbstractChainElement.h"
-#import "CEInitializeFutureContext.h"
 #import "ARHCSingleExecutionQueuePool.h"
 #import "ARHCHandlingChainQueueBuilder.h"
+#import "CFutureContext.h"
 
 @implementation ARHAbstractHandlingChain
 {
@@ -51,17 +51,13 @@
 {
     CFutureContext *result = [[CFutureContext alloc] init];
 
-    NSMutableDictionary *initial = [initialContext mutableCopy];
-    id <IPDFutureContext> adapter = (id <IPDFutureContext>) [[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:initial];
-    adapter.futureContext = result;
-
-    [_queueBuilder setInitialContext:initial];
-    [_queueBuilder setDelegate:_pool];
+    [_queueBuilder setInitialContext:[initialContext mutableCopy]];
+    [_queueBuilder addDelegate:_pool];
+    [_queueBuilder addDelegate:result];
     for (Class elementClass in _elementsClasses)
     {
         [_queueBuilder add:elementClass];
     }
-    [_queueBuilder add:[CEInitializeFutureContext class]];
 
     ARHCHandlingChainQueue *queue = [_queueBuilder build];
 

@@ -111,7 +111,6 @@
             @"extraWithPresentedPresented" : NSStringFromClass([CAdaptedCommonPresented class]),
             @"strongObjectPresented" : NSStringFromClass([CAdaptedCommonPresented class]),
             @"retainObjectPresented" : NSStringFromClass([CAdaptedCommonPresented class]),
-            @"futureContextPresented" : NSStringFromClass([CAdaptedCommonPresented class]),
 
             @"extraWithoutPresented" : NSStringFromClass([CAdaptedObjectStrongGetter class]),
             @"extraWithPresented" : NSStringFromClass([CAdaptedObjectStrongGetter class]),
@@ -119,7 +118,6 @@
             @"retainObject" : NSStringFromClass([CAdaptedObjectStrongGetter class]),
             @"copyObject" : NSStringFromClass([CAdaptedObjectStrongGetter class]),
             @"readonlyObject" : NSStringFromClass([CAdaptedObjectStrongGetter class]),
-            @"futureContext" : NSStringFromClass([CAdaptedObjectStrongGetter class]),
 
             @"weakObject" : NSStringFromClass([CAdaptedObjectWeakGetter class]),
             @"assignObject" : NSStringFromClass([CAdaptedObjectWeakGetter class]),
@@ -144,7 +142,6 @@
             @"setSO:" : NSStringFromClass([CAdaptedObjectStrongSetter class]),
             @"setRetainObject:" : NSStringFromClass([CAdaptedObjectStrongSetter class]),
             @"setCopyObject:" : NSStringFromClass([CAdaptedObjectStrongSetter class]),
-            @"setFutureContext:" : NSStringFromClass([CAdaptedObjectStrongSetter class]),
 
             @"setAssignObject:" : NSStringFromClass([CAdaptedObjectWeakSetter class]),
             @"setWeakObject:" : NSStringFromClass([CAdaptedObjectWeakSetter class]),

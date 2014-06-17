@@ -15,10 +15,10 @@ void contextFinalizer (void *context)
 {
     dispatch_queue_t _queue;
     BOOL _started;
+    NSMutableArray *_delegates;
 }
 
 @synthesize canceled = _canceled;
-@synthesize delegate = _delegate;
 
 - (id)initWithQueue:(dispatch_queue_t)queue
 {
@@ -31,6 +31,8 @@ void contextFinalizer (void *context)
 
         _canceled = NO;
         _started = NO;
+
+        _delegates = [NSPointerArray weakObjectsPointerArray];
     }
     return self;
 }
@@ -50,12 +52,35 @@ void contextFinalizer (void *context)
         {
             _started = NO;
             _queue = nil;
-            [_delegate queueCompleted:self
-                             canceled:_canceled];
+            [self propagateCompleteEvent];
         });
 
-        [_delegate queueStarted:self];
+        [self propagateStartedEvent];
+
         dispatch_resume (_queue);
+    }
+}
+
+- (void)propagateStartedEvent
+{
+    for (id <ARHIHandlingChainQueueDelegate> (^delegateAccessor) () in _delegates)
+    {
+        if ([delegateAccessor() respondsToSelector:@selector(queueStarted:)])
+        {
+            [delegateAccessor() queueStarted:self];
+        }
+    }
+}
+
+- (void)propagateCompleteEvent
+{
+    for (id <ARHIHandlingChainQueueDelegate> (^delegateAccessor) () in _delegates)
+    {
+        if ([delegateAccessor() respondsToSelector:@selector(queueCompleted:canceled:)])
+        {
+            [delegateAccessor() queueCompleted:self
+                            canceled:_canceled];
+        }
     }
 }
 
@@ -79,6 +104,69 @@ void contextFinalizer (void *context)
 - (NSMutableDictionary *)context
 {
     return (__bridge NSMutableDictionary *) dispatch_get_context (_queue);
+}
+
+- (void)addDelegate:(id <ARHIHandlingChainQueueDelegate>)delegate
+{
+    @synchronized (_delegates)
+    {
+        int index = [self indexOfDelegate:delegate];
+        if (index == -1)
+        {
+            __weak id weakDelegate = delegate;
+            [_delegates addObject:[^
+            {
+                return weakDelegate;
+            } copy]];
+        }
+    }
+}
+
+- (void)removeDelegate:(id <ARHIHandlingChainQueueDelegate>)delegate
+{
+    @synchronized (_delegates)
+    {
+        int indexToDelete = [self indexOfDelegate:delegate];
+        if (indexToDelete != -1)
+        {
+            [_delegates removeObjectAtIndex:(NSUInteger) indexToDelete];
+        }
+    }
+}
+
+- (int)indexOfDelegate:(id <ARHIHandlingChainQueueDelegate>)delegate
+{
+    @synchronized (_delegates)
+    {
+        [self compactDelegateCollection];
+
+        int indexOfDelegate = -1;
+        for (unsigned int i = 0; i < _delegates.count; i++)
+        {
+            id <ARHIHandlingChainQueueDelegate> (^delegateAccessor) () = [_delegates objectAtIndex:i];
+            if (delegateAccessor () != nil && delegateAccessor () == delegate)
+            {
+                indexOfDelegate = i;
+            }
+        }
+        return indexOfDelegate;
+    }
+}
+
+- (void)compactDelegateCollection
+{
+    NSMutableIndexSet *indexSet = [[NSMutableIndexSet alloc] init];
+
+    for (unsigned int i = 0; i < _delegates.count; i++)
+    {
+        id <ARHIHandlingChainQueueDelegate> (^delegateAccessor) () = [_delegates objectAtIndex:i];
+        if (delegateAccessor () == nil)
+        {
+            [indexSet addIndex:i];
+        }
+    }
+
+    [_delegates removeObjectsAtIndexes:indexSet];
 }
 
 @end

@@ -6,8 +6,9 @@
 #import "ARHIFutureContext.h"
 #import "ARHCMutableDictionaryPropertiesAdapter.h"
 #import "ARHCHandlingChainQueue.h"
+#import "ARHIHandlingChainQueueDelegate.h"
 
-@interface CFutureContext : NSObject<ARHIFutureContext>
+@interface CFutureContext : NSObject<ARHIFutureContext, ARHIHandlingChainQueueDelegate>
 
 - (void) set: (ARHCMutableDictionaryPropertiesAdapter *) context;
 

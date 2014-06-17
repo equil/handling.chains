@@ -50,11 +50,11 @@
     }
 }
 
-- (void)setDelegate:(id <ARHIHandlingChainQueueDelegate>)delegate
+- (void)addDelegate:(id <ARHIHandlingChainQueueDelegate>)delegate
 {
     @synchronized (self)
     {
-        _handlingChainQueue.delegate = delegate;
+        [_handlingChainQueue addDelegate:delegate];
     }
 }
 

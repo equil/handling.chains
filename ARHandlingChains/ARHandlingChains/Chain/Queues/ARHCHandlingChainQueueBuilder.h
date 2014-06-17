@@ -11,7 +11,7 @@
 - (id) initWithChainClass: (Class) chainClass;
 
 - (void) add: (Class) elementClass;
-- (void) setDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
+- (void) addDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
 - (void) setInitialContext: (NSMutableDictionary *) context;
 
 - (ARHCHandlingChainQueue *) build;

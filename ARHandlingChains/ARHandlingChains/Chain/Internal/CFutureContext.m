@@ -42,10 +42,19 @@
     }
 }
 
+- (void)queueCompleted:(ARHCHandlingChainQueue *)queue
+              canceled:(BOOL)isCanceled
+{
+    ARHCMutableDictionaryPropertiesAdapter *context = nil;
+    if (!isCanceled) {
+        context = [[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:queue.context];
+    }
+    [self set:context];
+}
+
 - (void)cancelHandling
 {
     [self.respondedQueue cancel];
-    [self set:nil];
 }
 
 @end
