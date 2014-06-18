@@ -57,4 +57,10 @@
     [_starting execute];
 }
 
+- (void)cancelAllQueues
+{
+    [_current cancel];
+    [_starting cancel];
+}
+
 @end

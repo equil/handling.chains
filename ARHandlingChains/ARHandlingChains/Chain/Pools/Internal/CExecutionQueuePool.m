@@ -51,4 +51,8 @@
 {
 }
 
+- (void)cancelAllQueues
+{
+}
+
 @end

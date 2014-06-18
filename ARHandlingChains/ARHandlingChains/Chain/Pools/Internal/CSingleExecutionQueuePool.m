@@ -58,4 +58,11 @@
     [_toDelete removeObject:queue];
 }
 
+- (void)cancelAllQueues
+{
+    [_current cancel];
+    [_toExecute cancel];
+}
+
+
 @end

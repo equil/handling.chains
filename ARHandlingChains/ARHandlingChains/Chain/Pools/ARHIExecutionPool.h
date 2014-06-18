@@ -9,5 +9,6 @@
 @protocol ARHIExecutionPool <NSObject>
 
 - (id <ARHIFutureContext>)executeQueue:(id<ARHIHandlingChainQueue>)queue;
+- (void) cancelAllQueues;
 
 @end
