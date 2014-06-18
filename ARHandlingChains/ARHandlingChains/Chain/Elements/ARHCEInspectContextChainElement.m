@@ -11,7 +11,7 @@
 
 - (BOOL)canProcess
 {
-    return !self.errorPresented && self.inspectorPresented;
+    return [super canProcess] && self.inspectorPresented;
 }
 
 - (void)process

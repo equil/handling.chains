@@ -4,10 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARHAbstractChainElement.h"
-#import "ARHCIDAPDError.h"
 #import "ARHIDAPDContextInspector.h"
+#import "ARHCCommonChainElement.h"
 
-@interface ARHCEInspectContextChainElement : ARHAbstractChainElement <ARHCIDAPDError, ARHIDAPDContextInspector>
+@interface ARHCEInspectContextChainElement : ARHCCommonChainElement <ARHIDAPDContextInspector>
 
 @end
