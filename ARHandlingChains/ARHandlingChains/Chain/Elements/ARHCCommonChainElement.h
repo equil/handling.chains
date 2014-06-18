@@ -6,8 +6,8 @@
 #import "ARHAbstractChainElement.h"
 #import "ARHCIDAPDError.h"
 
-@interface ARHCChainElement : ARHAbstractChainElement<ARHCIDAPDError>
+@interface ARHCCommonChainElement : ARHAbstractChainElement<ARHCIDAPDError>
 
-- (void) placeErrorWithAdditionalInfo: (NSDictionary *) additionalInfo;
+- (void) placeErrorWithAdditionalInfo: (id) additionalInfo;
 
 @end

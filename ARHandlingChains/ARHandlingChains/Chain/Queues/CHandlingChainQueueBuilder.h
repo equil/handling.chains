@@ -3,10 +3,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARHCHandlingChainQueue.h"
+#import "CHandlingChainQueue.h"
 #import "ARHAbstractChainElement.h"
 
-@interface ARHCHandlingChainQueueBuilder : NSObject
+@interface CHandlingChainQueueBuilder : NSObject
 
 - (id) initWithChainClass: (Class) chainClass;
 
@@ -14,6 +14,6 @@
 - (void) addDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
 - (void) setInitialContext: (NSMutableDictionary *) context;
 
-- (ARHCHandlingChainQueue *) build;
+- (id<ARHIHandlingChainQueue>) build;
 
 @end

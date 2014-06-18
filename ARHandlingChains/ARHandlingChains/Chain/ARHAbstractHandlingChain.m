@@ -4,36 +4,24 @@
 //
 
 #import "ARHAbstractHandlingChain.h"
-#import "ARHAbstractChainElement.h"
-#import "ARHCSingleExecutionQueueExecutionStrategy.h"
-#import "ARHCHandlingChainQueueBuilder.h"
-#import "CFutureContext.h"
+#import "CHandlingChainQueueBuilder.h"
 
 @implementation ARHAbstractHandlingChain
 {
 @private
-    id <ARHIChainQueuesExecutionStrategy> _pool;
     NSArray *_elementsClasses;
-    ARHCHandlingChainQueueBuilder *_queueBuilder;
+    CHandlingChainQueueBuilder *_queueBuilder;
 }
 
 #pragma mark - Initialization
 
-- (id)initWithElementsClasses:(NSArray *)elements;
-{
-    return [self initWithElementsClasses:elements
-                                    pool:[[ARHCSingleExecutionQueueExecutionStrategy alloc] init]];
-}
-
 - (id)initWithElementsClasses:(NSArray *)elements
-                         pool:(id <ARHIChainQueuesExecutionStrategy>)pool
 {
     self = [super init];
     if (self)
     {
         _elementsClasses = elements;
-        _pool = pool;
-        _queueBuilder = [[ARHCHandlingChainQueueBuilder alloc] initWithChainClass:[self class]];
+        _queueBuilder = [[CHandlingChainQueueBuilder alloc] initWithChainClass:[self class]];
     }
     return self;
 }
@@ -42,30 +30,19 @@
 
 #pragma mark - Interface behavior methods
 
-- (id <ARHIFutureContext>)handle
+- (id <ARHIHandlingChainQueue>)buildQueue
 {
-    return [self handleWithInitialContext:@{ }];
+    return [self buildQueueWithInitialContext:@{ }];
 }
 
-- (id <ARHIFutureContext>)handleWithInitialContext:(NSDictionary *)initialContext
+- (id <ARHIHandlingChainQueue>)buildQueueWithInitialContext:(NSDictionary *)initialContext
 {
-    CFutureContext *result = [[CFutureContext alloc] init];
-
     [_queueBuilder setInitialContext:[initialContext mutableCopy]];
-    [_queueBuilder addDelegate:_pool];
-    [_queueBuilder addDelegate:result];
     for (Class elementClass in _elementsClasses)
     {
         [_queueBuilder add:elementClass];
     }
-
-    ARHCHandlingChainQueue *queue = [_queueBuilder build];
-
-    result.respondedQueue = queue;
-
-    [_pool placeToPool:queue];
-
-    return result;
+    return [_queueBuilder build];
 }
 
 @end

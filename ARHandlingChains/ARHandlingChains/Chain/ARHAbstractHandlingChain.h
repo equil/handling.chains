@@ -5,16 +5,15 @@
 
 #import <Foundation/Foundation.h>
 #import "ARHIFutureContext.h"
+#import "ARHIHandlingChainQueue.h"
 
-@protocol ARHIChainQueuesExecutionStrategy;
+@protocol ARHIExecutionPool;
 
 @interface ARHAbstractHandlingChain : NSObject
 
 - (id)initWithElementsClasses:(NSArray *)elements;
-- (id)initWithElementsClasses:(NSArray *)elements
-                         pool: (id <ARHIChainQueuesExecutionStrategy>)pool;
 
-- (id<ARHIFutureContext>)handle;
-- (id<ARHIFutureContext>)handleWithInitialContext:(NSDictionary *)initialContext;
+- (id<ARHIHandlingChainQueue>)buildQueue;
+- (id<ARHIHandlingChainQueue>)buildQueueWithInitialContext:(NSDictionary *)initialContext;
 
 @end

@@ -4,8 +4,11 @@
 //
 
 #import "ARHAbstractChainElement.h"
+#import "IChainElementPrivate.h"
 #import "ARHCMutableDictionaryPropertiesAdapter.h"
-#import "ARHCHandlingChainQueue.h"
+
+@interface ARHAbstractChainElement()<IChainElementPrivate>
+@end
 
 @implementation ARHAbstractChainElement
 {
@@ -35,7 +38,8 @@
 
 - (NSString *)descriptionForInternalContextWithPrefix:(NSString *)prefix
 {
-    NSString *result = [[self.queue.context description] stringByReplacingOccurrencesOfString:@"\n"
+    NSMutableDictionary *context = ((id<IHandlingChainQueuePrivate>) self.queue).context;
+    NSString *result = [[context description] stringByReplacingOccurrencesOfString:@"\n"
                                                                                    withString:[prefix stringByAppendingString:@"\n"]];
     return result;
 }
@@ -53,13 +57,14 @@
     return NO;
 }
 
-#pragma mark - GCD context adaptation
+#pragma mark - queue context adaptation
 
 - (ARHCMutableDictionaryPropertiesAdapter *)context
 {
-    if (_adapter == nil || ![self.queue.context isEqual:_adapter.state])
+    NSMutableDictionary *context = ((id<IHandlingChainQueuePrivate>) self.queue).context;
+    if (_adapter == nil || ![context isEqual:_adapter.state])
     {
-        _adapter = [[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:self.queue.context];
+        _adapter = [[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:context];
     }
     return _adapter;
 }

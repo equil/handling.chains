@@ -5,10 +5,10 @@
 
 #import "ARHCHandlingChain.h"
 #import "ARHAbstractChainElement.h"
-#import "ARHCEInspectContextContext.h"
+#import "ARHCEInspectContextChainElement.h"
 #import "CEErrorNotification.h"
 #import "CECompleteNotification.h"
-#import "ARHIChainQueuesExecutionStrategy.h"
+#import "ARHIExecutionPool.h"
 
 NSString *const kARHCHandlingChainCompleteNotification = @"ARHCCompleteNotification";
 NSString *const kARHCHandlingChainErrorNotification = @"ARHCErrorNotification";
@@ -20,13 +20,11 @@ NSString *const kARHCHandlingChainErrorNotification = @"ARHCErrorNotification";
 #pragma mark - Initialization
 
 - (id)initWithElementsClasses:(NSArray *)elementsClasses
-                         pool:(id <ARHIChainQueuesExecutionStrategy>)pool
 {
     NSMutableArray *elements = [elementsClasses mutableCopy];
     [elements addObject:[CEErrorNotification class]];
     [elements addObject:[CECompleteNotification class]];
-    return [super initWithElementsClasses:elementsClasses
-                                     pool:pool];
+    return [super initWithElementsClasses:elementsClasses];
 }
 
 #pragma mark - Public interface observing

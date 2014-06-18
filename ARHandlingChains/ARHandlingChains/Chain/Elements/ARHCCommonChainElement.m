@@ -2,9 +2,13 @@
 // Created by Alexey Rogatkin on 17.06.14.
 //
 
-#import "ARHCChainElement.h"
+#import "ARHCCommonChainElement.h"
+#import "IChainElementPrivate.h"
 
-@implementation ARHCChainElement
+@interface ARHAbstractChainElement()<IChainElementPrivate>
+@end
+
+@implementation ARHCCommonChainElement
 
 - (BOOL)canProcess
 {

@@ -3,13 +3,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARHCHandlingChainQueue.h"
+
+@protocol ARHIHandlingChainQueue;
 
 @protocol ARHIHandlingChainQueueDelegate <NSObject>
 
 @optional
 
-- (void)queueStarted:(ARHCHandlingChainQueue *)queue;
-- (void)queueCompleted:(ARHCHandlingChainQueue *)queue canceled:(BOOL)isCanceled;
+- (void)queueStarted:(id <ARHIHandlingChainQueue>)queue;
+
+- (void)queueCompleted:(id <ARHIHandlingChainQueue>)queue;
 
 @end

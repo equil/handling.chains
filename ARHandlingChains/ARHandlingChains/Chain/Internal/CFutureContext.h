@@ -5,13 +5,14 @@
 #import <Foundation/Foundation.h>
 #import "ARHIFutureContext.h"
 #import "ARHCMutableDictionaryPropertiesAdapter.h"
-#import "ARHCHandlingChainQueue.h"
+#import "ARHIHandlingChainQueue.h"
+#import "IHandlingChainQueuePrivate.h"
 #import "ARHIHandlingChainQueueDelegate.h"
 
-@interface CFutureContext : NSObject<ARHIFutureContext, ARHIHandlingChainQueueDelegate>
+@interface CFutureContext : NSObject<ARHIFutureContext>
 
 - (void) set: (ARHCMutableDictionaryPropertiesAdapter *) context;
 
-@property (nonatomic, assign) ARHCHandlingChainQueue *respondedQueue;
+@property (nonatomic, assign) id<ARHIHandlingChainQueue, IHandlingChainQueuePrivate> respondedQueue;
 
 @end

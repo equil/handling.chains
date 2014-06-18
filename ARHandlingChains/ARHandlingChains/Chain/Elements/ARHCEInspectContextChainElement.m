@@ -3,9 +3,9 @@
 // Copyright (c) 2014 iDecide. All rights reserved.
 //
 
-#import "ARHCEInspectContextContext.h"
+#import "ARHCEInspectContextChainElement.h"
 
-@implementation ARHCEInspectContextContext
+@implementation ARHCEInspectContextChainElement
 {
 }
 

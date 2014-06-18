@@ -7,7 +7,6 @@
 @protocol ARHIFutureContext <NSObject>
 
 - (id) get;
-
 - (void)cancelHandling;
 
 @end

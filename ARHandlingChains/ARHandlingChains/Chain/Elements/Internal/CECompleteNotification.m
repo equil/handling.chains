@@ -5,6 +5,10 @@
 
 #import "CECompleteNotification.h"
 #import "ARHCHandlingChain.h"
+#import "IChainElementPrivate.h"
+
+@interface ARHAbstractChainElement()<IChainElementPrivate>
+@end
 
 @implementation CECompleteNotification
 {

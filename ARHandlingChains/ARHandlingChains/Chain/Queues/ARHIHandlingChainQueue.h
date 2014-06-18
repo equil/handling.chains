@@ -1,23 +1,17 @@
 //
-// Created by Alexey Rogatkin on 16.06.14.
+// Created by Alexey Rogatkin on 18.06.14.
 //
 
 #import <Foundation/Foundation.h>
+#import "ARHIHandlingChainQueueDelegate.h"
 
-@protocol ARHIHandlingChainQueueDelegate;
-
-@interface ARHCHandlingChainQueue : NSObject
+@protocol ARHIHandlingChainQueue <NSObject>
 
 @property (nonatomic, readonly) BOOL canceled;
 @property (nonatomic, readonly) BOOL handled;
-@property (nonatomic, readonly) NSMutableDictionary *context;
 
 - (void) addDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
 - (void) removeDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
 
-- (id)initWithQueue:(dispatch_queue_t)queue;
-
-- (void)execute;
-- (void)cancel;
 
 @end

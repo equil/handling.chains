@@ -4,18 +4,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARHCMutableDictionaryPropertiesAdapter.h"
-#import "ARHCHandlingChainQueue.h"
 
 @interface ARHAbstractChainElement : NSObject
 
-@property (nonatomic, assign) ARHCHandlingChainQueue *queue;
-
 @property (nonatomic, readonly) id context;
-
-@property (nonatomic, assign) Class chainClass;
-
-- (void)handle;
 
 - (BOOL)canProcess;
 

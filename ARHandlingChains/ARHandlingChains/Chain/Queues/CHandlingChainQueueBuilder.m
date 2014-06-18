@@ -2,12 +2,13 @@
 // Created by Alexey Rogatkin on 16.06.14.
 //
 
-#import "ARHCHandlingChainQueueBuilder.h"
+#import "CHandlingChainQueueBuilder.h"
+#import "IChainElementPrivate.h"
 
-@implementation ARHCHandlingChainQueueBuilder
+@implementation CHandlingChainQueueBuilder
 {
     dispatch_queue_t _queue;
-    ARHCHandlingChainQueue *_handlingChainQueue;
+    id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate> _handlingChainQueue;
     Class _chainClass;
 }
 
@@ -22,25 +23,24 @@
     return self;
 }
 
-
-
 - (void)reinitialize
 {
     _queue = dispatch_queue_create ("com.equil.handling.chain", DISPATCH_QUEUE_SERIAL);
     dispatch_suspend (_queue);
-    _handlingChainQueue = [[ARHCHandlingChainQueue alloc] initWithQueue:_queue];
+    _handlingChainQueue = [[CHandlingChainQueue alloc] initWithQueue:_queue];
 }
 
 - (void)add:(Class)elementClass
 {
     @synchronized (self)
     {
-        if (![elementClass isSubclassOfClass:[ARHAbstractChainElement class]]) {
+        if (![elementClass isSubclassOfClass:[ARHAbstractChainElement class]])
+        {
             NSLog (@"Warning: chain contains unsupported element class %@. May be you forgot extend it from ARHAbstractChainElement?", elementClass);
             return;
         }
 
-        ARHAbstractChainElement *element = [[elementClass alloc] init];
+        ARHAbstractChainElement<IChainElementPrivate> *element = [[elementClass alloc] init];
         dispatch_async (_queue, ^
         {
             [element handle];
@@ -63,11 +63,11 @@
     [_handlingChainQueue.context addEntriesFromDictionary:context];
 }
 
-- (ARHCHandlingChainQueue *)build
+- (id <ARHIHandlingChainQueue>)build
 {
     @synchronized (self)
     {
-        ARHCHandlingChainQueue *result = _handlingChainQueue;
+        id <ARHIHandlingChainQueue> result = _handlingChainQueue;
 
         [self reinitialize];
 
