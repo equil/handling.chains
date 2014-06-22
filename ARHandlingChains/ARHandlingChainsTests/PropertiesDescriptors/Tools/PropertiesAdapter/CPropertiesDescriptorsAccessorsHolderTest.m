@@ -64,7 +64,7 @@
 - (void)testExtractPropertiesWithPresentedAccessor
 {
     NSMutableSet *properties = [CPropertiesDescriptorsAccessorsHolder extractPropertiesWithPresentedLikeAccessor:_protocol];
-    XCTAssertEqual(properties.count, 3, "В интерфейсе 3 presented-like свойства, но метод [CPropertiesDescriptorsAccessorsHolder extractPropertiesWithPresentedLikeAccessor:] возвращает %d", properties.count);
+    XCTAssertEqual((unsigned long)properties.count, 3, "В интерфейсе 3 presented-like свойства, но метод [CPropertiesDescriptorsAccessorsHolder extractPropertiesWithPresentedLikeAccessor:] возвращает %lu", (unsigned long)properties.count);
 
     for (id element in properties)
     {

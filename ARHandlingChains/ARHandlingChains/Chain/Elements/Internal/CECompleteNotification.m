@@ -4,7 +4,7 @@
 //
 
 #import "CECompleteNotification.h"
-#import "ARHCHandlingChain.h"
+#import "ARHCCommonHandlingChain.h"
 #import "IChainElementPrivate.h"
 
 @interface ARHAbstractChainElement()<IChainElementPrivate>
@@ -24,7 +24,7 @@
     dispatch_async (dispatch_get_main_queue(), ^
     {
         [[NSNotificationCenter defaultCenter] postNotificationName:kARHCHandlingChainCompleteNotification
-                                                            object:self.chainClass];
+                                                            object:self.chain];
     });
 }
 

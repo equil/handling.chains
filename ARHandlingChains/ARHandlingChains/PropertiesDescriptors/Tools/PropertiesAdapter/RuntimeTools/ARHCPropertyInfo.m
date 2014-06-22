@@ -100,7 +100,8 @@
 - (NSString *)type
 {
     NSString *result = [_attributes objectForKey:@"T"];
-    if ([result hasPrefix:@"@"]) {
+    if ([result hasPrefix:@"@"])
+    {
         result = @"@";
     }
     return result;
@@ -123,22 +124,31 @@
 
 - (ARHCCPropertyInfoTypeOfType)typeOfType
 {
-    if ([self.type hasPrefix:@"c"] || [self.type hasPrefix:@"i"] || [self.type hasPrefix:@"s"]
-            || [self.type hasPrefix:@"l"] || [self.type hasPrefix:@"q"] || [self.type hasPrefix:@"C"]
-            || [self.type hasPrefix:@"I"] || [self.type hasPrefix:@"S"] || [self.type hasPrefix:@"L"]
-            || [self.type hasPrefix:@"Q"] || [self.type hasPrefix:@"f"] || [self.type hasPrefix:@"d"])
+    if ([self.type isEqualToString:[NSString stringWithUTF8String:@encode(char)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(int)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(short)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(long)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(long long)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(unsigned char)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(unsigned int)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(unsigned short)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(unsigned long)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(unsigned long long)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(float)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(double)]]
+            || [self.type isEqualToString:[NSString stringWithUTF8String:@encode(BOOL)]])
     {
         return ARHCCPropertyInfoScalarNumberType;
     }
-    if ([self.type hasPrefix:@"@"])
+    if ([self.type isEqualToString:[NSString stringWithUTF8String:@encode(NSObject *)]])
     {
         return ARHCCPropertyInfoObjectType;
     }
-    if ([self.type hasPrefix:@":"])
+    if ([self.type isEqualToString:[NSString stringWithUTF8String:@encode(SEL)]])
     {
         return ARHCCPropertyInfoSelectorType;
     }
-    if ([self.type hasPrefix:@"#"])
+    if ([self.type isEqualToString:[NSString stringWithUTF8String:@encode(Class)]])
     {
         return ARHCCPropertyInfoClassType;
     }

@@ -4,21 +4,22 @@
 
 #import "CHandlingChainQueueBuilder.h"
 #import "IChainElementPrivate.h"
+#import "ARHAbstractHandlingChain.h"
 
 @implementation CHandlingChainQueueBuilder
 {
     dispatch_queue_t _queue;
     id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate> _handlingChainQueue;
-    Class _chainClass;
+    __weak ARHAbstractHandlingChain *_chain;
 }
 
-- (id)initWithChainClass:(Class)chainClass
+- (id)initWithChain:(ARHAbstractHandlingChain *)chain
 {
     self = [super init];
     if (self)
     {
         [self reinitialize];
-        _chainClass = chainClass;
+        _chain = chain;
     }
     return self;
 }
@@ -46,7 +47,7 @@
             [element handle];
         });
         element.queue = _handlingChainQueue;
-        element.chainClass = _chainClass;
+        element.chain = _chain;
     }
 }
 

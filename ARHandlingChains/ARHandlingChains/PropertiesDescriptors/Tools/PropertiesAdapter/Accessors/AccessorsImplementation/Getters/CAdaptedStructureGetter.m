@@ -23,9 +23,8 @@
 
 - (NSMethodSignature *)signature
 {
-    const char *types = [[NSString stringWithFormat:@"%@@:",
-                                                    self.type] cStringUsingEncoding:NSUTF8StringEncoding];
-    return [NSMethodSignature signatureWithObjCTypes:types];
+    NSString *signature = [NSString stringWithFormat:@"%@%s%s", self.type, @encode(NSObject *), @encode(SEL)];
+    return [NSMethodSignature signatureWithObjCTypes:[signature cStringUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (void)performWithInvocation:(NSInvocation *)invocation
@@ -35,11 +34,12 @@
 
     NSUInteger sizeOfType;
     NSGetSizeAndAlignment ([self.type cStringUsingEncoding:NSUTF8StringEncoding], &sizeOfType, NULL);
-    void *temp = malloc (sizeof(sizeOfType));
+    void *temp = malloc (sizeOfType);
 
     [data getBytes:temp];
 
     [invocation setReturnValue:temp];
+    free(temp);
 }
 
 @end

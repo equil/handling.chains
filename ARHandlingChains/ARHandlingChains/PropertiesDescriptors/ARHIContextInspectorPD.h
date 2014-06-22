@@ -5,12 +5,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ARHCMutableDictionaryPropertiesAdapter.h"
-#import "CWeakObjectHandle.h"
 #import "ARHIPropertiesDescriptor.h"
 #import "ARHIChainContextInspector.h"
 
-@protocol ARHIDAPDContextInspector <ARHIPropertiesDescriptor>
+@protocol ARHIContextInspectorPD <ARHIPropertiesDescriptor>
 
 @optional
 

@@ -9,7 +9,7 @@
 
 - (void)needToStart: (id <ARHIHandlingChainQueue>)queue;
 - (void)started: (id <ARHIHandlingChainQueue>)queue;
-- (void)needToComplete: (id <ARHIHandlingChainQueue>)queue;
+- (void)goingToComplete: (id <ARHIHandlingChainQueue>)queue;
 - (void)completed: (id <ARHIHandlingChainQueue>)queue;
 
 @end

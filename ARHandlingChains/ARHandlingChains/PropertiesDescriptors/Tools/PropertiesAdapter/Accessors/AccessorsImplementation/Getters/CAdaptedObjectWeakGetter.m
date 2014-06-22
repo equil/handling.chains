@@ -3,19 +3,20 @@
 //
 
 #import "CAdaptedObjectWeakGetter.h"
-#import "CWeakObjectHandle.h"
+#import "CWeakObjectHolder.h"
 
 @implementation CAdaptedObjectWeakGetter
 
 - (NSMethodSignature *)signature
 {
-    return [NSMethodSignature signatureWithObjCTypes:"@@:"];
+    NSString *signature = [NSString stringWithFormat:@"%s%s%s", @encode(NSObject *), @encode(NSObject *), @encode(SEL)];
+    return [NSMethodSignature signatureWithObjCTypes:[signature cStringUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (void)performWithInvocation:(NSInvocation *)invocation
                      delegate:(NSMutableDictionary *)dictionary
 {
-    CWeakObjectHandle *objectHandle = [dictionary objectForKey:self.propertyName];
+    CWeakObjectHolder *objectHandle = [dictionary objectForKey:self.propertyName];
     NSObject *value = [objectHandle weakReference];
     [invocation setReturnValue:&value];
 }

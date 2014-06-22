@@ -4,10 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARHCMutableDictionaryPropertiesAdapter.h"
 
 @protocol ARHIChainContextInspector <NSObject>
 
-- (void)inspectContext: (ARHCMutableDictionaryPropertiesAdapter *) adapter;
+- (void)inspectContext:(id)adaptedContext;
 
 @end

@@ -13,5 +13,5 @@
 - (void) addDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
 - (void) removeDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;
 
-
 @end
+

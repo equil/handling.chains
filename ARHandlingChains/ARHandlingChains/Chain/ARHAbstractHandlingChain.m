@@ -21,7 +21,7 @@
     if (self)
     {
         _elementsClasses = elements;
-        _queueBuilder = [[CHandlingChainQueueBuilder alloc] initWithChainClass:[self class]];
+        _queueBuilder = [[CHandlingChainQueueBuilder alloc] initWithChain:self];
     }
     return self;
 }

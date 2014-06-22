@@ -27,25 +27,31 @@
 
 - (void)started:(id <ARHIHandlingChainQueue>)queue
 {
-    _starting = nil;
-    _current = (id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate>) queue;
+    @synchronized (self)
+    {
+        _starting = nil;
+        _current = (id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate>) queue;
+    }
 }
 
 - (void)completed:(id <ARHIHandlingChainQueue>)queue
 {
-    _current = nil;
-    [self startNext];
+    @synchronized (self)
+    {
+        _current = nil;
+        [self startNext];
+    }
 }
 
 - (void)needToStart:(id <ARHIHandlingChainQueue>)queue
 {
-    [_toExecute addObject:queue];
-    [self startNext];
+    @synchronized (self)
+    {
+        [_toExecute addObject:queue];
+        [self startNext];
+    }
 }
 
-- (void)needToComplete:(id <ARHIHandlingChainQueue>)queue
-{
-}
 - (void)startNext
 {
     if (_starting != nil || _current != nil || _toExecute.count < 1)
@@ -59,8 +65,12 @@
 
 - (void)cancelAllQueues
 {
-    [_current cancel];
-    [_starting cancel];
+    @synchronized (self)
+    {
+        [_toExecute removeAllObjects];
+        [_current cancel];
+        [_starting cancel];
+    }
 }
 
 @end

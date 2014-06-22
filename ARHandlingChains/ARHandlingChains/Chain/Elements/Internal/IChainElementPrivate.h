@@ -6,10 +6,12 @@
 #import "ARHIHandlingChainQueue.h"
 #import "IHandlingChainQueuePrivate.h"
 
+@class ARHAbstractHandlingChain;
+
 @protocol IChainElementPrivate <NSObject>
 
-@property (nonatomic, assign) Class chainClass;
-@property (nonatomic, assign) id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate> queue;
+@property (nonatomic, weak) ARHAbstractHandlingChain *chain;
+@property (nonatomic, weak) id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate> queue;
 
 - (void)handle;
 

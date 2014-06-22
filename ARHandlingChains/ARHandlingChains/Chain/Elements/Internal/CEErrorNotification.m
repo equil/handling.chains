@@ -4,7 +4,7 @@
 //
 
 #import "CEErrorNotification.h"
-#import "ARHCHandlingChain.h"
+#import "ARHCCommonHandlingChain.h"
 #import "IChainElementPrivate.h"
 
 @interface ARHAbstractChainElement()<IChainElementPrivate>
@@ -22,7 +22,7 @@
     dispatch_async (dispatch_get_main_queue(), ^
     {
         [[NSNotificationCenter defaultCenter] postNotificationName:kARHCHandlingChainErrorNotification
-                                                            object:self.error.chainClass
+                                                            object:self.chain
                                                           userInfo:@{ @"error" : self.error }];
     });
 }

@@ -4,7 +4,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARHCIDAPDError.h"
 #import "ARHAbstractChainElement.h"
 #import "ARHCCommonChainElement.h"
 

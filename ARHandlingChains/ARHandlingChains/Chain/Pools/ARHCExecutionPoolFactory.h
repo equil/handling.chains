@@ -8,6 +8,7 @@
 typedef enum {
     ARHExecutionPoolStrategySingleExecution = 0,
     ARHExecutionPoolStrategySerial = 1,
+    ARHExecutionPoolStrategyConcurrent = 2
 } ARHExecutionPoolStrategy;
 
 @interface ARHCExecutionPoolFactory : NSObject

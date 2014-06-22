@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ARHAbstractChainElement.h"
-#import "ARHCIDAPDError.h"
+#import "ARHIErrorPD.h"
 
-@interface CEErrorNotification : ARHAbstractChainElement <ARHCIDAPDError>
+@interface CEErrorNotification : ARHAbstractChainElement <ARHIErrorPD>
 @end

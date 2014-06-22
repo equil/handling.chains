@@ -184,7 +184,8 @@
 
 + (BOOL)isPresentedLikeAccessor:(ARHCPropertyInfo *)propertyInfo
 {
-    return [propertyInfo.name hasSuffix:@"Presented"] && [propertyInfo.type isEqualToString:@"c"]
+    return [propertyInfo.name hasSuffix:@"Presented"] && ([propertyInfo.type isEqualToString:[NSString stringWithCString:@encode(BOOL)
+                                                                                                                encoding:NSUTF8StringEncoding]])
             && propertyInfo.readonly;
 }
 

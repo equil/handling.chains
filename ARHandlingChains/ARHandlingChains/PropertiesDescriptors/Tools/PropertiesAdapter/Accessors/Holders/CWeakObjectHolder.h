@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CWeakObjectHandle : NSObject
+@interface CWeakObjectHolder : NSObject
 
 @property (nonatomic, readonly) NSObject *weakReference;
 

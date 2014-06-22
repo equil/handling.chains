@@ -3,9 +3,9 @@
 // Copyright (c) 2014 iDecide. All rights reserved.
 //
 
-#import "CWeakObjectHandle.h"
+#import "CWeakObjectHolder.h"
 
-@implementation CWeakObjectHandle
+@implementation CWeakObjectHolder
 {
     NSPointerArray *_array;
 }

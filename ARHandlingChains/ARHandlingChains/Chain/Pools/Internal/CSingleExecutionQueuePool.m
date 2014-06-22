@@ -28,41 +28,55 @@
 
 - (void)needToStart:(id <ARHIHandlingChainQueue>)queue
 {
-    if (_current != nil)
+    @synchronized (self)
     {
-        [_toDelete addObject:_current];
-        [_current cancel];
-        _current = nil;
+        if (_current != nil)
+        {
+            [_toDelete addObject:_current];
+            [_current cancel];
+            _current = nil;
+        }
+        _toExecute = (id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate>) queue;
+        [_toExecute execute];
     }
-    _toExecute = (id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate>) queue;
-    [_toExecute execute];
 }
 
 - (void)started:(id <ARHIHandlingChainQueue>)queue
 {
-    _current = _toExecute;
-    _toExecute = nil;
+    @synchronized (self)
+    {
+        _current = _toExecute;
+        _toExecute = nil;
+    }
 }
 
-- (void)needToComplete:(id <ARHIHandlingChainQueue>)queue
+- (void)goingToComplete:(id <ARHIHandlingChainQueue>)queue
 {
-    if (_current == queue)
+    @synchronized (self)
     {
-        [_toDelete addObject:_current];
-        _current = nil;
+        if (_current == queue)
+        {
+            [_toDelete addObject:_current];
+            _current = nil;
+        }
     }
 }
 
 - (void)completed:(id <ARHIHandlingChainQueue>)queue
 {
-    [_toDelete removeObject:queue];
+    @synchronized (self)
+    {
+        [_toDelete removeObject:queue];
+    }
 }
 
 - (void)cancelAllQueues
 {
-    [_current cancel];
-    [_toExecute cancel];
+    @synchronized (self)
+    {
+        [_current cancel];
+        [_toExecute cancel];
+    }
 }
-
 
 @end

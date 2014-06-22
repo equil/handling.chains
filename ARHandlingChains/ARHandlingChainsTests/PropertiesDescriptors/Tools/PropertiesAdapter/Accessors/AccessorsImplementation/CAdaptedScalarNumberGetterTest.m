@@ -73,29 +73,29 @@
 
     _accessors = @{
             @"testChar" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testChar"
-                                                                                  type:@"c"],
+                                                                              type:[NSString stringWithUTF8String:@encode(char)]],
             @"testInt" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testInt"
-                                                                                 type:@"i"],
+                                                                                 type:[NSString stringWithUTF8String:@encode(int)]],
             @"testShort" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testShort"
-                                                                                   type:@"s"],
+                                                                                   type:[NSString stringWithUTF8String:@encode(short)]],
             @"testLong" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testLong"
-                                                                                  type:@"l"],
+                                                                              type:[NSString stringWithUTF8String:@encode(long)]],
             @"testLongLong" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testLongLong"
-                                                                                      type:@"q"],
+                                                                                      type:[NSString stringWithUTF8String:@encode(long long)]],
             @"testUnsignedChar" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testUnsignedChar"
-                                                                                          type:@"C"],
+                                                                                          type:[NSString stringWithUTF8String:@encode(char)]],
             @"testUnsignedInt" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testUnsignedInt"
-                                                                                         type:@"I"],
+                                                                                         type:[NSString stringWithUTF8String:@encode(unsigned int)]],
             @"testUnsignedShort" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testUnsignedShort"
-                                                                                           type:@"S"],
+                                                                                           type:[NSString stringWithUTF8String:@encode(unsigned short)]],
             @"testUnsignedLong" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testUnsignedLong"
-                                                                                          type:@"L"],
+                                                                                          type:[NSString stringWithUTF8String:@encode(unsigned long)]],
             @"testUnsignedLongLong" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testUnsignedLongLong"
-                                                                                              type:@"Q"],
+                                                                                              type:[NSString stringWithUTF8String:@encode(unsigned long long)]],
             @"testFloat" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testFloat"
-                                                                                   type:@"f"],
+                                                                                   type:[NSString stringWithUTF8String:@encode(float)]],
             @"testDouble" : [[CAdaptedScalarNumberGetter alloc] initWithPropertyName:@"testDouble"
-                                                                                    type:@"d"]
+                                                                                    type:[NSString stringWithUTF8String:@encode(double)]]
     };
 }
 

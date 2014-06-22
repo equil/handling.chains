@@ -8,7 +8,8 @@
 
 - (NSMethodSignature *)signature
 {
-    return [NSMethodSignature signatureWithObjCTypes:"v@:#"];
+    NSString *signature = [NSString stringWithFormat:@"%s%s%s%s", @encode(void), @encode(NSObject *), @encode(SEL), @encode(Class)];
+    return [NSMethodSignature signatureWithObjCTypes:[signature cStringUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (void)performWithInvocation:(NSInvocation *)invocation

@@ -4,6 +4,7 @@
 
 #import "ARHCCommonChainElement.h"
 #import "IChainElementPrivate.h"
+#import "ARHAbstractHandlingChain.h"
 
 @interface ARHAbstractChainElement()<IChainElementPrivate>
 @end
@@ -17,10 +18,10 @@
 
 - (void)placeErrorWithAdditionalInfo:(NSDictionary *)additionalInfo
 {
-    ARHCErrorHandle *error = [[ARHCErrorHandle alloc] init];
+    ARHCErrorHolder *error = [[ARHCErrorHolder alloc] init];
     error.additionalInfo = additionalInfo;
     error.elementClass = [self class];
-    error.chainClass = self.chainClass;
+    error.chainClass = [self.chain class];
 
     self.error = error;
 }

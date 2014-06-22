@@ -4,9 +4,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ARHAbstractChainElement.h"
-#import "ARHCIDAPDError.h"
+#import "ARHIErrorPD.h"
 
-@interface ARHCCommonChainElement : ARHAbstractChainElement<ARHCIDAPDError>
+@interface ARHCCommonChainElement : ARHAbstractChainElement<ARHIErrorPD>
 
 - (void) placeErrorWithAdditionalInfo: (id) additionalInfo;
 

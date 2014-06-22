@@ -3,10 +3,10 @@
 // Copyright (c) 2014 iDecide. All rights reserved.
 //
 
-#import "ARHCErrorHandle.h"
+#import "ARHCErrorHolder.h"
 #import "ARHIChainContextInspector.h"
 
-@implementation ARHCErrorHandle
+@implementation ARHCErrorHolder
 {
 }
 

@@ -15,18 +15,19 @@
                       type:(NSString *)type
 {
     _typeToSelectorMapping = @{
-            @"c" : NSStringFromSelector (@selector(numberWithChar:)),
-            @"i" : NSStringFromSelector (@selector(numberWithInteger:)),
-            @"s" : NSStringFromSelector (@selector(numberWithShort:)),
-            @"l" : NSStringFromSelector (@selector(numberWithLong:)),
-            @"q" : NSStringFromSelector (@selector(numberWithLongLong:)),
-            @"C" : NSStringFromSelector (@selector(numberWithUnsignedChar:)),
-            @"I" : NSStringFromSelector (@selector(numberWithUnsignedInteger:)),
-            @"S" : NSStringFromSelector (@selector(numberWithUnsignedShort:)),
-            @"L" : NSStringFromSelector (@selector(numberWithUnsignedLong:)),
-            @"Q" : NSStringFromSelector (@selector(numberWithUnsignedLongLong:)),
-            @"f" : NSStringFromSelector (@selector(numberWithFloat:)),
-            @"d" : NSStringFromSelector (@selector(numberWithDouble:))
+            [NSString stringWithUTF8String:@encode(char)] : NSStringFromSelector (@selector(numberWithChar:)),
+            [NSString stringWithUTF8String:@encode(BOOL)] : NSStringFromSelector (@selector(numberWithBool:)),
+            [NSString stringWithUTF8String:@encode(int)] : NSStringFromSelector (@selector(numberWithInt:)),
+            [NSString stringWithUTF8String:@encode(short)] : NSStringFromSelector (@selector(numberWithShort:)),
+            [NSString stringWithUTF8String:@encode(long)] : NSStringFromSelector (@selector(numberWithLong:)),
+            [NSString stringWithUTF8String:@encode(long long)] : NSStringFromSelector (@selector(numberWithLongLong:)),
+            [NSString stringWithUTF8String:@encode(unsigned char)] : NSStringFromSelector (@selector(numberWithUnsignedChar:)),
+            [NSString stringWithUTF8String:@encode(unsigned int)] : NSStringFromSelector (@selector(numberWithUnsignedInt:)),
+            [NSString stringWithUTF8String:@encode(unsigned short)] : NSStringFromSelector (@selector(numberWithUnsignedShort:)),
+            [NSString stringWithUTF8String:@encode(unsigned long)] : NSStringFromSelector (@selector(numberWithUnsignedLong:)),
+            [NSString stringWithUTF8String:@encode(unsigned long long)] : NSStringFromSelector (@selector(numberWithUnsignedLongLong:)),
+            [NSString stringWithUTF8String:@encode(float)] : NSStringFromSelector (@selector(numberWithFloat:)),
+            [NSString stringWithUTF8String:@encode(double)] : NSStringFromSelector (@selector(numberWithDouble:))
     };
     if ([_typeToSelectorMapping objectForKey:type] == nil)
     {
@@ -51,8 +52,9 @@
     [numberInvocation setSelector:selector];
 
     NSUInteger sizeOfType;
-    NSGetSizeAndAlignment ([self.type cStringUsingEncoding:NSUTF8StringEncoding], &sizeOfType, NULL);
-    void *tempArgument = malloc (sizeof(sizeOfType));
+    NSUInteger alignment;
+    NSGetSizeAndAlignment ([invocation.methodSignature getArgumentTypeAtIndex:2], &sizeOfType, &alignment);
+    void *tempArgument = malloc (sizeOfType);
 
     [invocation getArgument:tempArgument
                     atIndex:2];
@@ -74,9 +76,8 @@
 
 - (NSMethodSignature *)signature
 {
-    const char *types = [[NSString stringWithFormat:@"v@:%@",
-                                                    self.type] cStringUsingEncoding:NSUTF8StringEncoding];
-    return [NSMethodSignature signatureWithObjCTypes:types];
+    NSString *signature = [NSString stringWithFormat:@"%s%s%s%@", @encode(void), @encode(NSObject *), @encode(SEL), self.type];
+    return [NSMethodSignature signatureWithObjCTypes:[signature cStringUsingEncoding:NSUTF8StringEncoding]];
 }
 
 

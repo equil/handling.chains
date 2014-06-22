@@ -6,9 +6,11 @@
 #import "CHandlingChainQueue.h"
 #import "ARHAbstractChainElement.h"
 
+@class ARHAbstractHandlingChain;
+
 @interface CHandlingChainQueueBuilder : NSObject
 
-- (id) initWithChainClass: (Class) chainClass;
+- (id)initWithChain: (ARHAbstractHandlingChain *) chain;
 
 - (void) add: (Class) elementClass;
 - (void) addDelegate: (id<ARHIHandlingChainQueueDelegate>) delegate;

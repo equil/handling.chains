@@ -5,13 +5,13 @@
 
 #import <Foundation/Foundation.h>
 #import "ARHIPropertiesDescriptor.h"
-#import "ARHCErrorHandle.h"
+#import "ARHCErrorHolder.h"
 
-@protocol ARHCIDAPDError <ARHIPropertiesDescriptor>
+@protocol ARHIErrorPD <ARHIPropertiesDescriptor>
 
 @optional
 
-@property(nonatomic, strong) ARHCErrorHandle *error;
+@property(nonatomic, strong) ARHCErrorHolder *error;
 @property(nonatomic, readonly) BOOL errorPresented;
 
 @end

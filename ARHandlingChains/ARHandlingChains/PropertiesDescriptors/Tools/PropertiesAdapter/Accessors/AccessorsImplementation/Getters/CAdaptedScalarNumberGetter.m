@@ -15,18 +15,19 @@
                       type:(NSString *)type
 {
     _typeToSelectorMapping = @{
-            @"c" : NSStringFromSelector (@selector(charValue)),
-            @"i" : NSStringFromSelector (@selector(integerValue)),
-            @"s" : NSStringFromSelector (@selector(shortValue)),
-            @"l" : NSStringFromSelector (@selector(longValue)),
-            @"q" : NSStringFromSelector (@selector(longLongValue)),
-            @"C" : NSStringFromSelector (@selector(unsignedCharValue)),
-            @"I" : NSStringFromSelector (@selector(unsignedIntegerValue)),
-            @"S" : NSStringFromSelector (@selector(unsignedShortValue)),
-            @"L" : NSStringFromSelector (@selector(unsignedLongValue)),
-            @"Q" : NSStringFromSelector (@selector(unsignedLongLongValue)),
-            @"f" : NSStringFromSelector (@selector(floatValue)),
-            @"d" : NSStringFromSelector (@selector(doubleValue))
+            [NSString stringWithUTF8String:@encode(char)] : NSStringFromSelector (@selector(charValue)),
+            [NSString stringWithUTF8String:@encode(BOOL)] : NSStringFromSelector (@selector(boolValue)),
+            [NSString stringWithUTF8String:@encode(int)] : NSStringFromSelector (@selector(integerValue)),
+            [NSString stringWithUTF8String:@encode(short)] : NSStringFromSelector (@selector(shortValue)),
+            [NSString stringWithUTF8String:@encode(long)] : NSStringFromSelector (@selector(longValue)),
+            [NSString stringWithUTF8String:@encode(long long)] : NSStringFromSelector (@selector(longLongValue)),
+            [NSString stringWithUTF8String:@encode(unsigned char)] : NSStringFromSelector (@selector(unsignedCharValue)),
+            [NSString stringWithUTF8String:@encode(unsigned int)] : NSStringFromSelector (@selector(unsignedIntegerValue)),
+            [NSString stringWithUTF8String:@encode(unsigned short)] : NSStringFromSelector (@selector(unsignedShortValue)),
+            [NSString stringWithUTF8String:@encode(unsigned long)] : NSStringFromSelector (@selector(unsignedLongValue)),
+            [NSString stringWithUTF8String:@encode(unsigned long long)] : NSStringFromSelector (@selector(unsignedLongLongValue)),
+            [NSString stringWithUTF8String:@encode(float)] : NSStringFromSelector (@selector(floatValue)),
+            [NSString stringWithUTF8String:@encode(double)] : NSStringFromSelector (@selector(doubleValue))
     };
 
     if ([_typeToSelectorMapping objectForKey:type] == nil)
@@ -57,7 +58,7 @@
 
     NSUInteger sizeOfType;
     NSGetSizeAndAlignment ([self.type cStringUsingEncoding:NSUTF8StringEncoding], &sizeOfType, NULL);
-    void *temp = malloc (sizeof(sizeOfType));
+    void *temp = malloc (sizeOfType);
 
     [numberInvocation getReturnValue:temp];
     [invocation setReturnValue:temp];
@@ -67,9 +68,8 @@
 
 - (NSMethodSignature *)signature
 {
-    const char *types = [[NSString stringWithFormat:@"%@@:",
-                                                    self.type] cStringUsingEncoding:NSUTF8StringEncoding];
-    return [NSMethodSignature signatureWithObjCTypes:types];
+    NSString *signature = [NSString stringWithFormat:@"%@%s%s", self.type, @encode(NSObject *), @encode(SEL)];
+    return [NSMethodSignature signatureWithObjCTypes:[signature cStringUsingEncoding:NSUTF8StringEncoding]];
 }
 
 @end

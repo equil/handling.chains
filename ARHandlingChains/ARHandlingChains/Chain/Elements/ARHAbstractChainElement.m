@@ -15,7 +15,12 @@
     ARHCMutableDictionaryPropertiesAdapter *_adapter;
 }
 
+
+
 #pragma mark - Public interface behavior
+
+@synthesize chain = _chain;
+@synthesize queue = _queue;
 
 - (void)handle
 {
@@ -59,7 +64,7 @@
 
 #pragma mark - queue context adaptation
 
-- (ARHCMutableDictionaryPropertiesAdapter *)context
+- (id)context
 {
     NSMutableDictionary *context = ((id<IHandlingChainQueuePrivate>) self.queue).context;
     if (_adapter == nil || ![context isEqual:_adapter.state])

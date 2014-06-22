@@ -8,7 +8,8 @@
 
 - (NSMethodSignature *)signature
 {
-    return [NSMethodSignature signatureWithObjCTypes:"c@:"];
+    NSString *signature = [NSString stringWithFormat:@"%s%s%s", @encode(BOOL), @encode(NSObject *), @encode(SEL)];
+    return [NSMethodSignature signatureWithObjCTypes:[signature cStringUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (NSString *)defaultAccessorName

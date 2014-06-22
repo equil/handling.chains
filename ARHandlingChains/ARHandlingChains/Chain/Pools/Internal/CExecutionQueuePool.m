@@ -3,7 +3,6 @@
 //
 
 #import "CExecutionQueuePool.h"
-#import "ARHIHandlingChainQueue.h"
 #import "IHandlingChainQueuePrivate.h"
 
 @interface CExecutionQueuePool () <ARHIHandlingChainQueueDelegate>
@@ -43,7 +42,7 @@
 {
 }
 
-- (void)needToComplete:(id <ARHIHandlingChainQueue>)queue
+- (void)goingToComplete:(id <ARHIHandlingChainQueue>)queue
 {
 }
 

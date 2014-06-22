@@ -4,9 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ARHIDAPDContextInspector.h"
 #import "ARHCCommonChainElement.h"
+#import "ARHIContextInspectorPD.h"
 
-@interface ARHCEInspectContextChainElement : ARHCCommonChainElement <ARHIDAPDContextInspector>
+@interface ARHCEInspectContextChainElement : ARHCCommonChainElement <ARHIContextInspectorPD>
 
 @end

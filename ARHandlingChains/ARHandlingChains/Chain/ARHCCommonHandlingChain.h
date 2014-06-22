@@ -10,13 +10,11 @@
 extern NSString *const kARHCHandlingChainCompleteNotification;
 extern NSString *const kARHCHandlingChainErrorNotification;
 
-@interface ARHCHandlingChain : ARHAbstractHandlingChain
+@interface ARHCCommonHandlingChain : ARHAbstractHandlingChain
 
 - (void)registerCompleteObserver:(id)observer
                         selector: (SEL) selector;
 - (void)registerErrorObserver:(id)observer
                      selector:(SEL)selector;
-- (void)removeCompleteObserver: (id) observer;
-- (void)removeErrorObserver:(id)observer;
 
 @end

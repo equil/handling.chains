@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ARHCErrorHandle : NSObject
+@interface ARHCErrorHolder : NSObject
 
 @property (nonatomic, strong) id additionalInfo;
 @property (nonatomic, assign) Class elementClass;

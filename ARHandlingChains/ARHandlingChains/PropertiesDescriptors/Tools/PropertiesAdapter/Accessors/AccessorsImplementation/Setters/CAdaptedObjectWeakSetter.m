@@ -3,13 +3,14 @@
 //
 
 #import "CAdaptedObjectWeakSetter.h"
-#import "CWeakObjectHandle.h"
+#import "CWeakObjectHolder.h"
 
 @implementation CAdaptedObjectWeakSetter
 
 - (NSMethodSignature *)signature
 {
-    return [NSMethodSignature signatureWithObjCTypes:"v@:@"];
+    NSString *signature = [NSString stringWithFormat:@"%s%s%s%s", @encode(void), @encode(NSObject *), @encode(SEL), @encode(NSObject *)];
+    return [NSMethodSignature signatureWithObjCTypes:[signature cStringUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (void)performWithInvocation:(NSInvocation *)invocation
@@ -22,7 +23,7 @@
 
     if (object != nil)
     {
-        object = [CWeakObjectHandle handleWithObject:object];
+        object = [CWeakObjectHolder handleWithObject:object];
     }
 
     [self storeObject:object
