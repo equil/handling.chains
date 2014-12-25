@@ -65,6 +65,9 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
     }
     else
     {
+        NSLog(@"MutableDictionaryAdapter can't detect invocation %@. \n"
+                "\nMay be you forgot adapt some class by propertyDescriptor or "
+                "note propertyDescriptor in source code through @protocol() link", anInvocation);
         [super forwardInvocation:anInvocation];
     }
 }
