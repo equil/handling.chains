@@ -39,6 +39,12 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
     {
         result = [_holder.accessors objectForKey:NSStringFromSelector (aSelector)] != nil;
     }
+    else
+    {
+        NSLog(@"MutableDictionaryAdapter can't detect selector %@. \n"
+                "\nMay be you forgot adapt some class by corresponding propertyDescriptor or "
+                "note propertyDescriptor in source code through @protocol() link", NSStringFromSelector(aSelector));
+    }
     return result;
 }
 
@@ -50,6 +56,13 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
     if (accessor != nil)
     {
         result = accessor.signature;
+    }
+    else
+    {
+        NSLog(@"MutableDictionaryAdapter can't detect selector %@. \n"
+                "\nMay be you forgot adapt some class by propertyDescriptor or "
+                "note propertyDescriptor in source code through @protocol() link", NSStringFromSelector(aSelector));
+
     }
 
     return result;
