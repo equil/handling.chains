@@ -41,7 +41,7 @@
             return;
         }
 
-        ARHAbstractChainElement<IChainElementPrivate> *element = [[elementClass alloc] init];
+        ARHAbstractChainElement<IChainElementPrivate> *element = (ARHAbstractChainElement <IChainElementPrivate> *) [[elementClass alloc] init];
         dispatch_async (_queue, ^
         {
             [element handle];

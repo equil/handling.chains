@@ -26,11 +26,14 @@ void contextFinalizer (void *context)
     BOOL _started;
     ARHCEnumerableWeakReferencesCollection *_delegates;
 
+    NSMutableDictionary *_context;
+
     CFutureContext *_futureContext;
     __weak CFutureContext *_weakFutureContext;
 }
 
 @synthesize canceled = _canceled;
+@synthesize context = _context;
 
 - (id)initWithQueue:(dispatch_queue_t)queue
 {
@@ -38,6 +41,7 @@ void contextFinalizer (void *context)
     if (self)
     {
         _queue = queue;
+        _context = [[NSMutableDictionary alloc] init];
         dispatch_set_context (_queue, (__bridge_retained CFMutableDictionaryRef) [NSMutableDictionary new]);
         dispatch_set_finalizer_f (_queue, &contextFinalizer);
 
