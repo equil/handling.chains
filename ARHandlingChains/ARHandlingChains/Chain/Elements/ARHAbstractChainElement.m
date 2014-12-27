@@ -22,6 +22,10 @@
 @synthesize chain = _chain;
 @synthesize queue = _queue;
 
+- (BOOL)mustCancelExecution {
+    return self.queue.canceled;
+}
+
 - (void)handle
 {
 //    NSLog(@"\n====== %@ ---> %@ ======", NSStringFromClass (self.chainClass), NSStringFromClass ([self class]));

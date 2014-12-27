@@ -8,6 +8,7 @@
 @interface ARHAbstractChainElement : NSObject
 
 @property (nonatomic, readonly) id context;
+@property (readonly) BOOL mustCancelExecution;
 
 - (BOOL)canProcess;
 
