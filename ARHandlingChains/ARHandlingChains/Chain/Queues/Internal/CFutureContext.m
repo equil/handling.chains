@@ -24,22 +24,16 @@
 
 - (id)get
 {
-    @synchronized (self)
-    {
-        dispatch_semaphore_wait (_semaphore, DISPATCH_TIME_FOREVER);
-        ARHCMutableDictionaryPropertiesAdapter *result = _contextAfterExecution;
-        _contextAfterExecution = nil;
-        return result;
-    }
+    dispatch_semaphore_wait (_semaphore, DISPATCH_TIME_FOREVER);
+    ARHCMutableDictionaryPropertiesAdapter *result = _contextAfterExecution;
+    _contextAfterExecution = nil;
+    return result;
 }
 
 - (void)set:(ARHCMutableDictionaryPropertiesAdapter *)contextAfterExecution
 {
-    @synchronized (self)
-    {
-        _contextAfterExecution = [contextAfterExecution copy];
-        dispatch_semaphore_signal (_semaphore);
-    }
+    _contextAfterExecution = [contextAfterExecution copy];
+    dispatch_semaphore_signal (_semaphore);
 }
 
 - (void)cancelHandling
