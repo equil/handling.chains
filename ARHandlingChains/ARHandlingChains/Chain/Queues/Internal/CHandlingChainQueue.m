@@ -15,7 +15,7 @@ void contextFinalizer (void *context)
 @interface CHandlingChainQueue (private)
 @property (nonatomic, readonly) id <ARHIFutureContext> futureContext;
 
-- (id)initWithQueue:(dispatch_queue_t)queue;
+- (id)initWithQueue:(dispatch_queue_t)suspendedQueue;
 - (void)execute;
 - (void)cancel;
 @end
@@ -35,12 +35,12 @@ void contextFinalizer (void *context)
 @synthesize canceled = _canceled;
 @synthesize context = _context;
 
-- (id)initWithQueue:(dispatch_queue_t)queue
+- (id)initWithQueue:(dispatch_queue_t)suspendedQueue
 {
     self = [super init];
     if (self)
     {
-        _queue = queue;
+        _queue = suspendedQueue;
         _context = [[NSMutableDictionary alloc] init];
         dispatch_set_context (_queue, (__bridge_retained CFMutableDictionaryRef) [NSMutableDictionary new]);
         dispatch_set_finalizer_f (_queue, &contextFinalizer);
@@ -75,7 +75,7 @@ void contextFinalizer (void *context)
 
             _weakFutureContext = _futureContext;
             _futureContext = nil;
-            _queue = nil;
+            dispatch_suspend(_queue);
         });
 
         [self propagateStartedEvent];
@@ -145,6 +145,10 @@ void contextFinalizer (void *context)
         return _weakFutureContext;
     }
     return _futureContext;
+}
+
+- (void)dealloc {
+    dispatch_resume(_queue);
 }
 
 @end
