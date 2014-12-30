@@ -25,7 +25,7 @@ NSString *const kARHCHandlingChainErrorNotification = @"ARHCErrorNotification";
     NSMutableArray *elements = [elementsClasses mutableCopy];
     [elements addObject:[CEErrorNotification class]];
     [elements addObject:[CECompleteNotification class]];
-    self = [super initWithElementsClasses:elementsClasses];
+    self = [super initWithElementsClasses:elements];
     if (self)
     {
         _observers = [[ARHCEnumerableWeakReferencesCollection alloc] init];
