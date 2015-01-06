@@ -7,7 +7,7 @@
 #import "ARHCCommonHandlingChain.h"
 
 
-@interface ARHCCommonRepeatableChainElement : ARHCCommonChainElement
+@interface ARHCCommonRepeatableChainElement : ARHCCommonChainElement<ARHIErrorPD>
 - (void)processContextAfterExecution:(NSDictionary *)contextAfterExecution;
 
 - (BOOL)needToRepeat:(NSDictionary *)contextAfterExecution;

@@ -15,11 +15,10 @@
 }
 
 - (void)process {
-    NSDictionary *initialContext = [[self initialContext] copy];
     NSDictionary *contextAfterExecution = nil;
     do {
         ARHCCommonHandlingChain *handlingChain = [self handlingChain];
-        id <ARHIHandlingChainQueue> queue = [handlingChain buildQueueWithInitialContext:[initialContext copy]];
+        id <ARHIHandlingChainQueue> queue = [handlingChain buildQueueWithInitialContext:[[self initialContext] copy]];
         @synchronized (self) {
             if (self.mustCancelExecution) {
                 return;
@@ -32,14 +31,18 @@
             return;
         }
     } while ([self needToRepeat:contextAfterExecution]);
+
     [self processContextAfterExecution:contextAfterExecution];
 }
 
 - (void)processContextAfterExecution:(NSDictionary *)contextAfterExecution {
-
+    id<ARHIErrorPD> context = (id <ARHIErrorPD>) [[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:[contextAfterExecution mutableCopy]];
+    if (context.errorPresented) {
+        self.error = context.error;
+    }
 }
 
-- (BOOL) needToRepeat: (NSDictionary *) contextAfterExecution {
+- (BOOL)needToRepeat:(NSDictionary *)contextAfterExecution {
     return NO;
 }
 
