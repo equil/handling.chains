@@ -16,6 +16,7 @@
 		655650D32C8138E60BADCD6C /* ARHCMutableDictionaryPropertiesAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565E387BDB863585B30C24 /* ARHCMutableDictionaryPropertiesAdapter.m */; };
 		6556514C5379D591626C1261 /* ARHCCommonChainElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6556556436E67D4283FFC0A5 /* ARHCCommonChainElement.m */; };
 		6556515058A68A0AA50F2702 /* CAdaptedScalarNumberSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 655657EC39BE385E4BE893B2 /* CAdaptedScalarNumberSetter.m */; };
+		65565176D6BF2C524C628918 /* ARHCCommonRepeatableChainElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 655659FA737BCE45F25AEB0A /* ARHCCommonRepeatableChainElement.m */; };
 		655651D1B411967647166900 /* CAdaptedStructureGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565723A99310CE207EB225 /* CAdaptedStructureGetter.m */; };
 		655652CD3D952AF386EFDD60 /* ARHCPropertyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565111F75535C93A2E2C44 /* ARHCPropertyInfo.m */; };
 		6556534E81CA4265EF59BBDB /* CAdaptedObjectWeakGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565FE0C0EA2B9873FC84A8 /* CAdaptedObjectWeakGetter.m */; };
@@ -32,6 +33,7 @@
 		65565593DFD3C259D012540A /* CStructureAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650B1251ADC0E12987935 /* CStructureAccessorFactory.m */; };
 		65565598E1BA0BF722F9C6F1 /* CSerialExecutionQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BA4AB65515D447B445B /* CSerialExecutionQueuePool.m */; };
 		655655A5FB8F753F0331F368 /* CExecutionQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BE2767C2570B1658EF3 /* CExecutionQueuePool.m */; };
+		655655A91E5CCC127BC44240 /* ARHCCommonRepeatableChainElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 655655F125DBE2A017B5938C /* ARHCCommonRepeatableChainElement.h */; };
 		655656E540D7F4AB4572796B /* CScalarNumberAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BD081CB1872E1864DA2 /* CScalarNumberAccessorFactory.m */; };
 		655656F276DA69DF98BFB982 /* CFutureContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565ACDFD3D473F75596E53 /* CFutureContext.m */; };
 		655657077670187849C24904 /* CAdaptedObjectStrongSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565FBC04714047012784F6 /* CAdaptedObjectStrongSetter.m */; };
@@ -190,6 +192,7 @@
 		6556558F72594D8B90DED674 /* ARHCEnumerableWeakReferencesCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCEnumerableWeakReferencesCollection.h; sourceTree = "<group>"; };
 		655655960A42AA690E5C0D92 /* ARHIChainContextInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHIChainContextInspector.h; sourceTree = "<group>"; };
 		655655AC46784EED6D89326B /* CWeakReferencesSentry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWeakReferencesSentry.h; sourceTree = "<group>"; };
+		655655F125DBE2A017B5938C /* ARHCCommonRepeatableChainElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCommonRepeatableChainElement.h; sourceTree = "<group>"; };
 		6556562979B92B935695AE27 /* ARHCCommonChainElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCCommonChainElement.h; sourceTree = "<group>"; };
 		6556563BCB8B59AE2A6B2EB2 /* ARHCErrorHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHCErrorHolder.h; sourceTree = "<group>"; };
 		65565664A59614EFF8D69AB9 /* CAdaptedScalarNumberSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedScalarNumberSetter.h; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 		655659059749B2AD950B507E /* CAdaptedObjectStrongGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedObjectStrongGetter.h; sourceTree = "<group>"; };
 		6556599D3F88C58946E70226 /* ARHIPropertiesDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARHIPropertiesDescriptor.h; sourceTree = "<group>"; };
 		655659D9521857347AA79209 /* CAdaptedScalarNumberGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAdaptedScalarNumberGetter.h; sourceTree = "<group>"; };
+		655659FA737BCE45F25AEB0A /* ARHCCommonRepeatableChainElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARHCCommonRepeatableChainElement.m; sourceTree = "<group>"; };
 		655659FEA39D2E9728B60EBA /* CAdaptedSelectorGetterAndSetterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAdaptedSelectorGetterAndSetterTest.m; sourceTree = "<group>"; };
 		65565A3CF6EA5D76D9776369 /* CCommonAccessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCommonAccessorFactory.m; sourceTree = "<group>"; };
 		65565A46EF581B09C9704DA7 /* CPropertiesDescriptorsAccessorsHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPropertiesDescriptorsAccessorsHolder.m; sourceTree = "<group>"; };
@@ -644,6 +648,8 @@
 				65565ADA6BE84D57F7E7ECAD /* ARHAbstractChainElement.h */,
 				6556562979B92B935695AE27 /* ARHCCommonChainElement.h */,
 				6556556436E67D4283FFC0A5 /* ARHCCommonChainElement.m */,
+				655659FA737BCE45F25AEB0A /* ARHCCommonRepeatableChainElement.m */,
+				655655F125DBE2A017B5938C /* ARHCCommonRepeatableChainElement.h */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -783,6 +789,7 @@
 				6BCFFF6C1957FB580016B61F /* CPropertiesDescriptorsAccessorsHolder.h in Headers */,
 				6BCFFF6D1957FB580016B61F /* ARHCPropertyInfo.h in Headers */,
 				6BCFFF6E1957FB580016B61F /* CWeakReferencesSentry.h in Headers */,
+				655655A91E5CCC127BC44240 /* ARHCCommonRepeatableChainElement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +921,7 @@
 				655656F276DA69DF98BFB982 /* CFutureContext.m in Sources */,
 				655653C4F61DBDD970133CE2 /* CHandlingChainQueueBuilder.m in Sources */,
 				65565C09A30B02EDCB61B281 /* CHandlingChainQueue.m in Sources */,
+				65565176D6BF2C524C628918 /* ARHCCommonRepeatableChainElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

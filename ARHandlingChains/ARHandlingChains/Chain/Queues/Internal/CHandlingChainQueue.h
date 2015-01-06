@@ -6,6 +6,8 @@
 #import "ARHIHandlingChainQueue.h"
 #import "IHandlingChainQueuePrivate.h"
 
+extern NSString *const kCHandlingChainQueueCancelingInitiationKey;
+
 @interface CHandlingChainQueue : NSObject<ARHIHandlingChainQueue, IHandlingChainQueuePrivate>
 
 @end

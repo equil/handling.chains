@@ -7,6 +7,8 @@
 #import "ARHCEnumerableWeakReferencesCollection.h"
 #import "CFutureContext.h"
 
+NSString *const kCHandlingChainQueueCancelingInitiationKey = @"com.equil.handling.chains.canceling.initiation.notification";
+
 void contextFinalizer (void *context)
 {
     CFRelease (context);
@@ -115,16 +117,17 @@ void contextFinalizer (void *context)
             return;
         }
         _canceled = YES;
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:kCHandlingChainQueueCancelingInitiationKey object:self];
+        });
     }
 }
 
-- (BOOL)handled
-{
+- (BOOL)handled {
     return _queue == nil;
 }
 
-- (NSMutableDictionary *)context
-{
+- (NSMutableDictionary *)context {
     return (__bridge NSMutableDictionary *) dispatch_get_context (_queue);
 }
 

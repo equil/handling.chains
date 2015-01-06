@@ -14,4 +14,6 @@
 
 - (void)process;
 
+- (void)cancelingInitiated;
+
 @end
