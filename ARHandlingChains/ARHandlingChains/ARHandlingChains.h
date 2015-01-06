@@ -20,6 +20,7 @@
 
 #import "ARHAbstractChainElement.h"
 #import "ARHCCommonChainElement.h"
+#import "ARHCCommonRepeatableChainElement.h"
 #import "ARHCEInspectContextChainElement.h"
 
 #import "ARHAbstractHandlingChain.h"

@@ -33,7 +33,7 @@
 		65565593DFD3C259D012540A /* CStructureAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 655650B1251ADC0E12987935 /* CStructureAccessorFactory.m */; };
 		65565598E1BA0BF722F9C6F1 /* CSerialExecutionQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BA4AB65515D447B445B /* CSerialExecutionQueuePool.m */; };
 		655655A5FB8F753F0331F368 /* CExecutionQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BE2767C2570B1658EF3 /* CExecutionQueuePool.m */; };
-		655655A91E5CCC127BC44240 /* ARHCCommonRepeatableChainElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 655655F125DBE2A017B5938C /* ARHCCommonRepeatableChainElement.h */; };
+		655655A91E5CCC127BC44240 /* ARHCCommonRepeatableChainElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 655655F125DBE2A017B5938C /* ARHCCommonRepeatableChainElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		655656E540D7F4AB4572796B /* CScalarNumberAccessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565BD081CB1872E1864DA2 /* CScalarNumberAccessorFactory.m */; };
 		655656F276DA69DF98BFB982 /* CFutureContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565ACDFD3D473F75596E53 /* CFutureContext.m */; };
 		655657077670187849C24904 /* CAdaptedObjectStrongSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565FBC04714047012784F6 /* CAdaptedObjectStrongSetter.m */; };
