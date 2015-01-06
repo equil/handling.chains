@@ -32,7 +32,11 @@
             return;
         }
     } while ([self needToRepeat:contextAfterExecution]);
-    
+    [self processContextAfterExecution:contextAfterExecution];
+}
+
+- (void)processContextAfterExecution:(NSDictionary *)contextAfterExecution {
+
 }
 
 - (BOOL) needToRepeat: (NSDictionary *) contextAfterExecution {

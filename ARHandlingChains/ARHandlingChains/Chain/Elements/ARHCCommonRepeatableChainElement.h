@@ -8,6 +8,8 @@
 
 
 @interface ARHCCommonRepeatableChainElement : ARHCCommonChainElement
+- (void)processContextAfterExecution:(NSDictionary *)contextAfterExecution;
+
 - (BOOL)needToRepeat:(NSDictionary *)contextAfterExecution;
 
 - (id <ARHIExecutionPool>)executionPool;
