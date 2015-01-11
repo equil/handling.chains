@@ -13,6 +13,6 @@
 @synthesize elementClass = _elementClass;
 @synthesize chainClass = _chainClass;
 @synthesize additionalInfo = _additionalInfo;
-
+@synthesize rootError = _rootError;
 
 @end

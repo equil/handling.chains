@@ -11,4 +11,6 @@
 @property (nonatomic, assign) Class elementClass;
 @property (nonatomic, assign) Class chainClass;
 
+@property (nonatomic, strong) ARHCErrorHolder *rootError;
+
 @end

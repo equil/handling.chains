@@ -18,12 +18,20 @@
 
 - (void)placeErrorWithAdditionalInfo:(NSDictionary *)additionalInfo
 {
+    [self placeErrorWithAdditionalInfo:additionalInfo causedBy:nil];
+}
+
+- (void)placeErrorWithAdditionalInfo:(NSDictionary *)additionalInfo
+                            causedBy:(ARHCErrorHolder *)rootError
+{
     ARHCErrorHolder *error = [[ARHCErrorHolder alloc] init];
     error.additionalInfo = additionalInfo;
     error.elementClass = [self class];
     error.chainClass = [self.chain class];
-
+    error.rootError = rootError;
     self.error = error;
 }
+
+
 
 @end

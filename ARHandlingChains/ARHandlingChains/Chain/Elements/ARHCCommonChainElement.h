@@ -6,8 +6,11 @@
 #import "ARHAbstractChainElement.h"
 #import "ARHIErrorPD.h"
 
-@interface ARHCCommonChainElement : ARHAbstractChainElement<ARHIErrorPD>
+@interface ARHCCommonChainElement : ARHAbstractChainElement <ARHIErrorPD>
 
-- (void) placeErrorWithAdditionalInfo: (id) additionalInfo;
+- (void)placeErrorWithAdditionalInfo:(id)additionalInfo;
+
+- (void)placeErrorWithAdditionalInfo:(NSDictionary *)additionalInfo
+                            causedBy:(ARHCErrorHolder *)rootError;
 
 @end

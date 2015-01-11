@@ -7,7 +7,11 @@
 #import "ARHCExecutionPoolFactory.h"
 #import "ARHCCommonHandlingChain.h"
 #import "ARHCMutableDictionaryPropertiesAdapter.h"
+#import "IChainElementPrivate.h"
 
+
+@interface ARHCCommonRepeatableChainElement()<IChainElementPrivate>
+@end
 
 @implementation ARHCCommonRepeatableChainElement {
     id<ARHIExecutionPool> _executionPool;
@@ -38,7 +42,8 @@
 - (void)processContextAfterExecution:(NSDictionary *)contextAfterExecution {
     id<ARHIErrorPD> context = (id <ARHIErrorPD>) [[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:[contextAfterExecution mutableCopy]];
     if (context.errorPresented) {
-        self.error = context.error;
+        [self placeErrorWithAdditionalInfo:context.error.additionalInfo
+                                  causedBy:context.error];
     }
 }
 
