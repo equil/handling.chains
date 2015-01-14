@@ -4,15 +4,30 @@
 //
 
 #import "ARHCErrorHolder.h"
-#import "ARHIChainContextInspector.h"
 
-@implementation ARHCErrorHolder
-{
+@implementation ARHCErrorHolder {
 }
 
 @synthesize elementClass = _elementClass;
 @synthesize chainClass = _chainClass;
 @synthesize additionalInfo = _additionalInfo;
 @synthesize rootError = _rootError;
+
+- (NSString *)signature {
+    NSMutableString *result = [[NSMutableString alloc] initWithString:@""];
+    ARHCErrorHolder *holder = self;
+
+    do {
+        if (![result isEqualToString:@""]) {
+            [result appendString:@":"];
+        }
+        [result appendString:NSStringFromClass(holder.elementClass)];
+
+        holder = holder.rootError;
+    } while (holder != nil);
+
+    return result;
+}
+
 
 @end

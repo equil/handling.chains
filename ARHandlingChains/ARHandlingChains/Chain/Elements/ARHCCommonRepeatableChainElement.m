@@ -27,7 +27,7 @@
             if (self.mustCancelExecution) {
                 return;
             }
-            _futureContext = [_executionPool executeQueue:queue];
+            _futureContext = [[self executionPool] executeQueue:queue];
         }
         id context = [_futureContext get];
         contextAfterExecution = ((ARHCMutableDictionaryPropertiesAdapter *) context).state;

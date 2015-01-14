@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) ARHCErrorHolder *rootError;
 
+@property (nonatomic, readonly) NSString *signature;
+
 @end
