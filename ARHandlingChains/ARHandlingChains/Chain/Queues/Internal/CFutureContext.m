@@ -38,6 +38,7 @@
 
 - (void)cancelHandling
 {
+    _context
     [self.respondedQueue cancel];
 }
 

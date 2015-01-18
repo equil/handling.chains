@@ -52,6 +52,7 @@ void contextFinalizer (void *context)
 
         _delegates = [[ARHCEnumerableWeakReferencesCollection alloc] init];
         _futureContext = [[CFutureContext alloc] init];
+        _futureContext.respondedQueue = self;
     }
     return self;
 }
@@ -71,7 +72,7 @@ void contextFinalizer (void *context)
         {
             _started = NO;
 
-            [_futureContext set:[[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:self.context]];
+            [_futureContext set:[[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:[self.context copy]]];
 
             [self propagateCompleteEvent];
 
