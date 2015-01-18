@@ -37,7 +37,7 @@
         return;
     }
 //    NSLog(@"\tСостояние контекста до выполнения: %@", [self descriptionForInternalContextWithPrefix:@"\t"]);
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelingInitiated) name:kCHandlingChainQueueCancelingInitiationKey object:self.chain];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cancelingInitiated) name:kCHandlingChainQueueCancelingInitiationKey object:self.queue];
     [self process];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 //    NSLog(@"\tСостояние контекста после выполнения: %@\n\n", [self descriptionForInternalContextWithPrefix:@"\t"]);
