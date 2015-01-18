@@ -21,6 +21,9 @@
 {
     dispatch_async (dispatch_get_main_queue(), ^
     {
+        if (self.chain == nil) {
+            return;
+        }
         [[NSNotificationCenter defaultCenter] postNotificationName:kARHCHandlingChainErrorNotification
                                                             object:self.chain
                                                           userInfo:@{ @"error" : self.error }];
