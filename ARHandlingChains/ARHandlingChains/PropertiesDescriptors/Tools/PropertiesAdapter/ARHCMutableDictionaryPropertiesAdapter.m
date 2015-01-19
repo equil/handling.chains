@@ -89,6 +89,15 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
     }
 }
 
+- (id)valueForKey:(NSString *)key {
+    return [_state valueForKey:key];
+}
+
+- (void)setValue:(id)value forKey:(NSString *)key {
+    [_state setValue:value forKey:key];
+}
+
+
 - (id)copyWithZone:(NSZone *)zone {
     NSMutableDictionary *copyOfState = [_state mutableCopy];
     ARHCMutableDictionaryPropertiesAdapter *result = [[ARHCMutableDictionaryPropertiesAdapter alloc] initWithDictionary:copyOfState];
