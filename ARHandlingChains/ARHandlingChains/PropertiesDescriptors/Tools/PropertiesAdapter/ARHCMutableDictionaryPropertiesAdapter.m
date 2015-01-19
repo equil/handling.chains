@@ -6,6 +6,7 @@
 #import "ARHCMutableDictionaryPropertiesAdapter.h"
 #import "CPropertiesDescriptorsAccessorsHolder.h"
 #import "IAdaptedPropertyAccessor.h"
+#import "CAdaptedCommonSetter.h"
 
 static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Presented";
 
@@ -71,8 +72,14 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
     id <IAdaptedPropertyAccessor> accessor = [_holder.accessors objectForKey:NSStringFromSelector(anInvocation.selector)];
     if (accessor != nil) {
+        if ([accessor isKindOfClass:[CAdaptedCommonSetter class]]) {
+            [self willChangeValueForKey:accessor.propertyName];
+        }
         [accessor performWithInvocation:anInvocation
                                delegate:_state];
+        if ([accessor isKindOfClass:[CAdaptedCommonSetter class]]) {
+            [self didChangeValueForKey:accessor.propertyName];
+        }
     }
     else {
         NSLog(@"MutableDictionaryAdapter can't detect invocation %@. \n"
