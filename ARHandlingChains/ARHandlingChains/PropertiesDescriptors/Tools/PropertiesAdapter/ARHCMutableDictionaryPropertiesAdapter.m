@@ -94,7 +94,12 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key {
+    if (key == nil) {
+        return;
+    }
+    [self willChangeValueForKey:key];
     [_state setValue:value forKey:key];
+    [self didChangeValueForKey:key];
 }
 
 
