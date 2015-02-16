@@ -29,5 +29,13 @@
     return result;
 }
 
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"@chainError -> {"];
+    [description appendFormat:@"\n\tsignature: %@,", self.signature];
+    [description appendFormat:@"\n\tinfo: %@", [[self.additionalInfo description] stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t"]];
+    [description appendString:@"\n}>"];
+    return description;
+}
+
 
 @end

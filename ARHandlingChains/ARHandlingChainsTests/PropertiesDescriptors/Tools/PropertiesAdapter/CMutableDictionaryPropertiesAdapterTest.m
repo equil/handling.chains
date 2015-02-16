@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "CITestPropertyDescriptor.h"
 #import "ARHCMutableDictionaryPropertiesAdapter.h"
+#import "ARHCErrorHolder.h"
 
 @interface CMutableDictionaryPropertiesAdapterTest : XCTestCase
 

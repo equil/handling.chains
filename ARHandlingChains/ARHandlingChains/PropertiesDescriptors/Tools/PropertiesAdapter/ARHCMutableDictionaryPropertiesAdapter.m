@@ -29,12 +29,11 @@ static NSString *const kMutableDictionaryAutomaticAdapterPresentedSuffix = @"Pre
 @synthesize state = _state;
 
 - (NSString *)description {
-    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ",
-                                                                     NSStringFromClass([self class])];
-
-    [description appendString:@"content: "];
-    [description appendString:[self.state description]];
-    [description appendString:@">"];
+    NSMutableString *description = [NSMutableString stringWithFormat:@"@adaptiveObject -> {"];
+    for (NSString *key in [_state allKeys]) {
+        [description appendFormat:@"\n\t%@: %@", key, [[_state[key] description] stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t"]];
+    }
+    [description appendString:@"\n}"];
     return description;
 }
 

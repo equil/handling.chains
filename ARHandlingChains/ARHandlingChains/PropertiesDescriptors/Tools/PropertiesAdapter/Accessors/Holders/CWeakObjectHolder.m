@@ -22,10 +22,20 @@
     return self;
 }
 
+
+
 + (instancetype)handleWithObject:(NSObject *)object
 {
     return [[self alloc] initWithObject:object];
 }
+
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"@weak -> {"];
+    [description appendFormat:@"\n\treference: %@", [[self.weakReference description] stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t"]];
+    [description appendString:@"\n}"];
+    return description;
+}
+
 
 - (NSObject *)weakReference
 {
