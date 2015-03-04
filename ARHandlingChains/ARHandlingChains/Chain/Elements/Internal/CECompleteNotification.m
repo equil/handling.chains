@@ -21,11 +21,11 @@
 
 - (void)process
 {
-    dispatch_async (dispatch_get_main_queue(), ^
-    {
+//    dispatch_async (dispatch_get_main_queue(), ^
+//    {
         [[NSNotificationCenter defaultCenter] postNotificationName:kARHCHandlingChainCompleteNotification
                                                             object:self.chain];
-    });
+//    });
 }
 
 @end

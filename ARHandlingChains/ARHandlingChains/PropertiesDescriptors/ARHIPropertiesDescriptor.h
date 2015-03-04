@@ -6,4 +6,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol ARHIPropertiesDescriptor <NSObject>
+@optional
+
+@property(nonatomic, readonly) NSDictionary *state;
+
 @end

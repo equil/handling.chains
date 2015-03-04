@@ -19,15 +19,12 @@
 
 - (void)process
 {
-    dispatch_async (dispatch_get_main_queue(), ^
-    {
-        if (self.chain == nil) {
-            return;
-        }
+//    dispatch_sync (dispatch_get_main_queue(), ^
+//    {
         [[NSNotificationCenter defaultCenter] postNotificationName:kARHCHandlingChainErrorNotification
                                                             object:self.chain
                                                           userInfo:@{ @"error" : self.error }];
-    });
+//    });
 }
 
 @end
