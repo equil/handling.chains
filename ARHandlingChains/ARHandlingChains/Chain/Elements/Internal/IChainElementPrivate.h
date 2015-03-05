@@ -11,7 +11,7 @@
 @protocol IChainElementPrivate <NSObject>
 
 @property (nonatomic, strong) ARHAbstractHandlingChain *chain;
-@property (nonatomic, weak) id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate> queue;
+@property (nonatomic, strong) id <ARHIHandlingChainQueue, IHandlingChainQueuePrivate> queue;
 
 - (void)handle;
 

@@ -13,6 +13,6 @@
 
 - (void) set: (ARHCMutableDictionaryPropertiesAdapter *) context;
 
-@property (nonatomic, assign) id<ARHIHandlingChainQueue, IHandlingChainQueuePrivate> respondedQueue;
+@property (nonatomic, weak) id<ARHIHandlingChainQueue, IHandlingChainQueuePrivate> respondedQueue;
 
 @end

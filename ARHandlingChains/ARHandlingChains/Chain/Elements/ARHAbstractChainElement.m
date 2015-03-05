@@ -43,13 +43,6 @@
 //    NSLog(@"\tСостояние контекста после выполнения: %@\n\n", [self descriptionForInternalContextWithPrefix:@"\t"]);
 }
 
-- (NSString *)descriptionForInternalContextWithPrefix:(NSString *)prefix {
-    NSMutableDictionary *context = ((id <IHandlingChainQueuePrivate>) self.queue).context;
-    NSString *result = [[context description] stringByReplacingOccurrencesOfString:@"\n"
-                                                                        withString:[prefix stringByAppendingString:@"\n"]];
-    return result;
-}
-
 - (void)cancelingInitiated {
 
 }
