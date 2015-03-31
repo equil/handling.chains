@@ -23,7 +23,7 @@
 
     if (object != nil)
     {
-        object = [CWeakObjectHolder handleWithObject:object];
+        object = [CWeakObjectHolder holderWithObject:object];
     }
 
     [self storeObject:object

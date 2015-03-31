@@ -55,18 +55,34 @@ NSString *const kARHCHandlingChainErrorNotification = @"ARHCErrorNotification";
                 selector:(SEL)selector
         notificationName:(NSString *)name
 {
-    [_observers addObject:observer];
-    [_observers onDeallocElement:observer
-                              do:^
-                              {
-                                  [[NSNotificationCenter defaultCenter] removeObserver:observer
-                                                                                  name:name
-                                                                                object:self];
-                              }];
+//    [_observers addObject:observer];
+//    [_observers onDeallocElement:observer
+//                              do:^
+//                              {
+//                                  [[NSNotificationCenter defaultCenter] removeObserver:observer
+//                                                                                  name:name
+//                                                                                object:self];
+//                              }];
     [[NSNotificationCenter defaultCenter] addObserver:observer
                                              selector:selector
                                                  name:name
                                                object:self];
+}
+
+- (void)removeCompleteObserver:(id)observer {
+    [self removeObserver:observer notificationName:kARHCHandlingChainCompleteNotification];
+}
+
+- (void)removeErrorObserver:(id)observer {
+    [self removeObserver:observer notificationName:kARHCHandlingChainErrorNotification];
+}
+
+- (void)removeObserver:(id)observer
+        notificationName:(NSString *)name
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:observer
+                                                    name:name
+                                                  object:self];
 }
 
 

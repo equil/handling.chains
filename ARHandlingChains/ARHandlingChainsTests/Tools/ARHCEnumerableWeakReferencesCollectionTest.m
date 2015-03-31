@@ -32,7 +32,7 @@
     _collection2 = nil;
     [super tearDown];
 }
-
+/*
 - (void)testCommonUses
 {
     NSArray *templateArray = [self quickSort:
@@ -163,4 +163,5 @@
     return [sortedArray copy];
 }
 
+*/
 @end

@@ -5,6 +5,7 @@
 #import <objc/runtime.h>
 #import "ARHCEnumerableWeakReferencesCollection.h"
 #import "CWeakReferencesSentry.h"
+#import "CWeakObjectHolder.h"
 
 @interface ARHCEnumerableWeakReferencesCollection (
 private)
@@ -34,34 +35,48 @@ private)
 
 - (void)addObject:(NSObject *)object
 {
-    NSUInteger hash = (NSUInteger) object;
-    @synchronized (_internalSet)
-    {
-        [_internalSet addObject:@(hash)];
+    @synchronized (_internalSet) {
+        [_internalSet addObject:[CWeakObjectHolder holderWithObject:object]];
     }
-
-    CWeakReferencesSentry *sentry = objc_getAssociatedObject (object, kWeakReferencesSentryKey);
-    if (sentry == nil)
-    {
-        sentry = [[CWeakReferencesSentry alloc] initWithHash:hash];
-        objc_setAssociatedObject (object, kWeakReferencesSentryKey, sentry, OBJC_ASSOCIATION_RETAIN);
-    }
-    [sentry.collections addObject:self];
+//    NSUInteger hash = (NSUInteger) object;
+//    @synchronized (_internalSet)
+//    {
+//        [_internalSet addObject:@(hash)];
+//    }
+//
+//    CWeakReferencesSentry *sentry = objc_getAssociatedObject (object, kWeakReferencesSentryKey);
+//    if (sentry == nil)
+//    {
+//        sentry = [[CWeakReferencesSentry alloc] initWithHash:hash];
+//        objc_setAssociatedObject (object, kWeakReferencesSentryKey, sentry, OBJC_ASSOCIATION_RETAIN);
+//    }
+//    [sentry.collections addObject:self];
 }
 
 - (void)removeObject:(NSObject *)object
 {
-    NSUInteger hash = (NSUInteger) object;
-    @synchronized (_internalSet)
-    {
-        [_internalSet removeObject:@(hash)];
-        [_onDeallocCallbacks removeObjectForKey:@(hash)];
+    @synchronized (_internalSet) {
+        NSMutableSet *toDelete = [[NSMutableSet alloc] init];
+        for (CWeakObjectHolder *holder in _internalSet) {
+            if (holder.weakReference == nil || holder.weakReference == object) {
+                [toDelete addObject:holder];
+            }
+        }
+        for (CWeakObjectHolder *holder in toDelete) {
+            [_internalSet removeObject:holder];
+        }
     }
-    CWeakReferencesSentry *sentry = objc_getAssociatedObject (object, kWeakReferencesSentryKey);
-    if (sentry != nil)
-    {
-        [sentry.collections removeObject:self];
-    }
+//    NSUInteger hash = (NSUInteger) object;
+//    @synchronized (_internalSet)
+//    {
+//        [_internalSet removeObject:@(hash)];
+//        [_onDeallocCallbacks removeObjectForKey:@(hash)];
+//    }
+//    CWeakReferencesSentry *sentry = objc_getAssociatedObject (object, kWeakReferencesSentryKey);
+//    if (sentry != nil)
+//    {
+//        [sentry.collections removeObject:self];
+//    }
 }
 
 - (void)onDeallocElement:(NSObject *)object
@@ -115,10 +130,18 @@ private)
 
         @synchronized (_internalSet)
         {
-            for (NSNumber *hash in _internalSet)
+            for (CWeakObjectHolder *holder in _internalSet)
             {
-                [tempObjects addObject:(__bridge id) (void *) [hash unsignedIntegerValue]];
+                NSObject *object = holder.weakReference;
+                if (object != nil) {
+                    [tempObjects addObject:object];
+
+                }
             }
+//            for (NSNumber *hash in _internalSet)
+//            {
+//                [tempObjects addObject:(__bridge id) (void *) [hash unsignedIntegerValue]];
+//            }
         }
 
         state->mutationsPtr = &state->extra[ 0 ];

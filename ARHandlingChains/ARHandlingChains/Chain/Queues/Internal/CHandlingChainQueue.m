@@ -152,6 +152,7 @@ void contextFinalizer (void *context)
 }
 
 - (void)dealloc {
+    _delegates = nil;
     dispatch_resume(_queue);
 }
 

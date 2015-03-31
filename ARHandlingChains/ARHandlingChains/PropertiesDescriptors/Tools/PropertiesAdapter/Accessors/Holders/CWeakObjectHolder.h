@@ -9,6 +9,6 @@
 
 @property (nonatomic, readonly) NSObject *weakReference;
 
-+ (instancetype)handleWithObject:(NSObject *)object;
++ (instancetype)holderWithObject:(NSObject *)object;
 
 @end

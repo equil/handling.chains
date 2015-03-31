@@ -24,7 +24,7 @@
 
 
 
-+ (instancetype)handleWithObject:(NSObject *)object
++ (instancetype)holderWithObject:(NSObject *)object
 {
     return [[self alloc] initWithObject:object];
 }

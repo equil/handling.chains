@@ -17,4 +17,7 @@ extern NSString *const kARHCHandlingChainErrorNotification;
 - (void)registerErrorObserver:(id)observer
                      selector:(SEL)selector;
 
+- (void)removeCompleteObserver:(id)observer;
+- (void)removeErrorObserver:(id)observer;
+
 @end
